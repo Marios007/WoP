@@ -31,7 +31,7 @@ class WoPApp extends Application.AppBase {
 
     // Return the initial view of your application here
     function getInitialView() as Array<Views or InputDelegates>? {
-        return [ new WoPView() ] as Array<Views or InputDelegates>;
+        return [ new WoPView(), new MyBehaviorDelegate() ] as Array<Views or InputDelegates>;
     }
 
 }
