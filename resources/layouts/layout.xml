@@ -1,0 +1,27 @@
+<layout id="MainLayout">
+    <label
+        id="textTop"
+        text="Du bist in der"
+        x="center"
+        y="25%"
+        font="Gfx.FONT_SMALL"
+        justification="Gfx.TEXT_JUSTIFY_CENTER"
+    />
+    <label
+        id="week"
+        text=""
+        x="center"
+        y="center"
+        font="Gfx.FONT_MEDIUM"
+        justification="Gfx.TEXT_JUSTIFY_CENTER"
+    />
+
+      <label
+        id="countdown"
+        text=""
+        x="center"
+        y="60%"
+        font="Gfx.FONT_SMALL"
+        justification="Gfx.TEXT_JUSTIFY_CENTER"
+    />
+</layout>
