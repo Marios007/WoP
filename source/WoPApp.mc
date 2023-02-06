@@ -4,6 +4,10 @@ import Toybox.WatchUi;
 
 class WoPApp extends Application.AppBase {
 
+    hidden var mView;
+    hidden var mModel;
+    hidden var mDelegate;
+    hidden var mGlanceView;
 
     function initialize() {
         AppBase.initialize();
@@ -17,7 +21,12 @@ class WoPApp extends Application.AppBase {
     function onStop(state as Dictionary?) as Void {
     }
 
-    
+    // Return the initial glance view of your widget here
+	(:glance)
+    function getGlanceView() {
+    	mGlanceView = new WoPGlanceView();
+    	return [ mGlanceView];
+    }
 
 
     // Return the initial view of your application here

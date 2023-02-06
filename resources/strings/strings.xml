@@ -1,3 +1,5 @@
 <strings>
     <string id="AppName">SSW</string>
+
+    <string id="glance_title" scope="glance">Week of pregnancy</string>
 </strings>
