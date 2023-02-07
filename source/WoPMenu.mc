@@ -9,8 +9,8 @@ class MyBehaviorDelegate extends WatchUi.BehaviorDelegate {
         var menu = new WatchUi.Menu();
         var delegate;
         menu.setTitle("My Menu");
-        menu.addItem("Item One", :one);
-        menu.addItem("Item Two", :two);
+        menu.addItem("Set Birthdate", :one);
+        menu.addItem("Info", :two);
         delegate = new MyMenuInputDelegate(); // a WatchUi.MenuInputDelegate
         WatchUi.pushView(menu, delegate, WatchUi.SLIDE_IMMEDIATE);
         return true;

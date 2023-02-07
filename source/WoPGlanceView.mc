@@ -32,7 +32,7 @@ class WoPGlanceView extends WatchUi.GlanceView {
     function onUpdate(dc) {
         dc.setColor(G.COLOR_WHITE, G.COLOR_TRANSPARENT);
     	dc.drawText(0, 6, G.FONT_GLANCE, appTitle, G.TEXT_JUSTIFY_LEFT);
-        message = "10W +3";
+        message = "10W + 3";
 
         dc.drawText(0, 26, G.FONT_SYSTEM_TINY, message, G.TEXT_JUSTIFY_LEFT);
     }

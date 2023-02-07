@@ -9,13 +9,17 @@ class WoPView extends WatchUi.View {
 
     private var _textTop;
     private var _currentWoP;
+    private var _currentWoPLabel;
+    private var _countdownDaysLabel;
     private var _countdownDays;
     private var _dateOfBirth;
     private var _durationPregnancy = new Time.Duration(24192000) ; //280d in sec
-
+    var calculator = new calcDates();
 
     function initialize() {
         View.initialize();
+        calculator.setDateOfBirth();
+
     }
 
     // Load your resources here
@@ -23,8 +27,8 @@ class WoPView extends WatchUi.View {
         setLayout(Rez.Layouts.MainLayout(dc));
 
         _textTop = findDrawableById("textTop");
-        _currentWoP = findDrawableById("week");
-        _countdownDays = findDrawableById("countdown");
+        _currentWoPLabel = findDrawableById("week");
+        _countdownDaysLabel = findDrawableById("countdown");
         
     }
 
@@ -32,16 +36,7 @@ class WoPView extends WatchUi.View {
     // the state of this View and prepare it to be shown. This includes
     // loading resources into memory.
     function onShow() as Void {
-        
-        
-         // set date of birth as Moment
-        var options = {
-            :year   => 2023,
-            :month  => 8,
-            :day    => 26,
-            :hour => 0   // UTC offset, in this case for CST
-        };
-        var _dateOfBirth = Gregorian.moment(options);
+        _dateOfBirth = calculator.getDateOfBirth();
         //System.println(_dateOfBirth.value());
         // print date of birth for test
         /*var dateOfBirth = Gregorian.utcInfo(_dateOfBirth, Time.FORMAT_SHORT);
@@ -49,15 +44,16 @@ class WoPView extends WatchUi.View {
             dateOfBirth.year.format("%04u"),
             dateOfBirth.month.format("%02u"),
             dateOfBirth.day.format("%02u")])); */
+        var today = calculator.getToday();
+     
 
-        var today = new Time.Moment(Time.today().value());
-        // add one hour because 1h missing ??? 
-        var oneHour = new Time.Duration(Gregorian.SECONDS_PER_HOUR);
-        today = today.add(oneHour); 
-        //System.println(today.value());
+        // calculate countdown and set text
+        _countdownDays = calculator.calculateCountdown(_dateOfBirth, today);
+        _countdownDaysLabel.setText("Noch " + _countdownDays + " Tage" );
 
-        calculateWeek(_dateOfBirth, today);
-        calculateCountdown(_dateOfBirth, today);
+        //calculate week an set text
+        _currentWoP = calculator.getDates(_dateOfBirth, today);
+        _currentWoPLabel.setText(_currentWoP.get(:week)+ " SSW ("+ (_currentWoP.get(:exactWeek)+"W + "+_currentWoP.get(:dayInWeek) +")"));
 
     }
 
@@ -94,16 +90,4 @@ class WoPView extends WatchUi.View {
 
     }
 
-
-    // calculate and set countdown until birth
-
-    function calculateCountdown(dateOfBirth as Time.Moment, today as Time.Moment) as Void{
-        var countdown = dateOfBirth.subtract(today);
-        var output = countdown.divide(86400);
-        output = output.value();
-        var output1 = output.toString();
-        //Set Text on screen
-        _countdownDays.setText("Noch " + output1 + " Tage" );
-
-}
 }
