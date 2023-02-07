@@ -5,13 +5,19 @@ using Toybox.Graphics as G;
 (:glance)
 class WoPGlanceView extends WatchUi.GlanceView {
 
-	hidden var message = "";
+	var message = "";
 	var appTitle;
     var yCenter;
+    var _currentWoP;
+    var _dateOfBirth;
+    var _today;
+    var calculatorGlance;
+
 
     function initialize() {
         
         WatchUi.GlanceView.initialize();
+        //calculatorGlance = new calcDates();
         //var test = new WoPView();
     }
 
@@ -26,15 +32,18 @@ class WoPGlanceView extends WatchUi.GlanceView {
     // Restore the state of this View and prepare it to be shown. 
     // This includes loading resources into memory.
     function onShow() {
+        //_today = calculatorGlance.getToday();
+        //_dateOfBirth = calculatorGlance.getDateOfBirth();
     }
 
     // Update the view
     function onUpdate(dc) {
         dc.setColor(G.COLOR_WHITE, G.COLOR_TRANSPARENT);
     	dc.drawText(0, 6, G.FONT_GLANCE, appTitle, G.TEXT_JUSTIFY_LEFT);
-        message = "10W + 3";
-
-        dc.drawText(0, 26, G.FONT_SYSTEM_TINY, message, G.TEXT_JUSTIFY_LEFT);
+        //_currentWoP = calculatorGlance.getDates(_dateOfBirth, _today);
+        //message = _currentWoP.get(:week)+ " SSW ("+ (_currentWoP.get(:exactWeek)+"W + "+_currentWoP.get(:dayInWeek) +")");
+        message = "Week 12 (11W + 3)";
+        dc.drawText(0, 26, G.FONT_GLANCE, message, G.TEXT_JUSTIFY_LEFT);
     }
 
     // Called when this View is removed from the screen. Save the

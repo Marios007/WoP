@@ -26,7 +26,13 @@ class calcDates {
             :hour => 0   // UTC offset, in this case for CST
         };
         _dateOfBirth = Gregorian.moment(options);
-
+                //System.println(_dateOfBirth.value());
+        // print date of birth for test
+        /*var dateOfBirth = Gregorian.utcInfo(_dateOfBirth, Time.FORMAT_SHORT);
+        System.println(Lang.format("$1$-$2$-$3$", [
+            dateOfBirth.year.format("%04u"),
+            dateOfBirth.month.format("%02u"),
+            dateOfBirth.day.format("%02u")])); */
     }
 
     function getDateOfBirth() {
