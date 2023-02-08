@@ -62,7 +62,7 @@ class WoPcalcDates {
 
         // calculate week of pregancy and week and day seperatly 
     function getDates(dateOfBirth as Time.Moment, today as Time.Moment ){
-        
+        System.println("getDates method");
         var currentWoP = today.subtract(dateOfBirth.subtract(_durationPregnancy)); //WoP in Days
 
         //System.println("WoP in seconds: " + currentWoP.value()); // WoP output in seconds

@@ -7,7 +7,10 @@ using Toybox.Lang;
 
 class WoPView extends WatchUi.View {
 
+    private var sAppTitle;
     private var _textTop;
+    private var textTop;
+    private var textWoP;
     private var _currentWoP;
     private var _currentWoPLabel;
     private var _countdownDaysLabel;
@@ -17,8 +20,12 @@ class WoPView extends WatchUi.View {
     var calculator = new WoPcalcDates();
 
     function initialize() {
-        View.initialize();
+        
+        sAppTitle = WatchUi.loadResource(Rez.Strings.view_title);
+        textTop = WatchUi.loadResource(Rez.Strings.text_top);
+        textWoP = WatchUi.loadResource(Rez.Strings.wop);
         calculator.setDateOfBirth();
+        View.initialize();
 
     }
 
@@ -36,16 +43,18 @@ class WoPView extends WatchUi.View {
     // the state of this View and prepare it to be shown. This includes
     // loading resources into memory.
     function onShow() as Void {
+
         _dateOfBirth = calculator.getDateOfBirth();
         var today = calculator.getToday();
-
         // calculate countdown and set text
+        _textTop.setText(textTop);
+
         _countdownDays = calculator.calculateCountdown(_dateOfBirth, today);
         _countdownDaysLabel.setText("Noch " + _countdownDays + " Tage" );
 
         //calculate week an set text
         _currentWoP = calculator.getDates(_dateOfBirth, today);
-        _currentWoPLabel.setText(_currentWoP.get(:week)+ " SSW ("+ (_currentWoP.get(:exactWeek)+"W + "+_currentWoP.get(:dayInWeek) +")"));
+        _currentWoPLabel.setText(_currentWoP.get(:week)+ " " + textWoP + " ("+ (_currentWoP.get(:exactWeek)+"W + "+_currentWoP.get(:dayInWeek) +")"));
 
     }
 

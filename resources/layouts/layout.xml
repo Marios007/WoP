@@ -1,7 +1,7 @@
 <layout id="MainLayout">
     <label
         id="textTop"
-        text="Du bist in der"
+        text=""
         x="center"
         y="25%"
         font="Gfx.FONT_SMALL"

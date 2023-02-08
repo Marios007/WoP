@@ -7,10 +7,12 @@ class MyMenuInputDelegate extends WatchUi.MenuInputDelegate {
     }
 
     function onMenuItem(item) {
-        if (item == :item_1) {
+        if (item == :one) {
             System.println("Item 1");
-        } else if (item == :item_2) {
-            System.println("Item 2");
+        } else if (item == :two) {
+            WatchUi.pushView(new AboutView(), new AboutDelegate(), WatchUi.SLIDE_IMMEDIATE );
+            return;
+
         }
     }
 }

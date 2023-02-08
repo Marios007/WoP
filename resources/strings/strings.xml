@@ -1,5 +1,13 @@
 <strings>
     <string id="AppName">SSW</string>
+    <string id="view_title" scope="foreground">Schwangerschaft</string>
+    <string id="glance_title" scope="glance">Schwangerschaft</string>
 
-    <string id="glance_title" scope="glance">Week of pregnancy</string>
+    <string id="menu_name">Menu</string>
+    <string id="set_birthday">Geburtstermin ändern</string>
+    <string id="info">Info</string>
+    <string id="wop">SSW</string>
+    <string id="text_top">Du bist in der</string>
+
+
 </strings>
