@@ -3,8 +3,8 @@ using Toybox.Time.Gregorian;
 using Toybox.Lang;
 using Toybox.Time;
 
-
-class calcDates {
+(:glance)
+class WoPcalcDates {
 
     var _birthdateDict = {};
     var _currentWoP;

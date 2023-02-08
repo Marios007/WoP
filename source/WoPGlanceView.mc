@@ -17,7 +17,7 @@ class WoPGlanceView extends WatchUi.GlanceView {
     function initialize() {
         
         WatchUi.GlanceView.initialize();
-        //calculatorGlance = new calcDates();
+        //calculatorGlance = new WoPcalcDates();
         //var test = new WoPView();
     }
 

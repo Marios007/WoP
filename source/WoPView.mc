@@ -14,7 +14,7 @@ class WoPView extends WatchUi.View {
     private var _countdownDays;
     private var _dateOfBirth;
     private var _durationPregnancy = new Time.Duration(24192000) ; //280d in sec
-    var calculator = new calcDates();
+    var calculator = new WoPcalcDates();
 
     function initialize() {
         View.initialize();
