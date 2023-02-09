@@ -12,6 +12,9 @@ class WoPGlanceView extends WatchUi.GlanceView {
     var _dateOfBirth;
     var _today;
     var calculatorGlance;
+    var xPosWeek;
+	var GW;
+	var GH;
 
 
     function initialize() {
@@ -19,6 +22,7 @@ class WoPGlanceView extends WatchUi.GlanceView {
         WatchUi.GlanceView.initialize();
         calculatorGlance = new WoPcalcDates();
         calculatorGlance.setDateOfBirth();
+        
         //var test = new WoPView();
     }
 
@@ -26,6 +30,8 @@ class WoPGlanceView extends WatchUi.GlanceView {
     function onLayout(dc) {
         appTitle = WatchUi.loadResource(Rez.Strings.glance_title);
         yCenter = dc.getHeight() /2; //use alter for adkjusting height of text
+        GW = dc.getWidth();
+    	GH = dc.getHeight();
     
     }
 
@@ -36,18 +42,67 @@ class WoPGlanceView extends WatchUi.GlanceView {
         _today = calculatorGlance.getToday();
         _dateOfBirth = calculatorGlance.getDateOfBirth();
         _currentWoP = calculatorGlance.getDates(_dateOfBirth, _today);
-        message = _currentWoP.get(:week)+ " SSW ("+ (_currentWoP.get(:exactWeek)+"W + "+_currentWoP.get(:dayInWeek) +")");
+        xPosWeek = 100/(_currentWoP.get(:week)/0.4);
+        message = _currentWoP.get(:week)+ ". SSW ("+ (_currentWoP.get(:exactWeek)+"W + "+_currentWoP.get(:dayInWeek) +")");
         
     }
 
     // Update the view
     function onUpdate(dc) {
         dc.setColor(G.COLOR_WHITE, G.COLOR_TRANSPARENT);
-        dc.drawText(0, 6, G.FONT_GLANCE, appTitle, G.TEXT_JUSTIFY_LEFT);
-        dc.drawText(0, 26, G.FONT_GLANCE, message, G.TEXT_JUSTIFY_LEFT);
+
+        dc.drawText(0, 0, G.FONT_GLANCE, appTitle, G.TEXT_JUSTIFY_LEFT);
+        dc.drawText(0, 40, G.FONT_GLANCE, message, G.TEXT_JUSTIFY_LEFT);
+        _currentWoP.get(:week);
         
-        //message = "Week 12 (11W + 3)";
         
+        System.println("Trimester: " + _currentWoP.get(:trimester));
+        switch (_currentWoP.get(:trimester)) {
+            case 1:
+                dc.setPenWidth(10);
+                dc.setColor(G.COLOR_RED, -1);
+                dc.drawLine(0, GH /2, GW/3.5, GH/2);
+                dc.setPenWidth(5);
+                dc.setColor(G.COLOR_YELLOW, -1);
+                dc.drawLine(GW/3.0, GH /2, GW/1.7, GH/2);
+                dc.setColor(G.COLOR_GREEN, -1);
+                dc.drawLine(GW/1.6, GH /2, GW, GH/2);
+                break;
+            case 2:
+                dc.setPenWidth(10);
+                dc.setColor(G.COLOR_YELLOW, -1);
+                dc.drawLine(GW/3, GH /2, GW/1.75, GH/2);
+                dc.setPenWidth(5);
+                dc.setColor(G.COLOR_RED, -1);
+                dc.drawLine(0, GH /2, GW/3.7, GH/2);
+                dc.setColor(G.COLOR_GREEN, -1);
+                dc.drawLine(GW/1.6, GH /2, GW, GH/2);
+                break;
+            case 3:
+                dc.setPenWidth(10);
+                dc.setColor(G.COLOR_GREEN, -1);
+                dc.drawLine(GW/1.5, GH /2, GW, GH/2);
+                dc.setPenWidth(5);
+                dc.setColor(G.COLOR_RED, -1);
+                dc.drawLine(0, GH /2, GW/3.7, GH/2);
+                dc.setColor(G.COLOR_YELLOW, -1);
+                dc.drawLine(GW/3.25, GH /2, GW/1.9, GH/2);
+                break;
+            default:
+                dc.setPenWidth(5);
+                dc.setColor(G.COLOR_RED, -1);
+                dc.drawLine(0, GH /2, GW/3.7, GH/2);
+                dc.setColor(G.COLOR_YELLOW, -1);
+                dc.drawLine(GW/3.25, GH /2, GW/1.7, GH/2);
+                dc.setColor(G.COLOR_GREEN, -1);
+                dc.drawLine(GW/1.6, GH /2, GW, GH/2);
+                break;
+        }
+        dc.setColor(G.COLOR_WHITE, G.COLOR_TRANSPARENT);
+        dc.setPenWidth(5);
+        dc.drawLine(GW/xPosWeek, GH/2+8, GW/xPosWeek, GH/2-8);
+
+
     }
 
     // Called when this View is removed from the screen. Save the

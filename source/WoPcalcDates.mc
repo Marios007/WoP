@@ -14,6 +14,7 @@ class WoPcalcDates {
     var _exactWeek;
     var _week;
     var _dayInWeek;
+    var _trimester;
     var _durationPregnancy = new Time.Duration(24192000); //280d in sec
 
 
@@ -74,13 +75,21 @@ class WoPcalcDates {
         //System.println("WoP in week: " + exactWeek);
         // System.println("Current WoP: " + week);
         //System.println("Current Day: " + (_dayInWeek));
+        _trimester = getTrimester(woP_in_Days);
         var weeksDict = {
-            :week => _week, :exactWeek => woP_in_Days/7, :dayInWeek => _dayInWeek  
+            :week => _week, :exactWeek => woP_in_Days/7, :dayInWeek => _dayInWeek, :trimester => _trimester
         };
         return weeksDict;
         //Set Text on screen
         //_currentWoP.setText(_week + " SSW ("+ (woP_in_Days/7)+"W + "+_dayInWeek +")");
+    }
 
+    function getTrimester(woP_in_Days)
+    {
+        if (woP_in_Days/7 <= 12)  {return 1; }
+        if (woP_in_Days/7 <= 24)  {return 2; }
+        if (woP_in_Days/7 <= 40)  {return 3; }
+        else {return 4;}
     }
 
 }
