@@ -16,6 +16,7 @@ class WoPView extends WatchUi.View {
     private var _countdownDaysLabel;
     private var _countdownDays;
     private var _dateOfBirth;
+    private var _trimesterLabel;
     var center_x; 
     var center_y; 
 
@@ -28,7 +29,6 @@ class WoPView extends WatchUi.View {
         textTop = WatchUi.loadResource(Rez.Strings.text_top);
         textWoP = WatchUi.loadResource(Rez.Strings.wop);
         calculator.setDateOfBirth();
-        
 
     }
 
@@ -39,30 +39,27 @@ class WoPView extends WatchUi.View {
         _textTop = findDrawableById("textTop");
         _currentWoPLabel = findDrawableById("week");
         _countdownDaysLabel = findDrawableById("countdown");
+        _trimesterLabel = findDrawableById("trimester");
         center_x = dc.getWidth()/2;
         center_y = dc.getHeight()/2;
-        
     }
 
     // Called when this View is brought to the foreground. Restore
     // the state of this View and prepare it to be shown. This includes
     // loading resources into memory.
     function onShow() as Void {
-
+        calculator.setDateOfBirth();
         _dateOfBirth = calculator.getDateOfBirth();
         var today = calculator.getToday();
         // calculate countdown and set text
         _textTop.setText(textTop);
-
         _countdownDays = calculator.calculateCountdown(_dateOfBirth, today);
         _countdownDaysLabel.setText("Noch " + _countdownDays + " Tage" );
 
         //calculate week an set text
         _currentWoP = calculator.getDates(_dateOfBirth, today);
         _currentWoPLabel.setText(_currentWoP.get(:week)+ " " + textWoP + " ("+ (_currentWoP.get(:exactWeek)+"W + "+_currentWoP.get(:dayInWeek) +")"));
-
-
-
+        _trimesterLabel.setText("Im " + _currentWoP.get(:trimester) + ". Trimester");
     }
 
     // Update the view
@@ -70,7 +67,6 @@ class WoPView extends WatchUi.View {
          // Call the parent onUpdate function to redraw the layout
         View.onUpdate(dc);
         circleStatus(dc);
-
     }
 
     // Called when this View is removed from the screen. Save the
@@ -89,22 +85,24 @@ class WoPView extends WatchUi.View {
         else {
             radius = center_y-3;
             }
-        //draw 3 gray arcs
+        //draw 1 gray arcs
         dc.setPenWidth(((dc.getWidth()/25)).toNumber());
         dc.drawArc(center_x, center_y, radius, Graphics.ARC_CLOCKWISE, 0, 360);
-        //dc.drawArc(center_x, center_y, radius, Graphics.ARC_CLOCKWISE, 328, 214);
-        //dc.drawArc(center_x, center_y, radius, Graphics.ARC_CLOCKWISE, 206, 94);
-    
-        dc.setColor(Graphics.COLOR_DK_GREEN, Graphics.COLOR_BLACK);
+        var angle = _currentWoP.get(:angle);
+        dc.setColor(Graphics.COLOR_GREEN, Graphics.COLOR_BLACK);
         dc.setPenWidth(((dc.getWidth()/20)).toNumber());
-        dc.drawArc(center_x, center_y, radius, Graphics.ARC_CLOCKWISE, 90, _currentWoP.get(:angle));
+        dc.drawArc(center_x, center_y, radius, Graphics.ARC_CLOCKWISE, 90, angle);
+        
         System.println("Angle: " + (_currentWoP.get(:angle)));
 
         dc.setPenWidth(((dc.getWidth()/10)).toNumber());
-        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
+        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
         dc.drawArc(center_x, center_y, radius, Graphics.ARC_CLOCKWISE, 236, 232);
         dc.drawArc(center_x, center_y, radius, Graphics.ARC_CLOCKWISE, 344, 340);
         dc.drawArc(center_x, center_y, radius, Graphics.ARC_CLOCKWISE, 92, 88);
+        dc.setPenWidth(((dc.getWidth()/10)).toNumber());
+        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
+        dc.drawArc(center_x, center_y, radius, Graphics.ARC_CLOCKWISE, angle+3, angle-3);
     }
 
 }

@@ -1,5 +1,6 @@
 using Toybox.WatchUi;
 using Toybox.System;
+import Toybox.Application.Storage;
 
 class MyMenuInputDelegate extends WatchUi.MenuInputDelegate {
     function initialize() {
@@ -8,7 +9,7 @@ class MyMenuInputDelegate extends WatchUi.MenuInputDelegate {
 
     function onMenuItem(item) {
         if (item == :one) {
-            System.println("Item 1");
+            WatchUi.pushView(new DatePicker(), new DatePickerDelegate(), WatchUi.SLIDE_IMMEDIATE );
         } else if (item == :two) {
             WatchUi.pushView(new AboutView(), new AboutDelegate(), WatchUi.SLIDE_IMMEDIATE );
             return;

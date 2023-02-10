@@ -18,11 +18,9 @@ class WoPGlanceView extends WatchUi.GlanceView {
 
 
     function initialize() {
-        
         WatchUi.GlanceView.initialize();
         calculatorGlance = new WoPcalcDates();
         calculatorGlance.setDateOfBirth();
-        
         //var test = new WoPView();
     }
 
@@ -53,54 +51,43 @@ class WoPGlanceView extends WatchUi.GlanceView {
 
         dc.drawText(0, 0, G.FONT_GLANCE, appTitle, G.TEXT_JUSTIFY_LEFT);
         dc.drawText(0, 40, G.FONT_GLANCE, message, G.TEXT_JUSTIFY_LEFT);
-        _currentWoP.get(:week);
-        
-       
-        System.println("Trimester: " + _currentWoP.get(:trimester));
+        dc.setPenWidth(7);
+        dc.setColor(G.COLOR_DK_GRAY, -1);
+        dc.drawLine(0, GH/2, GW/3.6, GH/2);
+        dc.drawLine(GW/3, GH/2, GW/1.63, GH/2);
+        dc.drawLine(GW/1.5, GH/2, GW, GH/2);
+
+
         switch (_currentWoP.get(:trimester)) {
             case 1:
-                dc.setPenWidth(10);
+                dc.setPenWidth(8);
                 dc.setColor(G.COLOR_RED, -1);
-                dc.drawLine(0, GH /2, GW/3.5, GH/2);
-                dc.setPenWidth(5);
-                dc.setColor(G.COLOR_YELLOW, -1);
-                dc.drawLine(GW/3.0, GH /2, GW/1.7, GH/2);
-                dc.setColor(G.COLOR_GREEN, -1);
-                dc.drawLine(GW/1.6, GH /2, GW, GH/2);
+                dc.drawLine(0, GH/2, GW/xPosWeek, GH/2);
                 break;
             case 2:
-                dc.setPenWidth(10);
+                dc.setPenWidth(8);
                 dc.setColor(G.COLOR_YELLOW, -1);
-                dc.drawLine(GW/3, GH /2, GW/1.75, GH/2);
-                dc.setPenWidth(5);
+                dc.drawLine(GW/3, GH/2, GW/xPosWeek, GH/2);
+                dc.setPenWidth(8);
                 dc.setColor(G.COLOR_RED, -1);
-                dc.drawLine(0, GH /2, GW/3.7, GH/2);
-                dc.setColor(G.COLOR_GREEN, -1);
-                dc.drawLine(GW/1.6, GH /2, GW, GH/2);
+                dc.drawLine(0, GH/2, GW/3.6, GH/2);
                 break;
             case 3:
-                dc.setPenWidth(10);
+                dc.setPenWidth(8);
                 dc.setColor(G.COLOR_GREEN, -1);
-                dc.drawLine(GW/1.5, GH /2, GW, GH/2);
-                dc.setPenWidth(5);
+                dc.drawLine(GW/1.5 , GH/2, GW/xPosWeek, GH/2);
+                dc.setPenWidth(8);
                 dc.setColor(G.COLOR_RED, -1);
-                dc.drawLine(0, GH /2, GW/3.7, GH/2);
+                dc.drawLine(0, GH/2, GW/3.6, GH/2);
                 dc.setColor(G.COLOR_YELLOW, -1);
-                dc.drawLine(GW/3.25, GH /2, GW/1.9, GH/2);
+                dc.drawLine(GW/3, GH/2, GW/1.63, GH/2);
                 break;
             default:
-                dc.setPenWidth(5);
-                dc.setColor(G.COLOR_RED, -1);
-                dc.drawLine(0, GH /2, GW/3.7, GH/2);
-                dc.setColor(G.COLOR_YELLOW, -1);
-                dc.drawLine(GW/3.25, GH /2, GW/1.7, GH/2);
-                dc.setColor(G.COLOR_GREEN, -1);
-                dc.drawLine(GW/1.6, GH /2, GW, GH/2);
                 break;
-        }
-        dc.setColor(G.COLOR_WHITE, G.COLOR_TRANSPARENT);
+        } 
+        dc.setColor(G.COLOR_WHITE, G.COLOR_BLACK);
         dc.setPenWidth(5);
-        dc.drawLine(GW/xPosWeek, GH/2+8, GW/xPosWeek, GH/2-8);
+        dc.drawLine(GW/xPosWeek, GH/2+7, GW/xPosWeek, GH/2-7);
 
 
     }

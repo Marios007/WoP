@@ -3,25 +3,32 @@
         id="textTop"
         text=""
         x="center"
-        y="25%"
-        font="Gfx.FONT_SMALL"
+        y="15%"
+        font="Gfx.FONT_XTINY"
         justification="Gfx.TEXT_JUSTIFY_CENTER"
     />
     <label
         id="week"
         text=""
         x="center"
-        y="center"
+        y="35%"
         font="Gfx.FONT_MEDIUM"
         justification="Gfx.TEXT_JUSTIFY_CENTER"
     />
-
+          <label
+        id="trimester"
+        text=""
+        x="center"
+        y="55%"
+        font="Gfx.FONT_TINY"
+        justification="Gfx.TEXT_JUSTIFY_CENTER"
+    />
       <label
         id="countdown"
         text=""
         x="center"
-        y="60%"
-        font="Gfx.FONT_SMALL"
+        y="70%"
+        font="Gfx.FONT_TINY"
         justification="Gfx.TEXT_JUSTIFY_CENTER"
     />
 </layout>

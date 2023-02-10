@@ -9,5 +9,20 @@
     <string id="wop">WoP</string>
     <string id="text_top">Current week</string>
 
+    <!-- Date picker --> 
+    <string id="datePickerTitle">Pick a date</string>
+    <string id="dateSeparator">-</string>
+    <string id="month01">Jan</string>
+    <string id="month02">Feb</string>
+    <string id="month03">Mar</string>
+    <string id="month04">Apr</string>
+    <string id="month05">May</string>
+    <string id="month06">Jun</string>
+    <string id="month07">Jul</string>
+    <string id="month08">Aug</string>
+    <string id="month09">Sep</string>
+    <string id="month10">Oct</string>
+    <string id="month11">Nov</string>
+    <string id="month12">Dec</string>
 
 </strings>

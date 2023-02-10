@@ -2,6 +2,8 @@ using Toybox.System;
 using Toybox.Time.Gregorian;
 using Toybox.Lang;
 using Toybox.Time;
+using Toybox.Application.Storage;
+import Toybox.WatchUi;
 
 (:glance)
 class WoPcalcDates {
@@ -20,10 +22,13 @@ class WoPcalcDates {
 
     function setDateOfBirth() {
         System.println("Set date of birth method");
+        
+        System.println("Month: " + Storage.getValue("month"));
+
         var options = {
-            :year   => 2023,
-            :month  => 8,
-            :day    => 26,
+            :year   => Storage.getValue("year"),
+            :month  => Storage.getValue("month"),
+            :day    => Storage.getValue("day"),
             :hour => 0   // UTC offset, in this case for CST
         };
         _dateOfBirth = Gregorian.moment(options);
@@ -47,10 +52,9 @@ class WoPcalcDates {
         output = output.value();
         var output1 = output.toString();
         //Set Text on screen
-        System.println("calculateCountdown method");
         return output1;
+        }
 
-}
     // return today as Moment
     function getToday() {
         _today = new Time.Moment(Time.today().value());
@@ -60,10 +64,8 @@ class WoPcalcDates {
         return _today;
     }
 
-
         // calculate week of pregancy and week and day seperatly 
     function getDates(dateOfBirth as Time.Moment, today as Time.Moment ){
-        System.println("getDates method");
         var currentWoP = today.subtract(dateOfBirth.subtract(_durationPregnancy)); //WoP in Days
 
         //System.println("WoP in seconds: " + currentWoP.value()); // WoP output in seconds
@@ -81,8 +83,6 @@ class WoPcalcDates {
             :angle => getAngle(_week)
         };
         return weeksDict;
-        //Set Text on screen
-        //_currentWoP.setText(_week + " SSW ("+ (woP_in_Days/7)+"W + "+_dayInWeek +")");
     }
 
     function getTrimester(week)
@@ -98,6 +98,5 @@ class WoPcalcDates {
         var weekAsAngle = (90-week*9)%360;
         return weekAsAngle;   
     }
-
 
 }

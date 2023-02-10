@@ -9,5 +9,21 @@
     <string id="wop">SSW</string>
     <string id="text_top">Du bist in der</string>
 
+    <!-- Date picker --> 
+    <string id="datePickerTitle">Geburtsdatum wählen</string>
+    <string id="dateSeparator">-</string>
+    <string id="month01">Jan</string>
+    <string id="month02">Feb</string>
+    <string id="month03">März</string>
+    <string id="month04">April</string>
+    <string id="month05">Mai</string>
+    <string id="month06">Juni</string>
+    <string id="month07">Juli</string>
+    <string id="month08">Aug</string>
+    <string id="month09">Sept</string>
+    <string id="month10">Okt</string>
+    <string id="month11">Nov</string>
+    <string id="month12">Dez</string>
+
 
 </strings>
