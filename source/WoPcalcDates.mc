@@ -75,21 +75,29 @@ class WoPcalcDates {
         //System.println("WoP in week: " + exactWeek);
         // System.println("Current WoP: " + week);
         //System.println("Current Day: " + (_dayInWeek));
-        _trimester = getTrimester(woP_in_Days);
+        _trimester = getTrimester(_week);
         var weeksDict = {
-            :week => _week, :exactWeek => woP_in_Days/7, :dayInWeek => _dayInWeek, :trimester => _trimester
+            :week => _week, :exactWeek => woP_in_Days/7, :dayInWeek => _dayInWeek, :trimester => _trimester,
+            :angle => getAngle(_week)
         };
         return weeksDict;
         //Set Text on screen
         //_currentWoP.setText(_week + " SSW ("+ (woP_in_Days/7)+"W + "+_dayInWeek +")");
     }
 
-    function getTrimester(woP_in_Days)
+    function getTrimester(week)
     {
-        if (woP_in_Days/7 <= 12)  {return 1; }
-        if (woP_in_Days/7 <= 24)  {return 2; }
-        if (woP_in_Days/7 <= 40)  {return 3; }
+        if (week <= 12)  {return 1; }
+        if (week <= 24)  {return 2; }
+        if (week <= 40)  {return 3; }
         else {return 4;}
     }
+
+    //convert week to an angle to draw the arc
+    function getAngle(week) {
+        var weekAsAngle = (90-week*9)%360;
+        return weekAsAngle;   
+    }
+
 
 }

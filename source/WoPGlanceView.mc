@@ -55,7 +55,7 @@ class WoPGlanceView extends WatchUi.GlanceView {
         dc.drawText(0, 40, G.FONT_GLANCE, message, G.TEXT_JUSTIFY_LEFT);
         _currentWoP.get(:week);
         
-        
+       
         System.println("Trimester: " + _currentWoP.get(:trimester));
         switch (_currentWoP.get(:trimester)) {
             case 1:

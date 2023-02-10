@@ -22,14 +22,13 @@ class AboutView extends WatchUi.View {
 
     var posY = dc.getHeight()/2.5;
     var titleHeight = dc.getFontHeight(Gfx.FONT_MEDIUM) * spacing * spacing;
-
     write(dc, aboutTitle, Gfx.COLOR_WHITE, Gfx.FONT_MEDIUM, posY - titleHeight);
-
     write(dc, aboutVersion, Gfx.COLOR_WHITE, Gfx.FONT_XTINY, posY);
     posY += hfx;
     write(dc, "by", Gfx.COLOR_DK_GRAY, Gfx.FONT_XTINY, posY);
     posY += hfx;
-    write(dc, "Mario Schülke", Gfx.COLOR_PINK, Gfx.FONT_XTINY, posY);
+    write(dc, "Mario Schülke", Gfx.COLOR_WHITE, Gfx.FONT_XTINY, posY);
+    
   }
 
   function write( dc, text, color, font, locY ) {
