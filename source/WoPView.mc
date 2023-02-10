@@ -16,26 +16,31 @@ class WoPView extends WatchUi.View {
     private var _countdownDaysLabel;
     private var _countdownDays;
     private var _dateOfBirth;
-    private var _durationPregnancy = new Time.Duration(24192000) ; //280d in sec
+    var center_x; 
+    var center_y; 
+
     var calculator = new WoPcalcDates();
 
     function initialize() {
-        
+        View.initialize();
+
         sAppTitle = WatchUi.loadResource(Rez.Strings.view_title);
         textTop = WatchUi.loadResource(Rez.Strings.text_top);
         textWoP = WatchUi.loadResource(Rez.Strings.wop);
         calculator.setDateOfBirth();
-        View.initialize();
+        
 
     }
 
     // Load your resources here
-    function onLayout(dc as Dc) as Void {
+    function onLayout(dc) as Void {
         setLayout(Rez.Layouts.MainLayout(dc));
 
         _textTop = findDrawableById("textTop");
         _currentWoPLabel = findDrawableById("week");
         _countdownDaysLabel = findDrawableById("countdown");
+        center_x = dc.getWidth()/2;
+        center_y = dc.getHeight()/2;
         
     }
 
@@ -56,12 +61,16 @@ class WoPView extends WatchUi.View {
         _currentWoP = calculator.getDates(_dateOfBirth, today);
         _currentWoPLabel.setText(_currentWoP.get(:week)+ " " + textWoP + " ("+ (_currentWoP.get(:exactWeek)+"W + "+_currentWoP.get(:dayInWeek) +")"));
 
+
+
     }
 
     // Update the view
-    function onUpdate(dc as Dc) as Void {
-        // Call the parent onUpdate function to redraw the layout
+    function onUpdate(dc) as Void {
+         // Call the parent onUpdate function to redraw the layout
         View.onUpdate(dc);
+        circleStatus(dc);
+
     }
 
     // Called when this View is removed from the screen. Save the
@@ -69,6 +78,33 @@ class WoPView extends WatchUi.View {
     // memory.
     function onHide() as Void {
 
+    }
+
+    function circleStatus(dc) {
+        dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_BLACK);
+        var radius;
+        if (center_x < center_y) {
+            radius = center_x-3;
+            } 
+        else {
+            radius = center_y-3;
+            }
+        //draw 3 gray arcs
+        dc.setPenWidth(((dc.getWidth()/25)).toNumber());
+        dc.drawArc(center_x, center_y, radius, Graphics.ARC_CLOCKWISE, 0, 360);
+        //dc.drawArc(center_x, center_y, radius, Graphics.ARC_CLOCKWISE, 328, 214);
+        //dc.drawArc(center_x, center_y, radius, Graphics.ARC_CLOCKWISE, 206, 94);
+    
+        dc.setColor(Graphics.COLOR_DK_GREEN, Graphics.COLOR_BLACK);
+        dc.setPenWidth(((dc.getWidth()/20)).toNumber());
+        dc.drawArc(center_x, center_y, radius, Graphics.ARC_CLOCKWISE, 90, _currentWoP.get(:angle));
+        System.println("Angle: " + (_currentWoP.get(:angle)));
+
+        dc.setPenWidth(((dc.getWidth()/10)).toNumber());
+        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
+        dc.drawArc(center_x, center_y, radius, Graphics.ARC_CLOCKWISE, 236, 232);
+        dc.drawArc(center_x, center_y, radius, Graphics.ARC_CLOCKWISE, 344, 340);
+        dc.drawArc(center_x, center_y, radius, Graphics.ARC_CLOCKWISE, 92, 88);
     }
 
 }
