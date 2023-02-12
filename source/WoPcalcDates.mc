@@ -8,23 +8,16 @@ import Toybox.WatchUi;
 (:glance)
 class WoPcalcDates {
 
-    var _birthdateDict = {};
-    var _currentWoP;
-    var _countdown;
-    var _dateOfBirth;
-    var _today;
-    var _exactWeek;
-    var _week;
-    var _dayInWeek;
-    var _trimester;
-    var _durationPregnancy = new Time.Duration(24192000); //280d in sec
+    private var _dateOfBirth; // as Gregorian moment
+    private var _today; 
+    private var _week;
+    private var _dayInWeek;
+    private var _trimester;
+    private var _weeksDict;
+    private const DURATION_PREGNANCY = new Time.Duration(24192000); //280d in sec
 
 
     function setDateOfBirth() {
-        System.println("Set date of birth method");
-        
-        System.println("Month: " + Storage.getValue("month"));
-
         var options = {
             :year   => Storage.getValue("year"),
             :month  => Storage.getValue("month"),
@@ -32,7 +25,7 @@ class WoPcalcDates {
             :hour => 0   // UTC offset, in this case for CST
         };
         _dateOfBirth = Gregorian.moment(options);
-                //System.println(_dateOfBirth.value());
+        //System.println(_dateOfBirth.value());
         // print date of birth for test
         /*var dateOfBirth = Gregorian.utcInfo(_dateOfBirth, Time.FORMAT_SHORT);
         System.println(Lang.format("$1$-$2$-$3$", [
@@ -50,9 +43,8 @@ class WoPcalcDates {
         var countdown = dateOfBirth.subtract(today);
         var output = countdown.divide(86400);
         output = output.value();
-        var output1 = output.toString();
-        //Set Text on screen
-        return output1;
+        countdown = output.toString();
+        return countdown;
         }
 
     // return today as Moment
@@ -60,37 +52,34 @@ class WoPcalcDates {
         _today = new Time.Moment(Time.today().value());
         var oneHour = new Time.Duration(Gregorian.SECONDS_PER_HOUR);
         _today = _today.add(oneHour); 
-        //System.println(_today.value());
         return _today;
     }
 
         // calculate week of pregancy and week and day seperatly 
     function getDates(dateOfBirth as Time.Moment, today as Time.Moment ){
-        var currentWoP = today.subtract(dateOfBirth.subtract(_durationPregnancy)); //WoP in Days
+        var currentWoP = today.subtract(dateOfBirth.subtract(DURATION_PREGNANCY)); //WoP in Days
 
         //System.println("WoP in seconds: " + currentWoP.value()); // WoP output in seconds
         var woP_in_Days = (currentWoP.value())/(86400);  // WoP output in days
         //System.println("WoP in days: " + woP_in_Days);
         _week = (woP_in_Days/7)+1;  //set current WoP!
-        //var exactWeek = woP_in_Days.toDouble()/7.0; // WoP in weeks as float
         _dayInWeek = woP_in_Days%7; //exact day in week
         //System.println("WoP in week: " + exactWeek);
-        // System.println("Current WoP: " + week);
+        //System.println("Current WoP: " + week);
         //System.println("Current Day: " + (_dayInWeek));
         _trimester = getTrimester(_week);
-        var weeksDict = {
+        _weeksDict = {
             :week => _week, :exactWeek => woP_in_Days/7, :dayInWeek => _dayInWeek, :trimester => _trimester,
             :angle => getAngle(_week)
         };
-        return weeksDict;
+        return _weeksDict;
     }
 
-    function getTrimester(week)
-    {
+    function getTrimester(week) {
         if (week <= 12)  {return 1; }
         if (week <= 24)  {return 2; }
         if (week <= 40)  {return 3; }
-        else {return 4;}
+        else {return 0;}
     }
 
     //convert week to an angle to draw the arc
@@ -98,5 +87,4 @@ class WoPcalcDates {
         var weekAsAngle = (90-week*9)%360;
         return weekAsAngle;   
     }
-
 }

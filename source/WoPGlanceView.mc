@@ -30,6 +30,9 @@ class WoPGlanceView extends WatchUi.GlanceView {
         yCenter = dc.getHeight() /2; //use alter for adkjusting height of text
         GW = dc.getWidth();
     	GH = dc.getHeight();
+    	GH = dc.getHeight();
+    
+        GH = dc.getHeight();
     
     }
 
@@ -42,7 +45,6 @@ class WoPGlanceView extends WatchUi.GlanceView {
         _currentWoP = calculatorGlance.getDates(_dateOfBirth, _today);
         xPosWeek = 100/(_currentWoP.get(:week)/0.4);
         message = _currentWoP.get(:week)+ ". SSW ("+ (_currentWoP.get(:exactWeek)+"W + "+_currentWoP.get(:dayInWeek) +")");
-        
     }
 
     // Update the view
@@ -88,8 +90,6 @@ class WoPGlanceView extends WatchUi.GlanceView {
         dc.setColor(G.COLOR_WHITE, G.COLOR_BLACK);
         dc.setPenWidth(5);
         dc.drawLine(GW/xPosWeek, GH/2+7, GW/xPosWeek, GH/2-7);
-
-
     }
 
     // Called when this View is removed from the screen. Save the

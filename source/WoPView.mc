@@ -7,7 +7,6 @@ using Toybox.Lang;
 
 class WoPView extends WatchUi.View {
 
-    private var sAppTitle;
     private var _textTop;
     private var textTop;
     private var textWoP;
@@ -17,8 +16,9 @@ class WoPView extends WatchUi.View {
     private var _countdownDays;
     private var _dateOfBirth;
     private var _trimesterLabel;
-    var center_x; 
-    var center_y; 
+    private var center_x; 
+    private var center_y;
+    private var sAppTitle; 
 
     var calculator = new WoPcalcDates();
 
@@ -76,33 +76,38 @@ class WoPView extends WatchUi.View {
 
     }
 
+    // drawing the grey arc and the status of pregancy as arc
     function circleStatus(dc) {
         dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_BLACK);
         var radius;
         if (center_x < center_y) {
             radius = center_x-3;
-            } 
+        } 
         else {
             radius = center_y-3;
-            }
+        }
+
         //draw 1 gray arcs
         dc.setPenWidth(((dc.getWidth()/25)).toNumber());
         dc.drawArc(center_x, center_y, radius, Graphics.ARC_CLOCKWISE, 0, 360);
+        // draw week on arc 
         var angle = _currentWoP.get(:angle);
         dc.setColor(Graphics.COLOR_GREEN, Graphics.COLOR_BLACK);
         dc.setPenWidth(((dc.getWidth()/20)).toNumber());
         dc.drawArc(center_x, center_y, radius, Graphics.ARC_CLOCKWISE, 90, angle);
         
         System.println("Angle: " + (_currentWoP.get(:angle)));
-
+        // draw 3 black rectangle to seperate grey arc
         dc.setPenWidth(((dc.getWidth()/10)).toNumber());
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
         dc.drawArc(center_x, center_y, radius, Graphics.ARC_CLOCKWISE, 236, 232);
         dc.drawArc(center_x, center_y, radius, Graphics.ARC_CLOCKWISE, 344, 340);
         dc.drawArc(center_x, center_y, radius, Graphics.ARC_CLOCKWISE, 92, 88);
         dc.setPenWidth(((dc.getWidth()/10)).toNumber());
+        // draw white arc for current week on the circle
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
         dc.drawArc(center_x, center_y, radius, Graphics.ARC_CLOCKWISE, angle+3, angle-3);
+
     }
 
 }
