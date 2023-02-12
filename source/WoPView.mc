@@ -16,18 +16,18 @@ class WoPView extends WatchUi.View {
     private var _countdownDays;
     private var _dateOfBirth;
     private var _trimesterLabel;
-    private var center_x; 
+    private var center_x;
     private var center_y;
-    private var sAppTitle; 
+    private var sAppTitle;
 
     var calculator = new WoPcalcDates();
 
     function initialize() {
         View.initialize();
 
-        sAppTitle = WatchUi.loadResource(Rez.Strings.view_title);
         textTop = WatchUi.loadResource(Rez.Strings.text_top);
         textWoP = WatchUi.loadResource(Rez.Strings.wop);
+        sAppTitle = WatchUi.loadResource(Rez.Strings.view_title);
         calculator.setDateOfBirth();
 
     }
@@ -57,7 +57,7 @@ class WoPView extends WatchUi.View {
         _countdownDaysLabel.setText("Noch " + _countdownDays + " Tage" );
 
         //calculate week an set text
-        _currentWoP = calculator.getDates(_dateOfBirth, today);
+        _currentWoP = calculator.getDates();
         _currentWoPLabel.setText(_currentWoP.get(:week)+ " " + textWoP + " ("+ (_currentWoP.get(:exactWeek)+"W + "+_currentWoP.get(:dayInWeek) +")"));
         _trimesterLabel.setText("Im " + _currentWoP.get(:trimester) + ". Trimester");
     }

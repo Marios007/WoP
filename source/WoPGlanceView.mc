@@ -29,10 +29,8 @@ class WoPGlanceView extends WatchUi.GlanceView {
         appTitle = WatchUi.loadResource(Rez.Strings.glance_title);
         yCenter = dc.getHeight() /2; //use alter for adkjusting height of text
         GW = dc.getWidth();
-    	GH = dc.getHeight();
-    	GH = dc.getHeight();
-    
         GH = dc.getHeight();
+        _today = calculatorGlance.getToday();
     
     }
 
@@ -40,9 +38,7 @@ class WoPGlanceView extends WatchUi.GlanceView {
     // Restore the state of this View and prepare it to be shown. 
     // This includes loading resources into memory.
     function onShow() {
-        _today = calculatorGlance.getToday();
-        _dateOfBirth = calculatorGlance.getDateOfBirth();
-        _currentWoP = calculatorGlance.getDates(_dateOfBirth, _today);
+        _currentWoP = calculatorGlance.getDates();
         xPosWeek = 100/(_currentWoP.get(:week)/0.4);
         message = _currentWoP.get(:week)+ ". SSW ("+ (_currentWoP.get(:exactWeek)+"W + "+_currentWoP.get(:dayInWeek) +")");
     }
