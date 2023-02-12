@@ -26,4 +26,9 @@
     <string id="month12">Dez</string>
 
 
+    <string id="SettingsDayTitle">Tag</string>
+    <string id="SettingsMonthTitle">Monat</string>
+    <string id="SettingsYearTitle">Jahr</string>
+
+
 </strings>

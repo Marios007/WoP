@@ -1,37 +1,37 @@
 <layouts>
-<layout id="MainLayout">
-    <label
-        id="textTop"
-        text=""
-        x="center"
-        y="15%"
-        font="Gfx.FONT_XTINY"
-        justification="Gfx.TEXT_JUSTIFY_CENTER"
-    />
-    <label
-        id="week"
-        text=""
-        x="center"
-        y="35%"
-        font="Gfx.FONT_MEDIUM"
-        justification="Gfx.TEXT_JUSTIFY_CENTER"
-    />
-          <label
-        id="trimester"
-        text=""
-        x="center"
-        y="55%"
-        font="Gfx.FONT_TINY"
-        justification="Gfx.TEXT_JUSTIFY_CENTER"
-    />
-      <label
-        id="countdown"
-        text=""
-        x="center"
-        y="70%"
-        font="Gfx.FONT_TINY"
-        justification="Gfx.TEXT_JUSTIFY_CENTER"
-    />
+    <layout id="MainLayout">
+        <label
+            id="textTop"
+            text=""
+            x="center"
+            y="15%"
+            font="Gfx.FONT_XTINY"
+            justification="Gfx.TEXT_JUSTIFY_CENTER"
+        />
+        <label
+            id="week"
+            text=""
+            x="center"
+            y="35%"
+            font="Gfx.FONT_MEDIUM"
+            justification="Gfx.TEXT_JUSTIFY_CENTER"
+        />
+        <label
+            id="trimester"
+            text=""
+            x="center"
+            y="55%"
+            font="Gfx.FONT_TINY"
+            justification="Gfx.TEXT_JUSTIFY_CENTER"
+        />
+        <label
+            id="countdown"
+            text=""
+            x="center"
+            y="70%"
+            font="Gfx.FONT_TINY"
+            justification="Gfx.TEXT_JUSTIFY_CENTER"
+        />
 </layout>
 
 <layout id="MainLayoutNew">
@@ -39,11 +39,10 @@
         color="Graphics.COLOR_BLACK" justification="Graphics.TEXT_JUSTIFY_CENTER"
         text="The quick brown fox jumped over the lazy dog" 
         x="10%" y="20%" width="80%" height="60%">
-        <!----> The fonts will be tried in order. This allows scaling the font size
-             as the text grows -->        
+        <!----> The fonts will be tried in order. This allows scaling the font size as the text grows-->
         <fonts>
             <font>Gfx.FONT_MEDIUM</font>
-            <font>Gfx.FONT_SMALL</font>            
+            <font>Gfx.FONT_SMALL</font>
             <font>Gfx.FONT_TINY</font>
             <font>Gfx.FONT_XTINY</font>
         </fonts>

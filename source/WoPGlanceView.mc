@@ -5,14 +5,14 @@ using Toybox.Graphics as G;
 (:glance)
 class WoPGlanceView extends WatchUi.GlanceView {
 
-	var _message = "";
-	var _appTitle;
+    var _message = "";
+    var _appTitle;
     var _woPDates;
     var _today;
     var calculatorGlance;
     var _xPosWeek;
-	var GW;
-	var GH;
+    var GW;
+    var GH;
 
 
     function initialize() {
