@@ -92,11 +92,33 @@ class WoPView extends WatchUi.View {
         dc.drawArc(center_x, center_y, radius, Graphics.ARC_CLOCKWISE, 0, 360);
         // draw week on arc 
         var angle = _currentWoP.get(:angle);
-        dc.setColor(Graphics.COLOR_GREEN, Graphics.COLOR_BLACK);
         dc.setPenWidth(((dc.getWidth()/20)).toNumber());
-        dc.drawArc(center_x, center_y, radius, Graphics.ARC_CLOCKWISE, 90, angle);
+        switch (_currentWoP.get(:trimester)) {
+            case 1:
+                dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_BLACK);
+                dc.drawArc(center_x, center_y, radius, Graphics.ARC_CLOCKWISE, 90, angle);
+                break;
+            case 2:
+                dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_BLACK);
+                dc.drawArc(center_x, center_y, radius, Graphics.ARC_CLOCKWISE, 90, 342);
+                dc.setColor(Graphics.COLOR_YELLOW, Graphics.COLOR_BLACK);
+                dc.drawArc(center_x, center_y, radius, Graphics.ARC_CLOCKWISE, 344, angle);
+
+                break;
+            case 3:
+                dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_BLACK);
+                dc.drawArc(center_x, center_y, radius, Graphics.ARC_CLOCKWISE, 90, 342);
+                dc.setColor(Graphics.COLOR_YELLOW, Graphics.COLOR_BLACK);
+                dc.drawArc(center_x, center_y, radius, Graphics.ARC_CLOCKWISE, 344, 236);
+                dc.setColor(Graphics.COLOR_GREEN, Graphics.COLOR_BLACK);
+                dc.drawArc(center_x, center_y, radius, Graphics.ARC_CLOCKWISE, 232, angle);
+
+                break;
+            case 4:
+                break;
         
-        System.println("Angle: " + (_currentWoP.get(:angle)));
+        }
+
         // draw 3 black rectangle to seperate grey arc
         dc.setPenWidth(((dc.getWidth()/10)).toNumber());
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);

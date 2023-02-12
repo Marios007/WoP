@@ -10,12 +10,13 @@ class WoPcalcDates {
 
     private var _dateOfBirth; // as Gregorian moment
     private var _today; 
-    private var _week;
-    private var _dayInWeek;
-    private var _trimester;
     private var _weeksDict;
     private const DURATION_PREGNANCY = new Time.Duration(24192000); //280d in sec
 
+
+    function initialize() {
+        _today =  getToday();
+    }
 
     function setDateOfBirth() {
         var options = {
@@ -41,9 +42,8 @@ class WoPcalcDates {
     // calculate the countdown until birth
     function calculateCountdown(dateOfBirth as Time.Moment, today as Time.Moment) {
         var countdown = dateOfBirth.subtract(today);
-        var output = countdown.divide(86400);
-        output = output.value();
-        countdown = output.toString();
+        countdown = countdown.divide(Gregorian.SECONDS_PER_DAY);
+        countdown = countdown.value().toString();
         return countdown;
     }
 
@@ -55,26 +55,29 @@ class WoPcalcDates {
         return _today;
     }
 
-        // calculate week of pregancy and week and day seperatly 
+        // calculate week of pregancy and week and day seperatly, return a dict with all information
     function getDates(){
         var dateOfBirth = getDateOfBirth();
-        var currentWoP = _today.subtract(dateOfBirth.subtract(DURATION_PREGNANCY)); //WoP in Days
+        var today = getToday();
+        var currentWoP = today.subtract(dateOfBirth.subtract(DURATION_PREGNANCY)); //WoP in Days
         //System.println("WoP in seconds: " + currentWoP.value()); // WoP output in seconds
-        var woP_in_Days = (currentWoP.value())/(86400);  // WoP output in days
+        var woP_in_Days = (currentWoP.value())/(Gregorian.SECONDS_PER_DAY);  // WoP output in days
         //System.println("WoP in days: " + woP_in_Days);
-        _week = (woP_in_Days/7)+1;  //set current WoP!
-        _dayInWeek = woP_in_Days%7; //exact day in week
+        var week = (woP_in_Days/7)+1;  //set current WoP!
+        var dayInWeek = woP_in_Days%7; //exact day in week
         //System.println("WoP in week: " + exactWeek);
         //System.println("Current WoP: " + week);
         //System.println("Current Day: " + (_dayInWeek));
-        _trimester = getTrimester(_week);
+        var trimester = getTrimester(week);
+        var angle = getAngle(week);
         _weeksDict = {
-            :week => _week, :exactWeek => woP_in_Days/7, :dayInWeek => _dayInWeek, :trimester => _trimester,
-            :angle => getAngle(_week)
+            :week => week, :exactWeek => woP_in_Days/7, :dayInWeek => dayInWeek, :trimester => trimester,
+            :angle => angle
         };
         return _weeksDict;
     }
 
+    // return the trimester according to the week
     function getTrimester(week) {
         if (week <= 12)  {return 1; }
         if (week <= 24)  {return 2; }
