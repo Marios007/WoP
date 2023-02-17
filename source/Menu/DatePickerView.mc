@@ -13,7 +13,6 @@ class DatePicker extends WatchUi.Picker {
                       $.Rez.Strings.month04, $.Rez.Strings.month05, $.Rez.Strings.month06,
                       $.Rez.Strings.month07, $.Rez.Strings.month08, $.Rez.Strings.month09,
                       $.Rez.Strings.month10, $.Rez.Strings.month11, $.Rez.Strings.month12] as Array<Symbol>;
-                      
         var title = new WatchUi.Text({:text=>$.Rez.Strings.datePickerTitle, :locX=>WatchUi.LAYOUT_HALIGN_CENTER,
             :locY=>WatchUi.LAYOUT_VALIGN_BOTTOM,:font=>Graphics.FONT_SYSTEM_TINY, :color=>Graphics.COLOR_WHITE});
         var separator = new WatchUi.Text({:text=>$.Rez.Strings.dateSeparator, :locX=>WatchUi.LAYOUT_HALIGN_CENTER,

@@ -3,6 +3,7 @@ using Toybox.Time.Gregorian;
 using Toybox.Lang;
 using Toybox.Time;
 using Toybox.Application.Storage;
+using Toybox.Application.Properties;
 import Toybox.WatchUi;
 
 (:glance)
@@ -20,9 +21,9 @@ class WoPcalcDates {
 
     function setDateOfBirth() {
         var options = {
-            :year   => Storage.getValue("year"),
-            :month  => Storage.getValue("month"),
-            :day    => Storage.getValue("day"),
+            :year   => Properties.getValue("year"),
+            :month  => Properties.getValue("month"),
+            :day    => Properties.getValue("day"),
             :hour => 0   // UTC offset, in this case for CST
         };
         _dateOfBirth = Gregorian.moment(options);

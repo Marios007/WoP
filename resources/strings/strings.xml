@@ -8,6 +8,7 @@
     <string id="info">Info</string>
     <string id="wop">SSW</string>
     <string id="text_top">Du bist in der</string>
+    
 
     <!-- Date picker --> 
     <string id="datePickerTitle">Geburtsdatum wählen</string>

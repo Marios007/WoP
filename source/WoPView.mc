@@ -13,6 +13,7 @@ class WoPView extends WatchUi.View {
     private var _currentWoP;
     private var _currentWoPLabel;
     private var _countdownDaysLabel;
+    private var _inLabel;
     private var _countdownDays;
     private var _dateOfBirth;
     private var _trimesterLabel;
@@ -40,6 +41,7 @@ class WoPView extends WatchUi.View {
         _currentWoPLabel = findDrawableById("week");
         _countdownDaysLabel = findDrawableById("countdown");
         _trimesterLabel = findDrawableById("trimester");
+        //_inLabel = findDrawableById("trimester");
         center_x = dc.getWidth()/2;
         center_y = dc.getHeight()/2;
     }
@@ -116,7 +118,6 @@ class WoPView extends WatchUi.View {
                 break;
             case 4:
                 break;
-        
         }
 
         // draw 3 black rectangle to seperate grey arc

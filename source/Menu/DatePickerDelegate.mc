@@ -1,4 +1,5 @@
 import Toybox.Application.Storage;
+import Toybox.Application.Properties;
 import Toybox.Graphics;
 import Toybox.Lang;
 import Toybox.WatchUi;
@@ -24,9 +25,8 @@ class DatePickerDelegate extends WatchUi.PickerDelegate {
     //! @param values The values chosen in the picker
     //! @return true if handled, false otherwise
     public function onAccept(values as Array<Number?>) as Boolean {
-        var separator = WatchUi.loadResource($.Rez.Strings.dateSeparator) as String;
+        //var separator = WatchUi.loadResource($.Rez.Strings.dateSeparator) as String;
         var monthResource = values[0];
-        System.println("month values [0] "+values[0]);
         if (monthResource != null) {
             var month = WatchUi.loadResource(monthResource as Symbol) as String;
             var day = values[2];
@@ -34,9 +34,13 @@ class DatePickerDelegate extends WatchUi.PickerDelegate {
             if ((day != null) && (year != null)) {
                 var date = month + day + year;
                 Storage.setValue("day", day);
+                Properties.setValue("day", day);
                 Storage.setValue("month", convertMonth(month));
+                Properties.setValue("month", convertMonth(month));
                 Storage.setValue("year", year);
-                Storage.setValue("date", date);
+                Properties.setValue("year", year);
+
+                Properties.setValue("dateSet", 1);
             }
         }
         WatchUi.popView(WatchUi.SLIDE_IMMEDIATE);

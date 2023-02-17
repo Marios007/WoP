@@ -1,6 +1,7 @@
 import Toybox.Application;
 import Toybox.Lang;
 import Toybox.WatchUi;
+import Toybox.Application.Properties;
 
 class WoPApp extends Application.AppBase {
 
@@ -21,13 +22,13 @@ class WoPApp extends Application.AppBase {
     function onStop(state as Dictionary?) as Void {
     }
 
-    // Return the initial glance view of your widget here
-	(:glance)
+    // Return the initial glance view of your widget here   
+    (:glance)
     function getGlanceView() {
-    	mGlanceView = new WoPGlanceView();
+        mGlanceView = new WoPGlanceView();
         mModel = new WoPcalcDates();
         mDelegate = new WoPDelegate(mModel);
-    	return [ mGlanceView];
+        return [ mGlanceView];
     }
 
 

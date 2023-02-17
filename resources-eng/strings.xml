@@ -25,4 +25,8 @@
     <string id="month11">Nov</string>
     <string id="month12">Dec</string>
 
+    <string id="SettingsDayTitle">Day</string>
+    <string id="SettingsMonthTitle">Month</string>
+    <string id="SettingsYearTitle">Year</string>
+
 </strings>
