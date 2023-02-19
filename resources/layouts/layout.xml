@@ -7,7 +7,7 @@
     </layout>
 
     <layout id="MainLayout">
-        <bitmap id="LauncherIcon" x="center" y="7%" filename="../drawables/woman_pregnant_icon.png" />
+        <bitmap id="LauncherIcon" x="center" y="7%" filename="../drawables/woman_pregnant4040.png" />
         <text-area id="textTop" color="Graphics.COLOR_WHITE" justification="Graphics.TEXT_JUSTIFY_CENTER" text="txtTop" x="center" y="25%" width="80%" height="20%">
             <fonts>
                 <font>Gfx.FONT_XTINY</font>
