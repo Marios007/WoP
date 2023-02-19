@@ -15,7 +15,7 @@
     
 
     <!-- Date picker --> 
-    <string id="datePickerTitle">Pick a date</string>
+    <string id="datePickerTitle">Pick date</string>
     <string id="dateSeparator">-</string>
     <string id="month01">Jan</string>
     <string id="month02">Feb</string>

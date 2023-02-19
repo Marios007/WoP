@@ -57,6 +57,9 @@ class WoPGlanceView extends WatchUi.GlanceView {
                 dc.setPenWidth(8);
                 dc.setColor(G.COLOR_RED, -1);
                 dc.drawLine(0, GH/2, GW/_xPosWeek, GH/2);
+                dc.setColor(G.COLOR_WHITE, G.COLOR_BLACK);
+                dc.setPenWidth(7);
+                dc.drawLine(GW/_xPosWeek, GH/2+7, (GW/_xPosWeek), GH/2-7);
                 break;
             case 2:
                 dc.setPenWidth(8);
@@ -65,6 +68,9 @@ class WoPGlanceView extends WatchUi.GlanceView {
                 dc.setPenWidth(8);
                 dc.setColor(G.COLOR_RED, -1);
                 dc.drawLine(0, GH/2, GW/3.6, GH/2);
+                dc.setColor(G.COLOR_WHITE, G.COLOR_BLACK);
+                dc.setPenWidth(7);
+                dc.drawLine(GW/_xPosWeek+1, GH/2+7, (GW/_xPosWeek+1), GH/2-7);
                 break;
             case 3:
                 dc.setPenWidth(8);
@@ -75,13 +81,16 @@ class WoPGlanceView extends WatchUi.GlanceView {
                 dc.drawLine(0, GH/2, GW/3.6, GH/2);
                 dc.setColor(G.COLOR_YELLOW, -1);
                 dc.drawLine(GW/3, GH/2, GW/1.63, GH/2);
+                dc.setColor(G.COLOR_WHITE, G.COLOR_BLACK);
+                dc.setPenWidth(7);
+                dc.drawLine(GW/_xPosWeek+2, GH/2+7, GW/_xPosWeek+2, GH/2-7);
                 break;
             default:
                 break;
         } 
-        dc.setColor(G.COLOR_WHITE, G.COLOR_BLACK);
-        dc.setPenWidth(5);
-        dc.drawLine(GW/_xPosWeek, GH/2+7, GW/_xPosWeek, GH/2-7);
+        //dc.setColor(G.COLOR_WHITE, G.COLOR_BLACK);
+        //dc.setPenWidth(7);
+        //dc.drawLine(GW/_xPosWeek, GH/2+7, (GW/_xPosWeek), GH/2-7);
     }
 
     // Called when this View is removed from the screen. Save the
