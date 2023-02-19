@@ -9,6 +9,10 @@ Shows the current week of pregnancy and trimester.
 - Glance view
 
 ---------
+## Sources
+
+https://www.babelli.de/entwicklung-embryo/
+
 
 
 ## Supported devices

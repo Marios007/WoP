@@ -1,7 +1,6 @@
 import Toybox.Application;
 import Toybox.Lang;
 import Toybox.WatchUi;
-import Toybox.Application.Properties;
 
 class WoPApp extends Application.AppBase {
 

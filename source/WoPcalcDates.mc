@@ -4,7 +4,7 @@ using Toybox.Lang;
 using Toybox.Time;
 using Toybox.Application.Storage;
 using Toybox.Application.Properties;
-import Toybox.WatchUi;
+using Toybox.WatchUi;
 
 (:glance)
 class WoPcalcDates {

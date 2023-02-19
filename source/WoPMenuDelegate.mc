@@ -1,6 +1,5 @@
 using Toybox.WatchUi;
 using Toybox.System;
-import Toybox.Application.Storage;
 
 class MyMenuInputDelegate extends WatchUi.MenuInputDelegate {
     function initialize() {
