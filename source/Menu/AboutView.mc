@@ -10,8 +10,8 @@ class AboutView extends WatchUi.View {
   function initialize() {
     spacing = System.getDeviceSettings().screenHeight < 160 ? 1.1 : 1.3;
 
-    aboutTitle = WatchUi.loadResource(Rez.Strings.AppName);
-    aboutVersion = "Version 0.1";
+    aboutTitle = WatchUi.loadResource(Rez.Strings.AppNameAbout);
+    aboutVersion = "Version 0.2";
     hfx = Gfx.getFontHeight(Gfx.FONT_XTINY) * spacing;
     View.initialize();
   }
@@ -28,7 +28,6 @@ class AboutView extends WatchUi.View {
     write(dc, "by", Gfx.COLOR_DK_GRAY, Gfx.FONT_XTINY, posY);
     posY += hfx;
     write(dc, "wop.garmin@outlook.com", Gfx.COLOR_WHITE, Gfx.FONT_XTINY, posY);
-    
   }
 
   function write( dc, text, color, font, locY ) {

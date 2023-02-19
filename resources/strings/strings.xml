@@ -1,5 +1,6 @@
 <strings>
     <string id="AppName">SSW</string>
+    <string id="AppNameAbout">SSW-Widget</string>
     <string id="view_title" scope="foreground">Schwangerschaft</string>
     <string id="glance_title" scope="glance">Schwangerschaft</string>
 
