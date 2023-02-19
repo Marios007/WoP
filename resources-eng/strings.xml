@@ -7,7 +7,7 @@
     <string id="menu_name">Settings</string>
     <string id="set_birthday">Set Birthdate</string>
     <string id="info">About</string>
-    <string id="wop">. WoP</string>
+    <string id="wop" scope="glance">. WoP </string>
     <string id="text_top">Current week</string>
     <string id="text_countdown1"></string>
     <string id="text_countdown2"> days remaining</string>

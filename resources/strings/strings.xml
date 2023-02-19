@@ -7,7 +7,7 @@
     <string id="menu_name">Menu</string>
     <string id="set_birthday">Geburtstermin ändern</string>
     <string id="info">Info</string>
-    <string id="wop">. SSW</string>
+    <string id="wop" scope="glance">. SSW </string>
     <string id="text_top">Du bist in der</string>
     <string id="text_countdown1">Noch </string>
     <string id="text_countdown2"> Tage</string>

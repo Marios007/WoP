@@ -7,6 +7,7 @@ class WoPGlanceView extends WatchUi.GlanceView {
 
     var _message = "";
     var _appTitle;
+    var _textWoP;
     var _woPDates;
     var _today;
     var calculatorGlance;
@@ -24,6 +25,7 @@ class WoPGlanceView extends WatchUi.GlanceView {
     // Load your resources here
     function onLayout(dc) {
         _appTitle = WatchUi.loadResource(Rez.Strings.glance_title);
+        _textWoP = WatchUi.loadResource(Rez.Strings.wop);
         GW = dc.getWidth();
         GH = dc.getHeight();
     }
@@ -34,7 +36,7 @@ class WoPGlanceView extends WatchUi.GlanceView {
     function onShow() {
         _woPDates = calculatorGlance.getDates();
         _xPosWeek = 100/(_woPDates.get(:week)/0.4);
-        _message = _woPDates.get(:week)+ ". SSW ("+ (_woPDates.get(:exactWeek)+"W + "+_woPDates.get(:dayInWeek) +")");
+        _message = _woPDates.get(:week) + _textWoP + "("  +(_woPDates.get(:exactWeek)+"W + "+_woPDates.get(:dayInWeek) +")");
     }
 
     // Update the view
@@ -42,7 +44,7 @@ class WoPGlanceView extends WatchUi.GlanceView {
         dc.setColor(G.COLOR_WHITE, G.COLOR_TRANSPARENT);
 
         dc.drawText(0, 0, G.FONT_GLANCE, _appTitle, G.TEXT_JUSTIFY_LEFT);
-        dc.drawText(0, 40, G.FONT_GLANCE, _message, G.TEXT_JUSTIFY_LEFT);
+        dc.drawText(0, GH/1.5, G.FONT_GLANCE, _message, G.TEXT_JUSTIFY_LEFT);
         dc.setPenWidth(7);
         dc.setColor(G.COLOR_DK_GRAY, -1);
         dc.drawLine(0, GH/2, GW/3.6, GH/2);
