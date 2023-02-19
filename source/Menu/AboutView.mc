@@ -27,7 +27,7 @@ class AboutView extends WatchUi.View {
     posY += hfx;
     write(dc, "by", Gfx.COLOR_DK_GRAY, Gfx.FONT_XTINY, posY);
     posY += hfx;
-    write(dc, "Mario Schülke", Gfx.COLOR_WHITE, Gfx.FONT_XTINY, posY);
+    write(dc, "wop.garmin@outlook.com", Gfx.COLOR_WHITE, Gfx.FONT_XTINY, posY);
     
   }
 
