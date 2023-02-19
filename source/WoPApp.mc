@@ -27,7 +27,6 @@ class WoPApp extends Application.AppBase {
     function getGlanceView() {
         mGlanceView = new WoPGlanceView();
         mModel = new WoPcalcDates();
-        mDelegate = new WoPDelegate();
         return [ mGlanceView];
     }
 

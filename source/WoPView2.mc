@@ -39,13 +39,7 @@ class WoPView2 extends WatchUi.View {
          // Call the parent onUpdate function to redraw the layout
         View.onUpdate(dc);
         circleStatus(dc);
-
-
         _textTop.setText(WatchUi.loadResource(Rez.Strings.text_top_page2));
-
-
-
-
     }
 
     // Called when this View is removed from the screen. Save the
