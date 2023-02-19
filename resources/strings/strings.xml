@@ -35,5 +35,7 @@
     <string id="SettingsMonthTitle">Monat</string>
     <string id="SettingsYearTitle">Jahr</string>
 
+    <!-- SecondPage --> 
+    <string id="text_top_page2">So groß wie </string>
 
 </strings>

@@ -34,4 +34,8 @@
     <string id="SettingsMonthTitle">Month</string>
     <string id="SettingsYearTitle">Year</string>
 
+    <!-- SecondPage --> 
+    <string id="text_top_page2">Text top</string>
+
+
 </strings>

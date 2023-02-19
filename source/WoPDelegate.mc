@@ -4,20 +4,19 @@ using Toybox.WatchUi;
 class WoPDelegate extends WatchUi.BehaviorDelegate {
     
     var model;
-    
-        // Set up the callback to the view
-    function initialize(model) {
-    	self.model = model;
+
+    // Set up the callback to the view
+    function initialize() {
         WatchUi.BehaviorDelegate.initialize();
     }
-    
+
     function onNextPage() {
+        WatchUi.pushView(new WoPView2(), new WoPDelegate2(), WatchUi.SLIDE_UP);
         return true;
     }
-    
+
     function onSelect() {
-    	// update data
-        //model.();
+        WatchUi.pushView(new WoPView2(), new WoPDelegate2(), WatchUi.SLIDE_UP);
         return true;
     }
 

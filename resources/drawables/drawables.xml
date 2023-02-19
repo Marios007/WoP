@@ -1,3 +1,4 @@
 <drawables>
     <bitmap id="LauncherIcon" filename="woman_pregnant4040.png" />
+    <bitmap id="fetusIcon" filename="baby_fetus_icon.png" />
 </drawables>

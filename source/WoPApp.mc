@@ -27,14 +27,14 @@ class WoPApp extends Application.AppBase {
     function getGlanceView() {
         mGlanceView = new WoPGlanceView();
         mModel = new WoPcalcDates();
-        mDelegate = new WoPDelegate(mModel);
+        mDelegate = new WoPDelegate();
         return [ mGlanceView];
     }
 
 
     // Return the initial view of your application here
     function getInitialView() as Array<Views or InputDelegates>? {
-        return [ new WoPView(), new MyBehaviorDelegate() ] as Array<Views or InputDelegates>;
+        return [ new WoPView(), new WoPDelegate() ] as Array<Views or InputDelegates>;
     }
 
 }

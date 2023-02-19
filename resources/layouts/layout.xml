@@ -1,14 +1,23 @@
 <layouts>
-    <layout id="MainLayoutOld">
-        <label id="textTop" text="" x="center" y="15%" font="Gfx.FONT_XTINY" justification="Gfx.TEXT_JUSTIFY_CENTER" />
-        <label id="week" text="" x="center" y="35%" font="Gfx.FONT_MEDIUM" justification="Gfx.TEXT_JUSTIFY_CENTER" />
-        <label id="trimester" text="" x="center" y="55%" font="Gfx.FONT_TINY" justification="Gfx.TEXT_JUSTIFY_CENTER" />
-        <label id="countdown" text="" x="center" y="70%" font="Gfx.FONT_TINY" justification="Gfx.TEXT_JUSTIFY_CENTER" />
+    <layout id="SecondPageLayout">
+        <bitmap id="fetusIcon" x="center" y="7%" filename="../drawables/baby_fetus_icon.png"/>
+        <text-area id="textTop" color="Graphics.COLOR_WHITE" justification="Graphics.TEXT_JUSTIFY_CENTER" text="" x="center" y="25%" width="80%" height="20%">
+            <fonts>
+                <font>Gfx.FONT_XTINY</font>
+            </fonts>
+        </text-area>
+        <text-area id="week" color="Graphics.COLOR_WHITE" justification="Graphics.TEXT_JUSTIFY_CENTER" text="Apfel" x="center" y="40%" width="90%" height="40%">
+            <fonts>
+                <font>Gfx.FONT_SMALL</font>
+                <font>Gfx.FONT_TINY</font>
+                <font>Gfx.FONT_XTINY</font>
+            </fonts>
+        </text-area>
     </layout>
 
     <layout id="MainLayout">
         <bitmap id="LauncherIcon" x="center" y="7%" filename="../drawables/woman_pregnant4040.png" />
-        <text-area id="textTop" color="Graphics.COLOR_WHITE" justification="Graphics.TEXT_JUSTIFY_CENTER" text="txtTop" x="center" y="25%" width="80%" height="20%">
+        <text-area id="textTop" color="Graphics.COLOR_WHITE" justification="Graphics.TEXT_JUSTIFY_CENTER" text="" x="center" y="25%" width="80%" height="20%">
             <fonts>
                 <font>Gfx.FONT_XTINY</font>
             </fonts>
