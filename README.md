@@ -2,10 +2,16 @@
 
 Shows the current week of pregnancy and trimester.
 
-Set the date inside the widget menu
+
+## Current functionality
+
+- Set the date inside the widget menu
+- Glance view
+
+---------
 
 
-Tested for:
+## Supported devices
 
 <table>
   <thead>
