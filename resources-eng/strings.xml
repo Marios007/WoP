@@ -6,8 +6,12 @@
     <string id="menu_name">Settings</string>
     <string id="set_birthday">Set Birthdate</string>
     <string id="info">About</string>
-    <string id="wop">WoP</string>
+    <string id="wop">. WoP</string>
     <string id="text_top">Current week</string>
+    <string id="text_countdown1"></string>
+    <string id="text_countdown2"> days remaining</string>
+    <string id="text_countdown3"> day remaining</string>
+    
 
     <!-- Date picker --> 
     <string id="datePickerTitle">Pick a date</string>

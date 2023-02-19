@@ -32,14 +32,9 @@ class DatePickerDelegate extends WatchUi.PickerDelegate {
             var day = values[2];
             var year = values[4];
             if ((day != null) && (year != null)) {
-                var date = month + day + year;
-                Storage.setValue("day", day);
                 Properties.setValue("day", day);
-                Storage.setValue("month", convertMonth(month));
                 Properties.setValue("month", convertMonth(month));
-                Storage.setValue("year", year);
                 Properties.setValue("year", year);
-
                 Properties.setValue("dateSet", 1);
             }
         }

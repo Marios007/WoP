@@ -1,9 +1,3 @@
-//!
-//! Copyright 2016 by HarryOnline
-//!
-//! Show About
-//!
-
 using Toybox.WatchUi as Ui;
 using Toybox.System;
 

@@ -8,27 +8,18 @@ using Toybox.Lang;
 class WoPView extends WatchUi.View {
 
     private var _textTop;
-    private var textTop;
-    private var textWoP;
     private var _currentWoP;
     private var _currentWoPLabel;
     private var _countdownDaysLabel;
-    private var _inLabel;
     private var _countdownDays;
     private var _dateOfBirth;
     private var _trimesterLabel;
     private var center_x;
     private var center_y;
-    private var sAppTitle;
-
     var calculator = new WoPcalcDates();
 
     function initialize() {
         View.initialize();
-
-        textTop = WatchUi.loadResource(Rez.Strings.text_top);
-        textWoP = WatchUi.loadResource(Rez.Strings.wop);
-        sAppTitle = WatchUi.loadResource(Rez.Strings.view_title);
         calculator.setDateOfBirth();
 
     }
@@ -41,7 +32,6 @@ class WoPView extends WatchUi.View {
         _currentWoPLabel = findDrawableById("week");
         _countdownDaysLabel = findDrawableById("countdown");
         _trimesterLabel = findDrawableById("trimester");
-        //_inLabel = findDrawableById("trimester");
         center_x = dc.getWidth()/2;
         center_y = dc.getHeight()/2;
     }
@@ -54,14 +44,15 @@ class WoPView extends WatchUi.View {
         _dateOfBirth = calculator.getDateOfBirth();
         var today = calculator.getToday();
         // calculate countdown and set text
-        _textTop.setText(textTop);
+        _textTop.setText(WatchUi.loadResource(Rez.Strings.text_top));
         _countdownDays = calculator.calculateCountdown(_dateOfBirth, today);
-        _countdownDaysLabel.setText("Noch " + _countdownDays + " Tage" );
+        _countdownDaysLabel.setText(WatchUi.loadResource(Rez.Strings.text_countdown1) + _countdownDays + WatchUi.loadResource(Rez.Strings.text_countdown2) );
 
         //calculate week an set text
         _currentWoP = calculator.getDates();
-        _currentWoPLabel.setText(_currentWoP.get(:week)+ " " + textWoP + " ("+ (_currentWoP.get(:exactWeek)+"W + "+_currentWoP.get(:dayInWeek) +")"));
-        _trimesterLabel.setText("Im " + _currentWoP.get(:trimester) + ". Trimester");
+        _currentWoPLabel.setText(_currentWoP.get(:week) + WatchUi.loadResource(Rez.Strings.wop) + " ("+ (_currentWoP.get(:exactWeek)+"W + "+_currentWoP.get(:dayInWeek) +")"));
+        _trimesterLabel.setText( _currentWoP.get(:trimester) + ". Trimester");
+        
     }
 
     // Update the view
@@ -99,12 +90,14 @@ class WoPView extends WatchUi.View {
             case 1:
                 dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_BLACK);
                 dc.drawArc(center_x, center_y, radius, Graphics.ARC_CLOCKWISE, 90, angle);
+                _trimesterLabel.setColor(Graphics.COLOR_RED);
                 break;
             case 2:
                 dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_BLACK);
                 dc.drawArc(center_x, center_y, radius, Graphics.ARC_CLOCKWISE, 90, 342);
                 dc.setColor(Graphics.COLOR_YELLOW, Graphics.COLOR_BLACK);
                 dc.drawArc(center_x, center_y, radius, Graphics.ARC_CLOCKWISE, 344, angle);
+                _trimesterLabel.setColor(Graphics.COLOR_YELLOW);
 
                 break;
             case 3:
@@ -114,7 +107,7 @@ class WoPView extends WatchUi.View {
                 dc.drawArc(center_x, center_y, radius, Graphics.ARC_CLOCKWISE, 344, 236);
                 dc.setColor(Graphics.COLOR_GREEN, Graphics.COLOR_BLACK);
                 dc.drawArc(center_x, center_y, radius, Graphics.ARC_CLOCKWISE, 232, angle);
-
+                _trimesterLabel.setColor(Graphics.COLOR_GREEN);
                 break;
             case 4:
                 break;

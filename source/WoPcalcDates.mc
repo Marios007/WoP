@@ -20,13 +20,22 @@ class WoPcalcDates {
     }
 
     function setDateOfBirth() {
-        var options = {
-            :year   => Properties.getValue("year"),
-            :month  => Properties.getValue("month"),
-            :day    => Properties.getValue("day"),
-            :hour => 0   // UTC offset, in this case for CST
-        };
-        _dateOfBirth = Gregorian.moment(options);
+        // if pregancy date is not set, set to today + 10 weeks 3 days
+        if (Properties.getValue("dateSet") == 0 ) {
+            var tenWeeks = new Time.Duration(17884800);
+            _dateOfBirth = _today.add(tenWeeks);
+        }
+
+        else {
+            var options = {
+                :year   => Properties.getValue("year"),
+                :month  => Properties.getValue("month"),
+                :day    => Properties.getValue("day"),
+                :hour => 0   // UTC offset, in this case for CST
+            };
+        
+            _dateOfBirth = Gregorian.moment(options);
+        }
         //System.println(_dateOfBirth.value());
         // print date of birth for test
         /*var dateOfBirth = Gregorian.utcInfo(_dateOfBirth, Time.FORMAT_SHORT);
