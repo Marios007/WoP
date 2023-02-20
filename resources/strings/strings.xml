@@ -12,7 +12,10 @@
     <string id="text_countdown1">Noch </string>
     <string id="text_countdown2"> Tage</string>
     <string id="text_countdown3"> Tag</string>
-    
+    <string id="first"></string>
+    <string id="second"></string>
+    <string id="third"></string>
+    <string id="trimester">. Trimester</string>
 
     <!-- Date picker --> 
     <string id="datePickerTitle">Geburtsd. wählen</string>

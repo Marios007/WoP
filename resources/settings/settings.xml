@@ -5,18 +5,18 @@
 
   <setting propertyKey="@Properties.month" title="@Strings.SettingsMonthTitle">
     <settingConfig type="list">
-      <listEntry value="0">@Strings.month01</listEntry>
-      <listEntry value="1">@Strings.month02</listEntry>
-      <listEntry value="2">@Strings.month03</listEntry>
-      <listEntry value="3">@Strings.month04</listEntry>
-      <listEntry value="4">@Strings.month05</listEntry>
-      <listEntry value="5">@Strings.month06</listEntry>
-      <listEntry value="6">@Strings.month07</listEntry>
-      <listEntry value="7">@Strings.month08</listEntry>
-      <listEntry value="8">@Strings.month09</listEntry>
-      <listEntry value="9">@Strings.month10</listEntry>
-      <listEntry value="10">@Strings.month11</listEntry>
-      <listEntry value="11">@Strings.month12</listEntry>
+      <listEntry value="1">@Strings.month01</listEntry>
+      <listEntry value="2">@Strings.month02</listEntry>
+      <listEntry value="3">@Strings.month03</listEntry>
+      <listEntry value="4">@Strings.month04</listEntry>
+      <listEntry value="5">@Strings.month05</listEntry>
+      <listEntry value="6">@Strings.month06</listEntry>
+      <listEntry value="7">@Strings.month07</listEntry>
+      <listEntry value="8">@Strings.month08</listEntry>
+      <listEntry value="9">@Strings.month09</listEntry>
+      <listEntry value="10">@Strings.month10</listEntry>
+      <listEntry value="11">@Strings.month11</listEntry>
+      <listEntry value="12">@Strings.month12</listEntry>
     </settingConfig>
   </setting>
 

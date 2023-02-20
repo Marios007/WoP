@@ -12,6 +12,10 @@
     <string id="text_countdown1"></string>
     <string id="text_countdown2"> days remaining</string>
     <string id="text_countdown3"> day remaining</string>
+    <string id="first">st</string>
+    <string id="second">nd</string>
+    <string id="third">rd</string>
+    <string id="trimester"> trimester</string>
     
 
     <!-- Date picker --> 

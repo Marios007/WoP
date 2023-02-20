@@ -51,7 +51,7 @@ class WoPView extends WatchUi.View {
         //calculate week an set text
         _currentWoP = calculator.getDates();
         _currentWoPLabel.setText(_currentWoP.get(:week) + WatchUi.loadResource(Rez.Strings.wop) + " ("+ (_currentWoP.get(:exactWeek)+"W + "+_currentWoP.get(:dayInWeek) +")"));
-        _trimesterLabel.setText( _currentWoP.get(:trimester) + ". Trimester");
+        
         
     }
 
@@ -91,6 +91,7 @@ class WoPView extends WatchUi.View {
                 dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_BLACK);
                 dc.drawArc(center_x, center_y, radius, Graphics.ARC_CLOCKWISE, 90, angle);
                 _trimesterLabel.setColor(Graphics.COLOR_RED);
+                _trimesterLabel.setText( _currentWoP.get(:trimester) + WatchUi.loadResource(Rez.Strings.first) + WatchUi.loadResource(Rez.Strings.trimester));
                 break;
             case 2:
                 dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_BLACK);
@@ -98,7 +99,7 @@ class WoPView extends WatchUi.View {
                 dc.setColor(Graphics.COLOR_YELLOW, Graphics.COLOR_BLACK);
                 dc.drawArc(center_x, center_y, radius, Graphics.ARC_CLOCKWISE, 344, angle);
                 _trimesterLabel.setColor(Graphics.COLOR_YELLOW);
-
+                _trimesterLabel.setText( _currentWoP.get(:trimester) + WatchUi.loadResource(Rez.Strings.second) + WatchUi.loadResource(Rez.Strings.trimester));
                 break;
             case 3:
                 dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_BLACK);
@@ -108,6 +109,7 @@ class WoPView extends WatchUi.View {
                 dc.setColor(Graphics.COLOR_GREEN, Graphics.COLOR_BLACK);
                 dc.drawArc(center_x, center_y, radius, Graphics.ARC_CLOCKWISE, 232, angle);
                 _trimesterLabel.setColor(Graphics.COLOR_GREEN);
+                _trimesterLabel.setText( _currentWoP.get(:trimester) + WatchUi.loadResource(Rez.Strings.third) + WatchUi.loadResource(Rez.Strings.trimester));
                 break;
             case 4:
                 break;
