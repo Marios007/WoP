@@ -11,7 +11,7 @@ class WoPDelegate extends WatchUi.BehaviorDelegate {
     }
 
     function onNextPage() {
-        WatchUi.pushView(new WoPView2(), new WoPDelegate2(), WatchUi.SLIDE_UP);
+        //WatchUi.pushView(new WoPView2(), new WoPDelegate2(), WatchUi.SLIDE_UP);
         return true;
     }
 
@@ -23,12 +23,12 @@ class WoPDelegate extends WatchUi.BehaviorDelegate {
         menu.addItem(WatchUi.loadResource(Rez.Strings.info), :two);
         
         delegate = new MyMenuInputDelegate(); // a WatchUi.MenuInputDelegate
-        WatchUi.pushView(menu, delegate, WatchUi.SLIDE_IMMEDIATE);
+        WatchUi.pushView(menu, delegate, WatchUi.SLIDE_RIGHT);
         return true;
     }
 
     function onSelect() {
-        WatchUi.pushView(new WoPView2(), new WoPDelegate2(), WatchUi.SLIDE_UP);
+        //WatchUi.pushView(new WoPView2(), new WoPDelegate2(), WatchUi.SLIDE_UP);
         return true;
     }
 
