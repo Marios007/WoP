@@ -11,7 +11,7 @@ class AboutView extends WatchUi.View {
     spacing = System.getDeviceSettings().screenHeight < 160 ? 1.1 : 1.3;
 
     aboutTitle = WatchUi.loadResource(Rez.Strings.AppNameAbout);
-    aboutVersion = "Version 0.2";
+    aboutVersion = "Version 0.3";
     hfx = Gfx.getFontHeight(Gfx.FONT_XTINY) * spacing;
     View.initialize();
   }
