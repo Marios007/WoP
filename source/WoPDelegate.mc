@@ -11,7 +11,7 @@ class WoPDelegate extends WatchUi.BehaviorDelegate {
     }
 
     function onNextPage() {
-        //WatchUi.pushView(new WoPView2(), new WoPDelegate2(), WatchUi.SLIDE_UP);
+        WatchUi.pushView(new WoPView2(), new WoPDelegate2(), WatchUi.SLIDE_UP);
         return true;
     }
 
@@ -28,7 +28,7 @@ class WoPDelegate extends WatchUi.BehaviorDelegate {
     }
 
     function onSelect() {
-        //WatchUi.pushView(new WoPView2(), new WoPDelegate2(), WatchUi.SLIDE_UP);
+        WatchUi.pushView(new WoPView2(), new WoPDelegate2(), WatchUi.SLIDE_UP);
         return true;
     }
 

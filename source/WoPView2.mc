@@ -11,7 +11,11 @@ class WoPView2 extends WatchUi.View {
     private var center_y;
     private var _currentWoP;
     private var _textTop;
+    private var _sizeBaby;
+    private var _weightBaby;
+    var dates;
     var calculator = new WoPcalcDates();
+    var stats = new WoPstats();
 
     function initialize() {
         View.initialize();
@@ -24,6 +28,8 @@ class WoPView2 extends WatchUi.View {
         center_x = dc.getWidth()/2;
         center_y = dc.getHeight()/2;
         _textTop = findDrawableById("textTop");
+        _sizeBaby = findDrawableById("sizeBaby");
+        _weightBaby = findDrawableById("weightBaby");
     }
 
     // Called when this View is brought to the foreground. Restore
@@ -31,6 +37,7 @@ class WoPView2 extends WatchUi.View {
     // loading resources into memory.
     function onShow() as Void {
         _currentWoP = calculator.getDates();
+        _textTop.setText(WatchUi.loadResource(Rez.Strings.text_top_page2));
         
     }
 
@@ -39,7 +46,15 @@ class WoPView2 extends WatchUi.View {
          // Call the parent onUpdate function to redraw the layout
         View.onUpdate(dc);
         circleStatus(dc);
-        _textTop.setText(WatchUi.loadResource(Rez.Strings.text_top_page2));
+
+        var week = _currentWoP.get(:week).toNumber();
+        var size = stats.getStatsforWeek(week);
+        System.println(size[0] +" "+ size[1] +" "+ size[2]);
+        _sizeBaby.setText(size[1].toString()+" mm");
+        _weightBaby.setText(size[2].toString()+" g");
+
+
+        
     }
 
     // Called when this View is removed from the screen. Save the

@@ -17,6 +17,7 @@ class WoPView extends WatchUi.View {
     private var center_x;
     private var center_y;
     var calculator = new WoPcalcDates();
+    var stats = new WoPstats();
 
     function initialize() {
         View.initialize();

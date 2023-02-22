@@ -16,7 +16,6 @@ class WoPDelegate2 extends WatchUi.BehaviorDelegate {
     
     function onPreviousPage() {
         WatchUi.popView(WatchUi.SLIDE_DOWN);
-        //model.();
         return true;
     }
 

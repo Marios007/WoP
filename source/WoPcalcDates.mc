@@ -73,7 +73,7 @@ class WoPcalcDates {
         //System.println("WoP in seconds: " + currentWoP.value()); // WoP output in seconds
         var woP_in_Days = (currentWoP.value())/(Gregorian.SECONDS_PER_DAY);  // WoP output in days
         //System.println("WoP in days: " + woP_in_Days);
-        var week = (woP_in_Days/7)+1;  //set current WoP!
+        var week = (woP_in_Days/7)+1;  //set current WoP! (week + 1 )
         var dayInWeek = woP_in_Days%7; //exact day in week
         //System.println("WoP in week: " + exactWeek);
         //System.println("Current WoP: " + week);
