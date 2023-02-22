@@ -52,8 +52,6 @@ class WoPView extends WatchUi.View {
         //calculate week an set text
         _currentWoP = calculator.getDates();
         _currentWoPLabel.setText(_currentWoP.get(:week) + WatchUi.loadResource(Rez.Strings.wop) + " ("+ (_currentWoP.get(:exactWeek)+"W + "+_currentWoP.get(:dayInWeek) +")"));
-        
-        
     }
 
     // Update the view

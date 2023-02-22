@@ -23,7 +23,7 @@ class WoPDelegate extends WatchUi.BehaviorDelegate {
         menu.addItem(WatchUi.loadResource(Rez.Strings.info), :two);
         
         delegate = new MyMenuInputDelegate(); // a WatchUi.MenuInputDelegate
-        WatchUi.pushView(menu, delegate, WatchUi.SLIDE_RIGHT);
+        WatchUi.pushView(menu, delegate, WatchUi.SLIDE_LEFT);
         return true;
     }
 
