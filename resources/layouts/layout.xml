@@ -7,14 +7,15 @@
                 <font>Gfx.FONT_XTINY</font>
             </fonts>
         </text-area>
-        <bitmap id="scaleIcon" x="30%" y="45%" filename="../drawables/ruler_white.png"/>
-        <text-area id="sizeBaby" color="Graphics.COLOR_WHITE" justification="Graphics.TEXT_JUSTIFY_CENTER" text="" x="20%" y="45%" width="90%" height="40%">
+        <bitmap id="rulerIcon" x="25%" y="37%" filename="../drawables/ruler_white.png"/>
+        <text-area id="sizeBaby" color="Graphics.COLOR_WHITE" justification="Graphics.TEXT_JUSTIFY_LEFT" text="" x="45%" y="37%" width="90%" height="40%">
             <fonts>
                 <font>Gfx.FONT_SMALL</font>
                 <font>Gfx.FONT_TINY</font>
             </fonts>
         </text-area>
-        <text-area id="weightBaby" color="Graphics.COLOR_WHITE" justification="Graphics.TEXT_JUSTIFY_CENTER" text="" x="center" y="60%" width="90%" height="40%">
+        <bitmap id="scaleIcon" x="25%" y="55%" filename="../drawables/scale_white.png"/>
+        <text-area id="weightBaby" color="Graphics.COLOR_WHITE" justification="Graphics.TEXT_JUSTIFY_LEFT" text="" x="45%" y="55%" width="90%" height="40%">
             <fonts>
                 <font>Gfx.FONT_SMALL</font>
                 <font>Gfx.FONT_TINY</font>

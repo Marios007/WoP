@@ -1,6 +1,6 @@
 using Toybox.WatchUi;
 
-(:glance)
+
 class WoPDelegate extends WatchUi.BehaviorDelegate {
     
     var model;

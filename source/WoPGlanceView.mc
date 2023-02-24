@@ -87,10 +87,7 @@ class WoPGlanceView extends WatchUi.GlanceView {
                 break;
             default:
                 break;
-        } 
-        //dc.setColor(G.COLOR_WHITE, G.COLOR_BLACK);
-        //dc.setPenWidth(7);
-        //dc.drawLine(GW/_xPosWeek, GH/2+7, (GW/_xPosWeek), GH/2-7);
+        }
     }
 
     // Called when this View is removed from the screen. Save the

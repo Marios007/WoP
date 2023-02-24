@@ -1,8 +1,6 @@
 import Toybox.Graphics;
 import Toybox.WatchUi;
 using Toybox.System;
-using Toybox.Time;
-using Toybox.Time.Gregorian;
 using Toybox.Lang;
 
 class WoPView2 extends WatchUi.View {
@@ -38,7 +36,12 @@ class WoPView2 extends WatchUi.View {
     function onShow() as Void {
         _currentWoP = calculator.getDates();
         _textTop.setText(WatchUi.loadResource(Rez.Strings.text_top_page2));
-        
+
+        var week = _currentWoP.get(:week).toNumber();
+        var size = stats.getStatsforWeek(week);
+        System.println(size[0] +" "+ size[1] +" "+ size[2]);
+        _sizeBaby.setText(size[1].toString()+" mm");
+        _weightBaby.setText(size[2].toString()+" g");
     }
 
     // Update the view
@@ -46,15 +49,6 @@ class WoPView2 extends WatchUi.View {
          // Call the parent onUpdate function to redraw the layout
         View.onUpdate(dc);
         circleStatus(dc);
-
-        var week = _currentWoP.get(:week).toNumber();
-        var size = stats.getStatsforWeek(week);
-        System.println(size[0] +" "+ size[1] +" "+ size[2]);
-        _sizeBaby.setText(size[1].toString()+" mm");
-        _weightBaby.setText(size[2].toString()+" g");
-
-
-        
     }
 
     // Called when this View is removed from the screen. Save the
@@ -91,7 +85,6 @@ class WoPView2 extends WatchUi.View {
                 dc.drawArc(center_x, center_y, radius, Graphics.ARC_CLOCKWISE, 90, 342);
                 dc.setColor(Graphics.COLOR_YELLOW, Graphics.COLOR_BLACK);
                 dc.drawArc(center_x, center_y, radius, Graphics.ARC_CLOCKWISE, 344, angle);
-
                 break;
             case 3:
                 dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_BLACK);
