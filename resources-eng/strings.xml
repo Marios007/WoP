@@ -1,6 +1,6 @@
 <strings>
     <string id="AppName">WoP</string>
-        <string id="AppNameAbout">WoP-Widget</string>
+    <string id="AppNameAbout">WoP-Widget</string>
     <string id="view_title" scope="foreground">Pregnancy</string>
     <string id="glance_title" scope="glance">Week of pregnancy</string>
 
