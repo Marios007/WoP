@@ -64,7 +64,7 @@ class WoPView2 extends WatchUi.View {
 
     }
 
-    // drawing the grey arc and the status of pregancy as arc
+    // drawing the grey arc and the status of pregnancy as arc
     function circleStatus(dc) {
         dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_BLACK);
         var radius;

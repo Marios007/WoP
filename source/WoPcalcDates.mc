@@ -20,7 +20,7 @@ class WoPcalcDates {
     }
 
     function setDateOfBirth() {
-        // if pregancy date is not set, set to today + 10 weeks 3 days
+        // if pregnancy date is not set, set to today + 10 weeks 3 days
         if (Properties.getValue("dateSet") == 0 ) {
             var tenWeeks = new Time.Duration(17884800);
             _dateOfBirth = _today.add(tenWeeks);
@@ -65,7 +65,7 @@ class WoPcalcDates {
         return _today;
     }
 
-        // calculate week of pregancy and week and day seperatly, return a dict with all information
+        // calculate week of pregnancy and week and day seperatly, return a dict with all information
     function getDates(){
         var dateOfBirth = getDateOfBirth();
         var today = getToday();
