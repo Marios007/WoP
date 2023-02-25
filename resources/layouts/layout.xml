@@ -31,25 +31,25 @@
 
     <layout id="SecondPageLayout">
         <bitmap id="fetusIcon" x="center" y="7%" filename="../drawables/baby_fetus_icon.png"/>
-        <text-area id="textTop" color="Graphics.COLOR_WHITE" justification="Graphics.TEXT_JUSTIFY_CENTER" text="" x="center" y="25%" width="75%" height="20%">
+        <text-area id="textTop" color="Graphics.COLOR_WHITE" justification="Graphics.TEXT_JUSTIFY_CENTER" text="" x="center" y="28%" width="80%" height="20%">
             <fonts>
+                <font>Gfx.FONT_TINY</font>
                 <font>Gfx.FONT_XTINY</font>
             </fonts>
         </text-area>
-        <bitmap id="rulerIcon" x="25%" y="37%" filename="../drawables/ruler_white.png"/>
-        <text-area id="sizeBaby" color="Graphics.COLOR_WHITE" justification="Graphics.TEXT_JUSTIFY_LEFT" text="" x="45%" y="37%" width="90%" height="40%">
+        <bitmap id="rulerIcon" x="25%" y="40%" filename="../drawables/ruler_white.png"/>
+        <text-area id="sizeBaby" color="Graphics.COLOR_WHITE" justification="Graphics.TEXT_JUSTIFY_LEFT" text="" x="45%" y="40%" width="90%" height="40%">
             <fonts>
                 <font>Gfx.FONT_SMALL</font>
                 <font>Gfx.FONT_TINY</font>
             </fonts>
         </text-area>
-        <bitmap id="scaleIcon" x="25%" y="55%" filename="../drawables/scale_white.png"/>
-        <text-area id="weightBaby" color="Graphics.COLOR_WHITE" justification="Graphics.TEXT_JUSTIFY_LEFT" text="" x="45%" y="55%" width="90%" height="40%">
+        <bitmap id="scaleIcon" x="25%" y="58%" filename="../drawables/scale_white.png"/>
+        <text-area id="weightBaby" color="Graphics.COLOR_WHITE" justification="Graphics.TEXT_JUSTIFY_LEFT" text="" x="45%" y="58%" width="90%" height="40%">
             <fonts>
                 <font>Gfx.FONT_SMALL</font>
                 <font>Gfx.FONT_TINY</font>
             </fonts>
         </text-area>
     </layout>
-
 </layouts>
