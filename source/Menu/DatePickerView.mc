@@ -1,5 +1,4 @@
 //! Picker that allows the user to choose a date
-import Toybox.Application.Storage;
 import Toybox.Graphics;
 import Toybox.Lang;
 import Toybox.WatchUi;

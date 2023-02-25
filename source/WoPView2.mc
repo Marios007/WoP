@@ -38,8 +38,8 @@ class WoPView2 extends WatchUi.View {
 
         var week = _currentWoP.get(:week).toNumber();
         var size = stats.getStatsforWeek(week);
-        _sizeBaby.setText(size[1]+" mm");
-        _weightBaby.setText(size[2]+" g");
+        _sizeBaby.setText(size[1]);
+        _weightBaby.setText(size[2]);
     }
 
     // Update the view
