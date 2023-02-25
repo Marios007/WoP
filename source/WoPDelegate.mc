@@ -31,5 +31,4 @@ class WoPDelegate extends WatchUi.BehaviorDelegate {
         WatchUi.pushView(new WoPView2(), new WoPDelegate2(), WatchUi.SLIDE_UP);
         return true;
     }
-
 }

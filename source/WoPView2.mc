@@ -1,7 +1,6 @@
 import Toybox.Graphics;
 import Toybox.WatchUi;
-using Toybox.System;
-using Toybox.Lang;
+import Toybox.Lang;
 
 class WoPView2 extends WatchUi.View {
 
@@ -39,14 +38,13 @@ class WoPView2 extends WatchUi.View {
 
         var week = _currentWoP.get(:week).toNumber();
         var size = stats.getStatsforWeek(week);
-        System.println(size[0] +" "+ size[1] +" "+ size[2]);
-        _sizeBaby.setText(size[1].toString()+" mm");
-        _weightBaby.setText(size[2].toString()+" g");
+        _sizeBaby.setText(size[1]+" mm");
+        _weightBaby.setText(size[2]+" g");
     }
 
     // Update the view
     function onUpdate(dc) as Void {
-         // Call the parent onUpdate function to redraw the layout
+        // Call the parent onUpdate function to redraw the layout
         View.onUpdate(dc);
         circleStatus(dc);
     }
