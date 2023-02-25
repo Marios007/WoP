@@ -32,16 +32,8 @@ class WoPcalcDates {
                 :day    => Properties.getValue("day"),
                 :hour => 0   // UTC offset, in this case for CST
             };
-        
             _dateOfBirth = Gregorian.moment(options);
         }
-        //System.println(_dateOfBirth.value());
-        // print date of birth for test
-        /*var dateOfBirth = Gregorian.utcInfo(_dateOfBirth, Time.FORMAT_SHORT);
-        System.println(Lang.format("$1$-$2$-$3$", [
-            dateOfBirth.year.format("%04u"),
-            dateOfBirth.month.format("%02u"),
-            dateOfBirth.day.format("%02u")])); */
     }
 
     function getDateOfBirth() {
@@ -69,14 +61,9 @@ class WoPcalcDates {
         var dateOfBirth = getDateOfBirth();
         var today = getToday();
         var currentWoP = today.subtract(dateOfBirth.subtract(DURATION_PREGNANCY)); //WoP in Days
-        //System.println("WoP in seconds: " + currentWoP.value()); // WoP output in seconds
         var woP_in_Days = (currentWoP.value())/(Gregorian.SECONDS_PER_DAY);  // WoP output in days
-        //System.println("WoP in days: " + woP_in_Days);
         var week = (woP_in_Days/7)+1;  //set current WoP! (week + 1 )
         var dayInWeek = woP_in_Days%7; //exact day in week
-        //System.println("WoP in week: " + exactWeek);
-        //System.println("Current WoP: " + week);
-        //System.println("Current Day: " + (_dayInWeek));
         var trimester = getTrimester(week);
         var angle = getAngle(week);
         _weeksDict = {

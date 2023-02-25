@@ -57,7 +57,6 @@ class WoPstats {
     ];
 
 
-
     function initialize() {
         
     }
