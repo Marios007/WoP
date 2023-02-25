@@ -2,6 +2,7 @@
 
 Shows the current week of pregnancy and trimester.
 
+![MainView](screenshots/MainViewENG.png) ![MainView](screenshots/GlanceViewENG2.jpeg)
 
 ## Current functionality
 
