@@ -22,7 +22,6 @@ class WoPView extends WatchUi.View {
     function initialize() {
         View.initialize();
         calculator.setDateOfBirth();
-
     }
 
     // Load your resources here
@@ -65,7 +64,6 @@ class WoPView extends WatchUi.View {
     // state of this View here. This includes freeing resources from
     // memory.
     function onHide() as Void {
-
     }
 
     // drawing the grey arc and the status of pregnancy as arc
@@ -124,7 +122,6 @@ class WoPView extends WatchUi.View {
         // draw white arc for current week on the circle
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
         dc.drawArc(center_x, center_y, radius, Graphics.ARC_CLOCKWISE, angle+3, angle-3);
-
     }
 
 }

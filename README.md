@@ -127,6 +127,10 @@ https://www.babelli.de/entwicklung-embryo/
       <td>X</td>
     </tr>
     <tr>
+      <td>Venu® 2s</td>
+      <td>X</td>
+    </tr>
+    <tr>
       <td>vívoactive® 4</td>
       <td>X</td>
     </tr>
