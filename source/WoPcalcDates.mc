@@ -59,8 +59,7 @@ class WoPcalcDates {
         // calculate week of pregnancy and week and day seperatly, return a dict with all information
     function getDates(){
         var dateOfBirth = getDateOfBirth();
-        var today = getToday();
-        var currentWoP = today.subtract(dateOfBirth.subtract(DURATION_PREGNANCY)); //WoP in Days
+        var currentWoP = _today.subtract(dateOfBirth.subtract(DURATION_PREGNANCY)); //WoP in Days
         var woP_in_Days = (currentWoP.value())/(Gregorian.SECONDS_PER_DAY);  // WoP output in days
         var week = (woP_in_Days/7)+1;  //set current WoP! (week + 1 )
         var dayInWeek = woP_in_Days%7; //exact day in week
@@ -84,6 +83,6 @@ class WoPcalcDates {
     //convert week to an angle to draw the arc
     function getAngle(week) {
         var weekAsAngle = (90-week*9)%360;
-        return weekAsAngle;   
+        return weekAsAngle;
     }
 }
