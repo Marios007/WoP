@@ -14,6 +14,9 @@ Shows the current week of pregnancy and trimester.
 
 https://www.babelli.de/entwicklung-embryo/
 
+##
+Connect IQ Store:
+https://apps.garmin.com/de-DE/apps/35876c51-1fcb-4781-88b4-0130060010dc
 
 
 ## Supported devices
