@@ -3,9 +3,6 @@ using Toybox.System;
 
 class WoPstats {
 
-    private var _week;
-    private var _size;
-    private var _weight;
     // [week, size in mm, weight in g] 
     private var statsTable = [
             [0,"0 mm","0 g"],

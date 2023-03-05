@@ -8,7 +8,7 @@ using Toybox.WatchUi;
 (:glance)
 class WoPcalcDates {
 
-    private var _dateOfBirth; // as Gregorian moment
+    private var _dateOfBirth; 
     private var _today; 
     private var _weeksDict;
     private const DURATION_PREGNANCY = new Time.Duration(24192000); //280d in sec
@@ -16,27 +16,35 @@ class WoPcalcDates {
 
     function initialize() {
         _today =  getToday();
-    }
-
-    function setDateOfBirth() {
         // if pregnancy date is not set, set to today + 10 weeks 3 days
         if (Properties.getValue("dateSet") == 0 ) {
-            var tenWeeks = new Time.Duration(17884800);
-            _dateOfBirth = _today.add(tenWeeks);
+            setInitialDate();
         }
+    }
 
-        else {
-            var options = {
+    //set initial date in 10 weeks 3 days from today after new install
+    function setInitialDate(){
+        var tenWeeks = new Time.Duration(17884800); // 17884800 == pregnant already 10 week 3 days
+        var today =  getToday();
+        var initialDate = today.add(tenWeeks);
+        //_dateOfBirth = initialDate;
+        var initialDateGregorian = Gregorian.info(initialDate, Time.FORMAT_SHORT);
+        System.println("initial: " +initialDateGregorian.day+"." +initialDateGregorian.month );
+        Properties.setValue("day", initialDateGregorian.day);
+        Properties.setValue("month", initialDateGregorian.month);
+        Properties.setValue("year", initialDateGregorian.year);
+        Properties.setValue("dateSet", 1);
+    }
+
+
+    function getDateOfBirth() {
+        var options = {
                 :year   => Properties.getValue("year"),
                 :month  => Properties.getValue("month"),
                 :day    => Properties.getValue("day"),
                 :hour => 0   // UTC offset, in this case for CST
             };
             _dateOfBirth = Gregorian.moment(options);
-        }
-    }
-
-    function getDateOfBirth() {
         return _dateOfBirth;
     }
 

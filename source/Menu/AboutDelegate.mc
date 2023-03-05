@@ -8,7 +8,7 @@ class AboutDelegate extends Ui.BehaviorDelegate {
   }
 
   function onSelect() {
-    Ui.popView(SLIDE_IMMEDIATE);
+    Ui.popView(SLIDE_LEFT);
     return true;
   }
 }

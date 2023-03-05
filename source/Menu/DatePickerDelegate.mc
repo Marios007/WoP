@@ -24,7 +24,7 @@ class DatePickerDelegate extends WatchUi.PickerDelegate {
     //! Handle a confirm event from the picker
     //! @param values The values chosen in the picker
     //! @return true if handled, false otherwise
-    public function onAccept(values as Array<Number?>) as Boolean {
+    public function onAccept(values) as Boolean {
         //var separator = WatchUi.loadResource($.Rez.Strings.dateSeparator) as String;
         var monthResource = values[0];
         if (monthResource != null) {
@@ -38,6 +38,7 @@ class DatePickerDelegate extends WatchUi.PickerDelegate {
                 Properties.setValue("dateSet", 1);
             }
         }
+        WatchUi.popView(WatchUi.SLIDE_IMMEDIATE);
         WatchUi.popView(WatchUi.SLIDE_IMMEDIATE);
         return true;
     }

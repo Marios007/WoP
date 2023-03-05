@@ -19,7 +19,6 @@ class WoPGlanceView extends WatchUi.GlanceView {
     function initialize() {
         WatchUi.GlanceView.initialize();
         calculatorGlance = new WoPcalcDates();
-        calculatorGlance.setDateOfBirth();
     }
 
     // Load your resources here
