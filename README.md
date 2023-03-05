@@ -2,17 +2,18 @@
 
 Shows the current week of pregnancy and trimester.
 
-![MainView](screenshots/MainViewENG.png) ![MainView](screenshots/GlanceViewENG2.jpeg)
+![MainView](screenshots/connectIQ/MainViewENG.png) ![MainView](screenshots/ConnectIQ//GlanceViewENG.png)
 
 ## Current functionality
 
 - Set the date inside the widget menu
 - Glance view
+- Information about current weight and size
 
 ---------
 ## Sources
 
-https://www.babelli.de/entwicklung-embryo/
+Size and weight: https://www.babelli.de/entwicklung-embryo/
 
 ##
 Connect IQ Store:
@@ -94,6 +95,14 @@ https://apps.garmin.com/de-DE/apps/35876c51-1fcb-4781-88b4-0130060010dc
       <td>X</td>
     </tr>
     <tr>
+      <td>Forerunner® 265s</td>
+      <td>X</td>
+    </tr>
+    <tr>
+      <td>Forerunner® 265</td>
+      <td>X</td>
+    </tr>
+    <tr>
       <td>Forerunner® 745</td>
       <td>X</td>
     </tr>
@@ -103,6 +112,10 @@ https://apps.garmin.com/de-DE/apps/35876c51-1fcb-4781-88b4-0130060010dc
     </tr>
     <tr>
       <td>Forerunner® 955</td>
+      <td>X</td>
+    </tr>
+       <tr>
+      <td>Forerunner® 965</td>
       <td>X</td>
     </tr>
     <tr>
