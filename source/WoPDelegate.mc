@@ -23,7 +23,7 @@ class WoPDelegate extends WatchUi.BehaviorDelegate {
     function onMenu() {
     // Generate a new Menu with a drawable Title
         menu = new WatchUi.Menu2({:title=>new $.DrawableMenuTitle()});
-        // Add menu items for demonstrating toggles, checkbox and icon menu items
+
         var subLabel = Properties.getValue("day")+"."+Properties.getValue("month")+"."+Properties.getValue("year");
         menu.addItem(new WatchUi.MenuItem(WatchUi.loadResource(Rez.Strings.set_birthday), subLabel, "birthday", null));
         menu.addItem(new WatchUi.MenuItem(WatchUi.loadResource(Rez.Strings.info), null, "info", null));

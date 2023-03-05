@@ -56,9 +56,12 @@ class WoPGlanceView extends WatchUi.GlanceView {
                 dc.setPenWidth(8);
                 dc.setColor(G.COLOR_RED, -1);
                 dc.drawLine(0, GH/2, GW/_xPosWeek, GH/2);
+                dc.setPenWidth(9);
+                dc.setColor(G.COLOR_BLACK, G.COLOR_BLACK);
+                dc.drawLine(GW/_xPosWeek, GH/2+5, (GW/_xPosWeek), GH/2-5);
                 dc.setColor(G.COLOR_WHITE, G.COLOR_BLACK);
-                dc.setPenWidth(7);
-                dc.drawLine(GW/_xPosWeek, GH/2+7, (GW/_xPosWeek), GH/2-7);
+                dc.setPenWidth(6);
+                dc.drawLine(GW/_xPosWeek, GH/2+5, (GW/_xPosWeek), GH/2-5);
                 break;
             case 2:
                 dc.setPenWidth(8);
@@ -67,9 +70,12 @@ class WoPGlanceView extends WatchUi.GlanceView {
                 dc.setPenWidth(8);
                 dc.setColor(G.COLOR_RED, -1);
                 dc.drawLine(0, GH/2, GW/3.33-8, GH/2);
-                dc.setColor(G.COLOR_WHITE, G.COLOR_BLACK);
-                dc.setPenWidth(7);
-                dc.drawLine(GW/_xPosWeek+3, GH/2+7, (GW/_xPosWeek+3), GH/2-7);
+                dc.setPenWidth(9);
+                dc.setColor(G.COLOR_BLACK, G.COLOR_BLACK);
+                dc.drawLine(GW/_xPosWeek+3, GH/2+5, (GW/_xPosWeek+3), GH/2-5);
+                dc.setColor(G.COLOR_WHITE, G.COLOR_BLACK); 
+                dc.setPenWidth(6);
+                dc.drawLine(GW/_xPosWeek+3, GH/2+5, (GW/_xPosWeek+3), GH/2-5);
                 break;
             case 3:
                 dc.setPenWidth(8);
@@ -80,9 +86,12 @@ class WoPGlanceView extends WatchUi.GlanceView {
                 dc.drawLine(0, GH/2, GW/3.33-7, GH/2);
                 dc.setColor(G.COLOR_YELLOW, -1);
                 dc.drawLine(GW/3.33+3, GH/2, GW/1.66-7, GH/2);
+                dc.setPenWidth(9);
+                dc.setColor(G.COLOR_BLACK, G.COLOR_BLACK);
+                dc.drawLine(GW/_xPosWeek+6, GH/2+5, (GW/_xPosWeek+6), GH/2-5);
                 dc.setColor(G.COLOR_WHITE, G.COLOR_BLACK);
-                dc.setPenWidth(7);
-                dc.drawLine(GW/_xPosWeek+6, GH/2+7, GW/_xPosWeek+6, GH/2-7);
+                dc.setPenWidth(6);
+                dc.drawLine(GW/_xPosWeek+6, GH/2+5, GW/_xPosWeek+6, GH/2-5);
                 break;
             default:
                 break;
