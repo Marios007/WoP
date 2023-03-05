@@ -67,7 +67,7 @@ class WoPView2 extends WatchUi.View {
         }
 
         //draw 1 gray arcs
-        dc.setPenWidth(((dc.getWidth()/30)).toNumber());
+        dc.setPenWidth(((dc.getWidth()/32)).toNumber());
         dc.drawArc(center_x, center_y, radius, Graphics.ARC_CLOCKWISE, 0, 360);
         // draw week on arc 
         var angle = _currentWoP.get(:angle);
