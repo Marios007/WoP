@@ -29,7 +29,6 @@ class WoPcalcDates {
         var initialDate = today.add(tenWeeks);
         //_dateOfBirth = initialDate;
         var initialDateGregorian = Gregorian.info(initialDate, Time.FORMAT_SHORT);
-        System.println("initial: " +initialDateGregorian.day+"." +initialDateGregorian.month );
         Properties.setValue("day", initialDateGregorian.day);
         Properties.setValue("month", initialDateGregorian.month);
         Properties.setValue("year", initialDateGregorian.year);
