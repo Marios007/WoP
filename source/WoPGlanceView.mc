@@ -40,7 +40,7 @@ class WoPGlanceView extends WatchUi.GlanceView {
 
     // Update the view
     function onUpdate(dc) {
-        dc.setColor(G.COLOR_BLACK, G.COLOR_WHITE);
+        dc.setColor(G.COLOR_WHITE, G.COLOR_TRANSPARENT);
 
         dc.drawText(0, 0, G.FONT_GLANCE, _appTitle, G.TEXT_JUSTIFY_LEFT);
         dc.drawText(0, GH/1.5, G.FONT_GLANCE, _message, G.TEXT_JUSTIFY_LEFT);
