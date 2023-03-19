@@ -50,18 +50,12 @@ class DrawableMenuTitle extends WatchUi.Drawable {
         var spacing = 2;
         var appIcon = WatchUi.loadResource($.Rez.Drawables.LauncherIcon) as BitmapResource;
         var bitmapWidth = appIcon.getWidth();
-        System.println("bitmapWidth: "+bitmapWidth);
         var labelWidth = dc.getTextWidthInPixels("Menu", Graphics.FONT_TINY);
-        System.println("labelWidth: "+labelWidth);
+
         var bitmapX = (dc.getWidth() - (bitmapWidth + spacing + labelWidth)) / 2;
-        System.println("dc.getWidth(): "+dc.getWidth());
-        System.println("bitmapX: "+bitmapX);
         var bitmapY = (dc.getHeight() - appIcon.getHeight()) / 2;
-        System.println("bitmapY: "+bitmapY);
         var labelX = bitmapX + bitmapWidth + spacing;
-        System.println("labelX: "+labelX);
         var labelY = dc.getHeight() / 2;
-        System.println("labelY: "+labelY);
 
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
         dc.clear();

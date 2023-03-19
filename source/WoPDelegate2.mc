@@ -12,7 +12,6 @@ class WoPDelegate2 extends WatchUi.BehaviorDelegate {
     }
     
     function onNextPage() {
-        WatchUi.pushView(new WoPView3(), new WoPDelegate(), WatchUi.SLIDE_UP);
         return true;
     }
 
