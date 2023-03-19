@@ -111,6 +111,7 @@ class WoPView extends WatchUi.View {
                 break;
         }
 
+
         // draw 3 black rectangle to seperate grey arc
         dc.setPenWidth(((dc.getWidth()/15)).toNumber());
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
