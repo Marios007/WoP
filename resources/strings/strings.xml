@@ -1,44 +1,45 @@
 <strings>
-    <string id="AppName">Schwangerschaft</string>
-    <string id="AppNameAbout">SSW-Widget</string>
-    <string id="view_title" scope="foreground">Schwangerschaft</string>
-    <string id="glance_title" scope="glance">Schwangerschaft</string>
+    <string id="AppName">Pregnancy</string>
+    <string id="AppNameAbout">WoP-Widget</string>
+    <string id="view_title" scope="foreground">Pregnancy</string>
+    <string id="glance_title" scope="glance">Pregnancy info</string>
 
-    <string id="menu_name">Menu</string>
-    <string id="set_birthday">Geburtstermin ändern</string>
-    <string id="info">Info</string>
-    <string id="wop" scope="glance">. SSW </string>
-    <string id="text_top">Du bist in der</string>
-    <string id="text_countdown1">Noch </string>
-    <string id="text_countdown2"> Tage</string>
-    <string id="text_countdown3"> Tag</string>
-    <string id="first"></string>
-    <string id="second"></string>
-    <string id="third"></string>
-    <string id="trimester">. Trimester</string>
+    <string id="menu_name">Settings</string>
+    <string id="set_birthday">Set Birthdate</string>
+    <string id="info">About</string>
+    <string id="wop" scope="glance">. WoP </string>
+    <string id="text_top">Current week</string>
+    <string id="text_countdown1"></string>
+    <string id="text_countdown2"> days remaining</string>
+    <string id="text_countdown3"> day remaining</string>
+    <string id="first">st</string>
+    <string id="second">nd</string>
+    <string id="third">rd</string>
+    <string id="trimester"> trimester</string>
+    
 
     <!-- Date picker --> 
-    <string id="datePickerTitle">Geburtsd. wählen</string>
+    <string id="datePickerTitle">Pick date</string>
     <string id="dateSeparator">-</string>
     <string id="month01">Jan</string>
     <string id="month02">Feb</string>
-    <string id="month03">März</string>
-    <string id="month04">April</string>
-    <string id="month05">Mai</string>
-    <string id="month06">Juni</string>
-    <string id="month07">Juli</string>
+    <string id="month03">Mar</string>
+    <string id="month04">Apr</string>
+    <string id="month05">May</string>
+    <string id="month06">Jun</string>
+    <string id="month07">Jul</string>
     <string id="month08">Aug</string>
-    <string id="month09">Sept</string>
-    <string id="month10">Okt</string>
+    <string id="month09">Sep</string>
+    <string id="month10">Oct</string>
     <string id="month11">Nov</string>
-    <string id="month12">Dez</string>
+    <string id="month12">Dec</string>
 
-
-    <string id="SettingsDayTitle">Tag</string>
-    <string id="SettingsMonthTitle">Monat</string>
-    <string id="SettingsYearTitle">Jahr</string>
+    <string id="SettingsDayTitle">Day</string>
+    <string id="SettingsMonthTitle">Month</string>
+    <string id="SettingsYearTitle">Year</string>
 
     <!-- SecondPage --> 
-    <string id="text_top_page2">Aktuelle Größe/Gewicht </string>
+    <string id="text_top_page2">Current size/weight </string>
+
 
 </strings>
