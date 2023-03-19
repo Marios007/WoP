@@ -1,0 +1,45 @@
+<strings>
+    <string id="AppName">怀孕</string>
+    <string id="AppNameAbout">孕周-Widget</string>
+    <string id="view_title" scope="foreground">怀孕</string>
+    <string id="glance_title" scope="glance">怀孕信息</string>
+
+    <string id="menu_name">设置</string>
+    <string id="set_birthday">设置预产期</string>
+    <string id="info">关于</string>
+    <string id="wop" scope="glance">. 孕周 </string>
+    <string id="text_top">当前孕周</string>
+    <string id="text_countdown1">剩余 </string>
+    <string id="text_countdown2"> 天</string>
+    <string id="text_countdown3"></string>
+    <string id="first"></string>
+    <string id="second"></string>
+    <string id="third"></string>
+    <string id="trimester"> trimester</string>
+
+
+    <!-- Date picker --> 
+    <string id="datePickerTitle">选择预产期</string>
+    <string id="dateSeparator">-</string>
+    <string id="month01">一月</string>
+    <string id="month02">二月</string>
+    <string id="month03">三月</string>
+    <string id="month04">四月</string>
+    <string id="month05">五月</string>
+    <string id="month06">六月</string>
+    <string id="month07">七月</string>
+    <string id="month08">八月</string>
+    <string id="month09">九月</string>
+    <string id="month10">十月</string>
+    <string id="month11">十一月</string>
+    <string id="month12">十二月</string>
+
+    <string id="SettingsDayTitle">日</string>
+    <string id="SettingsMonthTitle">月</string>
+    <string id="SettingsYearTitle">年</string>
+
+    <!-- SecondPage --> 
+    <string id="text_top_page2">当前大小/重量 </string>
+
+
+</strings>
