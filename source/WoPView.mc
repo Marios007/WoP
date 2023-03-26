@@ -126,5 +126,4 @@ class WoPView extends WatchUi.View {
         dc.drawArc(center_x, center_y, radius, Graphics.ARC_CLOCKWISE, angle+3, angle+2);
         dc.drawArc(center_x, center_y, radius, Graphics.ARC_CLOCKWISE, angle-2, angle-3);
     }
-
 }

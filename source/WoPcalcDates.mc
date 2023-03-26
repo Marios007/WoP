@@ -57,9 +57,7 @@ class WoPcalcDates {
 
     // return today as Moment
     function getToday() {
-        _today = new Time.Moment(Time.today().value());
-        var oneHour = new Time.Duration(Gregorian.SECONDS_PER_HOUR);
-        _today = _today.add(oneHour); 
+        _today = new Time.Moment(Time.now().value());
         return _today;
     }
 
