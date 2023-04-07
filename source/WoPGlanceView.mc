@@ -16,9 +16,9 @@ class WoPGlanceView extends WatchUi.GlanceView {
     var GH;
 
 
-    function initialize() {
+    function initialize(mCalc) {
         WatchUi.GlanceView.initialize();
-        calculatorGlance = new WoPcalcDates();
+        calculatorGlance = mCalc;
     }
 
     // Load your resources here
@@ -103,6 +103,4 @@ class WoPGlanceView extends WatchUi.GlanceView {
     // memory.
     function onHide() {
     }
-
-
 }

@@ -5,7 +5,7 @@
     <string id="glance_title" scope="glance">Pregnancy info</string>
 
     <string id="menu_name">Settings</string>
-    <string id="set_birthday">Set Birthdate</string>
+    <string id="set_birthday">Set date of birth</string>
     <string id="info">About</string>
     <string id="wop" scope="glance">. WoP </string>
     <string id="text_top">Current week</string>

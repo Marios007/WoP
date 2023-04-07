@@ -18,7 +18,7 @@
     <string id="trimester">. Trimester</string>
 
     <!-- Date picker --> 
-    <string id="datePickerTitle">Geburtsd. wählen</string>
+    <string id="datePickerTitle">Geburtstermin</string>
     <string id="dateSeparator">-</string>
     <string id="month01">Jan</string>
     <string id="month02">Feb</string>

@@ -5,7 +5,7 @@ import Toybox.WatchUi;
 class WoPApp extends Application.AppBase {
 
     hidden var mView;
-    hidden var mModel;
+    hidden var mCalc;
     hidden var mDelegate;
     hidden var mGlanceView;
 
@@ -21,20 +21,22 @@ class WoPApp extends Application.AppBase {
     function onStop(state as Dictionary?) as Void {
     }
 
-    // Return the initial glance view of your widget here   
-    (:glance)
-    function getGlanceView() {
-        mGlanceView = new WoPGlanceView();
-        mModel = new WoPcalcDates();
-        return [ mGlanceView];
-    }
-
 
     // Return the initial view of your application here
     function getInitialView() as Array<Views or InputDelegates>? {
-        return [ new WoPView(), new WoPDelegate() ] as Array<Views or InputDelegates>;
+        mCalc = new WoPcalcDates();
+        mView = new WoPView(mCalc);
+        mDelegate = new WoPDelegate();
+        return [ mView, mDelegate ] as Array<Views or InputDelegates>;
     }
 
+    // Return the initial glance view of your widget here
+    (:glance)
+    function getGlanceView() {
+        mCalc = new WoPcalcDates();
+        mGlanceView = new WoPGlanceView(mCalc);
+        return [ mGlanceView];
+    }
 }
 
 function getApp() as WoPApp {
