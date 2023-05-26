@@ -78,7 +78,6 @@ class WoPGlanceView extends WatchUi.GlanceView {
                 dc.drawLine(GW/_xPosWeek+3, GH/2+5, (GW/_xPosWeek+3), GH/2-5);
                 break;
             case 3:
-                System.println("case 3");
                 dc.setPenWidth(8);
                 dc.setColor(G.COLOR_GREEN, -1);
                 dc.drawLine(GW/1.66+3 , GH/2, GW/_xPosWeek+3, GH/2);
