@@ -50,7 +50,6 @@ class WoPGlanceView extends WatchUi.GlanceView {
         dc.drawLine(GW/3.33+3, GH/2, GW/1.66-7, GH/2);
         dc.drawLine(GW/1.66+3, GH/2, GW, GH/2);
 
-        System.println(_woPDates.get(:trimester));
         switch (_woPDates.get(:trimester)) {
             case 1:
                 dc.setPenWidth(8);
