@@ -41,56 +41,61 @@ class WoPGlanceView extends WatchUi.GlanceView {
     // Update the view
     function onUpdate(dc) {
         dc.setColor(G.COLOR_WHITE, G.COLOR_TRANSPARENT);
-
-        dc.drawText(0, 0, G.FONT_GLANCE, _appTitle, G.TEXT_JUSTIFY_LEFT);
-        dc.drawText(0, GH/1.5, G.FONT_GLANCE, _message, G.TEXT_JUSTIFY_LEFT);
-        dc.setPenWidth(7);
+        
+        var penWidth = 7;
+        var heightAdj = (dc.getFontHeight(G.FONT_GLANCE)*0.5)+penWidth; //half size of the font and the line thickness
+        System.println("heightAdj: " + heightAdj);
+        dc.drawText(0, ((GH/4)-heightAdj), G.FONT_GLANCE, _appTitle, G.TEXT_JUSTIFY_LEFT);
+        dc.drawText(0, ((GH/1.333)-heightAdj), G.FONT_GLANCE, _message, G.TEXT_JUSTIFY_LEFT);
+        System.println("GH/4: " + GH/4);
+        System.println("GH/1.3: " + GH/1.333);
+        dc.setPenWidth(penWidth);
         dc.setColor(G.COLOR_DK_GRAY, -1);
-        dc.drawLine(0, GH/2, GW/3.33-7, GH/2);
-        dc.drawLine(GW/3.33+3, GH/2, GW/1.66-7, GH/2);
-        dc.drawLine(GW/1.66+3, GH/2, GW, GH/2);
+
+        dc.drawLine(GW/3.33+3, (GH/2)-penWidth, GW/1.66-penWidth, (GH/2)-penWidth);
+        dc.drawLine(GW/1.66+3, (GH/2)-penWidth, GW, (GH/2)-penWidth);
 
         switch (_woPDates.get(:trimester)) {
             case 1:
                 dc.setPenWidth(8);
                 dc.setColor(G.COLOR_RED, -1);
-                dc.drawLine(0, GH/2, GW/_xPosWeek, GH/2);
+                dc.drawLine(0, (GH/2)-penWidth, GW/_xPosWeek, (GH/2)-penWidth);
                 dc.setPenWidth(9);
                 dc.setColor(G.COLOR_BLACK, G.COLOR_BLACK);
-                dc.drawLine(GW/_xPosWeek, GH/2+5, (GW/_xPosWeek), GH/2-5);
+                dc.drawLine(GW/_xPosWeek, GH/2-2, (GW/_xPosWeek), GH/2-12);
                 dc.setColor(G.COLOR_WHITE, G.COLOR_BLACK);
                 dc.setPenWidth(6);
-                dc.drawLine(GW/_xPosWeek, GH/2+5, (GW/_xPosWeek), GH/2-5);
+                dc.drawLine(GW/_xPosWeek, GH/2-2, (GW/_xPosWeek), GH/2-12); 
                 break;
             case 2:
                 dc.setPenWidth(8);
                 dc.setColor(G.COLOR_YELLOW, -1);
-                dc.drawLine(GW/3.33+3, GH/2, GW/_xPosWeek+3, GH/2);
+                dc.drawLine(GW/3.33+3, (GH/2)-penWidth, GW/_xPosWeek+3, (GH/2)-penWidth);
                 dc.setPenWidth(8);
                 dc.setColor(G.COLOR_RED, -1);
-                dc.drawLine(0, GH/2, GW/3.33-8, GH/2);
+                dc.drawLine(0, (GH/2)-penWidth, GW/3.33-8, (GH/2)-penWidth);
                 dc.setPenWidth(9);
                 dc.setColor(G.COLOR_BLACK, G.COLOR_BLACK);
-                dc.drawLine(GW/_xPosWeek+3, GH/2+5, (GW/_xPosWeek+3), GH/2-5);
+                dc.drawLine(GW/_xPosWeek+3, GH/2-2, (GW/_xPosWeek+3), GH/2-12);
                 dc.setColor(G.COLOR_WHITE, G.COLOR_BLACK); 
                 dc.setPenWidth(6);
-                dc.drawLine(GW/_xPosWeek+3, GH/2+5, (GW/_xPosWeek+3), GH/2-5);
+                dc.drawLine(GW/_xPosWeek+3, GH/2-2, (GW/_xPosWeek+3), GH/2-12);
                 break;
             case 3:
                 dc.setPenWidth(8);
                 dc.setColor(G.COLOR_GREEN, -1);
-                dc.drawLine(GW/1.66+3 , GH/2, GW/_xPosWeek+3, GH/2);
+                dc.drawLine(GW/1.66+3 , (GH/2)-penWidth, GW/_xPosWeek+3, (GH/2)-penWidth);
                 dc.setPenWidth(8);
                 dc.setColor(G.COLOR_RED, -1);
-                dc.drawLine(0, GH/2, GW/3.33-7, GH/2);
+                dc.drawLine(0, (GH/2)-penWidth, GW/3.33-penWidth, (GH/2)-penWidth);
                 dc.setColor(G.COLOR_YELLOW, -1);
-                dc.drawLine(GW/3.33+3, GH/2, GW/1.66-7, GH/2);
+                dc.drawLine(GW/3.33+3, (GH/2)-penWidth, GW/1.66-penWidth, (GH/2)-penWidth);
                 dc.setPenWidth(9);
                 dc.setColor(G.COLOR_BLACK, G.COLOR_BLACK);
-                dc.drawLine(GW/_xPosWeek+6, GH/2+5, (GW/_xPosWeek+6), GH/2-5);
+                dc.drawLine(GW/_xPosWeek+6, GH/2-2, (GW/_xPosWeek+6), GH/2-12);
                 dc.setColor(G.COLOR_WHITE, G.COLOR_BLACK);
                 dc.setPenWidth(6);
-                dc.drawLine(GW/_xPosWeek+6, GH/2+5, GW/_xPosWeek+6, GH/2-5);
+                dc.drawLine(GW/_xPosWeek+6, GH/2-2, GW/_xPosWeek+6, GH/2-12);
                 break;
             default:
                 break;
