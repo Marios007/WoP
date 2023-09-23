@@ -1,5 +1,6 @@
 using Toybox.WatchUi;
 using Toybox.System;
+import Toybox.Lang;
 using Toybox.Graphics as G;
 
 (:glance)
@@ -14,6 +15,7 @@ class WoPGlanceView extends WatchUi.GlanceView {
     var _xPosWeek;
     var GW;
     var GH;
+    var currentFont;
 
 
     function initialize(mCalc) {
@@ -40,15 +42,23 @@ class WoPGlanceView extends WatchUi.GlanceView {
 
     // Update the view
     function onUpdate(dc) {
+
         dc.setColor(G.COLOR_WHITE, G.COLOR_TRANSPARENT);
-        
         var penWidth = 7;
-        var heightAdj = (dc.getFontHeight(G.FONT_GLANCE)*0.5)+penWidth; //half size of the font and the line thickness
-        System.println("heightAdj: " + heightAdj);
-        dc.drawText(0, ((GH/4)-heightAdj), G.FONT_GLANCE, _appTitle, G.TEXT_JUSTIFY_LEFT);
-        dc.drawText(0, ((GH/1.333)-heightAdj), G.FONT_GLANCE, _message, G.TEXT_JUSTIFY_LEFT);
-        System.println("GH/4: " + GH/4);
-        System.println("GH/1.3: " + GH/1.333);
+        if (Toybox.Graphics has :VectorFont) {
+            currentFont = G.getVectorFont({
+            :face => ["RobotoRegular", "NotoNaskhArabicBold", "NotoSansArmenianRegular", "PridiRegularGarmin", "SakkalMajallaRoman"] as Array<String>,
+            :size => 32
+        });
+
+        } else {
+            currentFont = G.FONT_GLANCE;
+        }
+
+        var heightAdj = (dc.getFontHeight(currentFont)*0.5)+penWidth; //half size of the font and the line thickness
+
+        dc.drawText(0, ((GH/4)-heightAdj), currentFont, _appTitle, G.TEXT_JUSTIFY_LEFT);
+        dc.drawText(0, ((GH/1.333)-heightAdj), currentFont, _message, G.TEXT_JUSTIFY_LEFT);
         dc.setPenWidth(penWidth);
         dc.setColor(G.COLOR_DK_GRAY, -1);
 
@@ -107,4 +117,5 @@ class WoPGlanceView extends WatchUi.GlanceView {
     // memory.
     function onHide() {
     }
+
 }

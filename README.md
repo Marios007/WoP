@@ -53,6 +53,10 @@ https://apps.garmin.com/de-DE/apps/35876c51-1fcb-4781-88b4-0130060010dc
       <td>X</td>
     </tr>
     <tr>
+      <td>epix™ Pro (Gen 2)</td>
+      <td>X</td>
+    </tr>
+    <tr>
       <td>fēnix® 6</td>
       <td>X</td>
     </tr>
@@ -82,6 +86,18 @@ https://apps.garmin.com/de-DE/apps/35876c51-1fcb-4781-88b4-0130060010dc
     </tr>
     <tr>
       <td>fēnix® 7X</td>
+      <td>X</td>
+    </tr>
+    <tr>
+      <td>fēnix® 7 Pro</td>
+      <td>X</td>
+    </tr>
+    <tr>
+      <td>fēnix® 7S Pro</td>
+      <td>X</td>
+    </tr>
+    <tr>
+      <td>fēnix® 7X Pro</td>
       <td>X</td>
     </tr>
     <tr>
@@ -149,11 +165,23 @@ https://apps.garmin.com/de-DE/apps/35876c51-1fcb-4781-88b4-0130060010dc
       <td>X</td>
     </tr>
     <tr>
+      <td>Venu® 3</td>
+      <td>X</td>
+    </tr>
+    <tr>
+      <td>Venu® 3s</td>
+      <td>X</td>
+    </tr>
+    <tr>
       <td>vívoactive® 4</td>
       <td>X</td>
     </tr>
     <tr>
       <td>vívoactive® 4S</td>
+      <td>X</td>
+    </tr>
+    <tr>
+      <td>vívoactive® 5</td>
       <td>X</td>
     </tr>
   </tbody>
