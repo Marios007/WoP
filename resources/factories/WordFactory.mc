@@ -10,14 +10,14 @@ import Toybox.WatchUi;
 
 //! Factory that controls which words can be picked
 class WordFactory extends WatchUi.PickerFactory {
-    private var _words as Array<Symbol>;
+    private var _words;
     private var _font as FontDefinition;
 
     //! Constructor
     //! @param words Resource identifiers for strings
     //! @param options Dictionary of options
     //! @option options :font The font to use
-    public function initialize(words as Array<Symbol>, options as {:font as FontDefinition}) {
+    public function initialize(words, options as {:font as FontDefinition}) {
         PickerFactory.initialize();
 
         _words = words;

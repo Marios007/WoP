@@ -59,7 +59,7 @@ class WoPstats {
             return statsTable[week];
         }
         else {
-            return statsTable[0];
+            return statsTable[41];
         }
     }
 

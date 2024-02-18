@@ -51,7 +51,8 @@ class WoPcalcDates {
     function calculateCountdown(dateOfBirth as Time.Moment, today as Time.Moment) {
         var countdown = dateOfBirth.subtract(today);
         countdown = countdown.divide(Gregorian.SECONDS_PER_DAY);
-        countdown = countdown.value().toString();
+        countdown = Math.round(countdown.value());
+        countdown = countdown.toString();
         return countdown;
     }
 
@@ -66,8 +67,8 @@ class WoPcalcDates {
         var dateOfBirth = getDateOfBirth();
         var currentWoP = _today.subtract(dateOfBirth.subtract(DURATION_PREGNANCY)); //WoP in Days
         var woP_in_Days = (currentWoP.value())/(Gregorian.SECONDS_PER_DAY);  // WoP output in days
-        var week = (woP_in_Days/7)+1;  //set current WoP! (week + 1 )
-        var dayInWeek = woP_in_Days%7; //exact day in week
+        var week = Math.floor(woP_in_Days / 7) + 1;  //set current WoP! (week + 1 )
+        var dayInWeek = woP_in_Days - 7 * Math.floor(woP_in_Days / 7); //exact day in week
         var trimester = getTrimester(week);
         var angle = getAngle(week);
         _weeksDict = {

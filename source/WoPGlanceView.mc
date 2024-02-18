@@ -36,7 +36,7 @@ class WoPGlanceView extends WatchUi.GlanceView {
     // This includes loading resources into memory.
     function onShow() {
         _woPDates = calculatorGlance.getDates();
-        _xPosWeek = 100/(_woPDates.get(:week)/0.4);
+        _xPosWeek = 100 * 0.4 / _woPDates.get(:week);
         _message = _woPDates.get(:week) + _textWoP + "("  +(_woPDates.get(:exactWeek)+"W + "+_woPDates.get(:dayInWeek) +")");
     }
 
@@ -45,15 +45,15 @@ class WoPGlanceView extends WatchUi.GlanceView {
 
         dc.setColor(G.COLOR_WHITE, G.COLOR_TRANSPARENT);
         var penWidth = 7;
-        if (Toybox.Graphics has :VectorFont) {
-            currentFont = G.getVectorFont({
-            :face => ["RobotoRegular", "NotoNaskhArabicBold", "NotoSansArmenianRegular", "PridiRegularGarmin", "SakkalMajallaRoman"] as Array<String>,
-            :size => 32
-        });
+   //     if (Toybox.Graphics has :VectorFont) {
+    //        currentFont = G.getVectorFont({
+    //        :face => ["RobotoRegular","SakkalMajallaRoman", "NotoNaskhArabicBold", "NotoSansArmenianRegular", "PridiRegularGarmin", "SakkalMajallaRoman"] as Array<String>,
+    //        :size => 30
+     //   });
 
-        } else {
+    //    } else {
             currentFont = G.FONT_GLANCE;
-        }
+     //   }
 
         var heightAdj = (dc.getFontHeight(currentFont)*0.5)+penWidth; //half size of the font and the line thickness
 
@@ -64,6 +64,7 @@ class WoPGlanceView extends WatchUi.GlanceView {
 
         dc.drawLine(GW/3.33+3, (GH/2)-penWidth, GW/1.66-penWidth, (GH/2)-penWidth);
         dc.drawLine(GW/1.66+3, (GH/2)-penWidth, GW, (GH/2)-penWidth);
+
 
         switch (_woPDates.get(:trimester)) {
             case 1:

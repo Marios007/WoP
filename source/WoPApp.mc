@@ -23,11 +23,11 @@ class WoPApp extends Application.AppBase {
 
 
     // Return the initial view of your application here
-    function getInitialView() as Array<Views or InputDelegates>? {
+    function getInitialView()  {
         mCalc = new WoPcalcDates();
         mView = new WoPView(mCalc);
         mDelegate = new WoPDelegate();
-        return [ mView, mDelegate ] as Array<Views or InputDelegates>;
+        return [ mView, mDelegate ];
     }
 
     // Return the initial glance view of your widget here

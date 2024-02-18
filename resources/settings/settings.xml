@@ -21,7 +21,7 @@
   </setting>
 
   <setting propertyKey="@Properties.year" title="@Strings.SettingsYearTitle">
-    <settingConfig type="numeric" min="2023" max="2025" required="true"/>
+    <settingConfig type="numeric" min="2024" max="2026" required="true"/>
   </setting>
 
 </settings>
