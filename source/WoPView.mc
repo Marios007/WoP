@@ -4,6 +4,7 @@ using Toybox.System;
 using Toybox.Time;
 using Toybox.Time.Gregorian;
 using Toybox.Lang;
+import Toybox.Application.Properties;
 
 class WoPView extends WatchUi.View {
 
@@ -20,6 +21,7 @@ class WoPView extends WatchUi.View {
     var calculator;
     var stats = new WoPstats();
     var drawer = new WoPDrawer();
+    var dialog;
 
     function initialize(mCalc) {
         View.initialize();
@@ -29,6 +31,13 @@ class WoPView extends WatchUi.View {
 
     // Load your resources here
     function onLayout(dc) as Void {
+//        System.println("DataSet: " + Properties.getValue("dateSet"));
+        if (Properties.getValue("dateSet") == 0 ) {
+            var message = WatchUi.loadResource(Rez.Strings.PopUpMessage);
+            dialog = new WatchUi.Confirmation(message);
+            WatchUi.pushView(dialog,new MyConfirmationDelegate(),WatchUi.SLIDE_IMMEDIATE);
+            
+        }
         setLayout(Rez.Layouts.MainLayout(dc));
 
         _textTop = findDrawableById("textTop");
@@ -87,5 +96,4 @@ class WoPView extends WatchUi.View {
     // memory.
     function onHide() as Void {
     }
-
 }

@@ -3,6 +3,21 @@ import Toybox.Lang;
 import Toybox.WatchUi;
 import Toybox.Application.Properties;
 
+
+
+class MenuSettingsView extends WatchUi.Menu2 {
+
+    function initialize() {
+        Menu2.initialize({:title=>new $.DrawableMenuTitle()});
+
+        var subLabel = Properties.getValue("day")+"."+Properties.getValue("month")+"."+Properties.getValue("year");
+        Menu2.addItem(new WatchUi.MenuItem(WatchUi.loadResource(Rez.Strings.set_birthday), subLabel, "birthday", null));
+        Menu2.addItem(new WatchUi.MenuItem(WatchUi.loadResource(Rez.Strings.info), null, "info", null));
+	}
+}
+
+
+
 //! This is the menu input delegate for the main menu of the application
 class Menu2Delegate extends WatchUi.Menu2InputDelegate {
 

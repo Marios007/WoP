@@ -32,7 +32,7 @@ class WoPcalcDates {
         Properties.setValue("day", initialDateGregorian.day);
         Properties.setValue("month", initialDateGregorian.month);
         Properties.setValue("year", initialDateGregorian.year);
-        Properties.setValue("dateSet", 1);
+        // Properties.setValue("dateSet", 1);
     }
 
 

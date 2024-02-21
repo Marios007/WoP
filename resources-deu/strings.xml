@@ -41,4 +41,7 @@
     <!-- SecondPage --> 
     <string id="text_top_page2">Aktuelle Größe/Gewicht </string>
 
+    <!-- Other --> 
+    <string id="PopUpMessage">Geburtsdatum einstellen?</string>
+
 </strings>

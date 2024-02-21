@@ -57,7 +57,6 @@ class DatePickerDelegate extends WatchUi.PickerDelegate {
             }
         }
         WatchUi.popView(WatchUi.SLIDE_IMMEDIATE);
-        WatchUi.popView(WatchUi.SLIDE_IMMEDIATE);
         return true;
     }
 

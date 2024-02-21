@@ -3,8 +3,6 @@ import Toybox.Graphics;
 import Toybox.Lang;
 import Toybox.Application.Properties;
 
-var menu;
-
 class WoPDelegate extends WatchUi.BehaviorDelegate {
     
     var model;
@@ -22,12 +20,7 @@ class WoPDelegate extends WatchUi.BehaviorDelegate {
 
     function onMenu() {
     // Generate a new Menu with a drawable Title
-        menu = new WatchUi.Menu2({:title=>new $.DrawableMenuTitle()});
-
-        var subLabel = Properties.getValue("day")+"."+Properties.getValue("month")+"."+Properties.getValue("year");
-        menu.addItem(new WatchUi.MenuItem(WatchUi.loadResource(Rez.Strings.set_birthday), subLabel, "birthday", null));
-        menu.addItem(new WatchUi.MenuItem(WatchUi.loadResource(Rez.Strings.info), null, "info", null));
-        WatchUi.pushView(menu, new $.Menu2Delegate(menu.getItem(0)), WatchUi.SLIDE_LEFT);
+        WatchUi.pushView(new MenuSettingsView(), new $.Menu2Delegate(model), WatchUi.SLIDE_LEFT);
         return true;
     }
 

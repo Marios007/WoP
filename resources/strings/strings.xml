@@ -42,4 +42,8 @@
     <string id="text_top_page2">Current size/weight </string>
 
 
+    <!-- Others --> 
+    <string id="PopUpMessage">Set date of birth?</string>
+
+
 </strings>
