@@ -3,7 +3,8 @@ import Toybox.Lang;
 import Toybox.WatchUi;
 import Toybox.Application.Properties;
 
-
+var itemBirthday;
+var itemInfo;
 
 class MenuSettingsView extends WatchUi.Menu2 {
 
@@ -11,9 +12,18 @@ class MenuSettingsView extends WatchUi.Menu2 {
         Menu2.initialize({:title=>new $.DrawableMenuTitle()});
 
         var subLabel = Properties.getValue("day")+"."+Properties.getValue("month")+"."+Properties.getValue("year");
-        Menu2.addItem(new WatchUi.MenuItem(WatchUi.loadResource(Rez.Strings.set_birthday), subLabel, "birthday", null));
-        Menu2.addItem(new WatchUi.MenuItem(WatchUi.loadResource(Rez.Strings.info), null, "info", null));
+        itemBirthday = new WatchUi.MenuItem(WatchUi.loadResource(Rez.Strings.set_birthday), subLabel, "birthday", null);
+        itemInfo = new WatchUi.MenuItem(WatchUi.loadResource(Rez.Strings.info), null, "info", null);
+        Menu2.addItem(itemBirthday);
+        Menu2.addItem(itemInfo);
 	}
+
+    function onShow() as Void {
+        var subLabel = Properties.getValue("day")+"."+Properties.getValue("month")+"."+Properties.getValue("year");
+        itemBirthday = new WatchUi.MenuItem(WatchUi.loadResource(Rez.Strings.set_birthday), subLabel, "birthday", null);
+        Menu2.updateItem(itemBirthday, 0);
+	}
+
 }
 
 

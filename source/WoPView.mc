@@ -31,22 +31,19 @@ class WoPView extends WatchUi.View {
 
     // Load your resources here
     function onLayout(dc) as Void {
-//        System.println("DataSet: " + Properties.getValue("dateSet"));
         if (Properties.getValue("dateSet") == 0 ) {
             var message = WatchUi.loadResource(Rez.Strings.PopUpMessage);
             dialog = new WatchUi.Confirmation(message);
             WatchUi.pushView(dialog,new MyConfirmationDelegate(),WatchUi.SLIDE_IMMEDIATE);
-            
         }
+    // set layout and
         setLayout(Rez.Layouts.MainLayout(dc));
-
         _textTop = findDrawableById("textTop");
         _currentWoPLabel = findDrawableById("week");
         _countdownDaysLabel = findDrawableById("countdown");
         _trimesterLabel = findDrawableById("trimester");
         center_x = dc.getWidth()/2;
         center_y = dc.getHeight()/2;
-        
     }
 
     // Called when this View is brought to the foreground. Restore
