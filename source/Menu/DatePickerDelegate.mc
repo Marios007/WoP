@@ -11,7 +11,7 @@ class DatePickerDelegate extends WatchUi.PickerDelegate {
 
 
 
-    var monthDict = { 
+    var monthDict as Dictionary = { 
         WatchUi.loadResource(Rez.Strings.month01) => 1,
         WatchUi.loadResource(Rez.Strings.month02) => 2,
         WatchUi.loadResource(Rez.Strings.month03) => 3,
@@ -24,7 +24,7 @@ class DatePickerDelegate extends WatchUi.PickerDelegate {
         WatchUi.loadResource(Rez.Strings.month10) => 10,
         WatchUi.loadResource(Rez.Strings.month11) => 11,
         WatchUi.loadResource(Rez.Strings.month12) => 12,
-        };
+        } as Dictionary;
 
 
     //! Constructor
@@ -51,7 +51,7 @@ class DatePickerDelegate extends WatchUi.PickerDelegate {
             var year = values[4];
             if ((day != null) && (year != null)) {
                 Properties.setValue("day", day);
-                Properties.setValue("month", convertMonth(month));
+                Properties.setValue("month", convertMonth(month as String));
                 Properties.setValue("year", year);
                 Properties.setValue("dateSet", 1);
             }
@@ -61,8 +61,8 @@ class DatePickerDelegate extends WatchUi.PickerDelegate {
     }
 
 
-    private function convertMonth(month) {
-        return monthDict[month];
+    private function convertMonth(month as String) {
+        return monthDict[month] as Dictionary;
     }
 
 }

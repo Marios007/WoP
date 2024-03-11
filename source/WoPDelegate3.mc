@@ -2,9 +2,10 @@ using Toybox.WatchUi;
 import Toybox.Application.Properties;
 
 
-class WoPDelegate2 extends WatchUi.BehaviorDelegate {
+class WoPDelegate3 extends WatchUi.BehaviorDelegate {
     
     var model;
+    var menu;
     
         // Set up the callback to the view
     function initialize() {
@@ -12,17 +13,11 @@ class WoPDelegate2 extends WatchUi.BehaviorDelegate {
     }
     
     function onNextPage() {
-        WatchUi.pushView(new WoPView3(), new WoPDelegate3(), WatchUi.SLIDE_UP);
         return true;
     }
 
     function onMenu() {
         WatchUi.pushView(new MenuSettingsView(), new $.Menu2Delegate(model), WatchUi.SLIDE_LEFT);
-        return true;
-    }
-
-    function onSelect() {
-        WatchUi.pushView(new WoPView3(), new WoPDelegate3(), WatchUi.SLIDE_UP);
         return true;
     }
 
@@ -32,7 +27,7 @@ class WoPDelegate2 extends WatchUi.BehaviorDelegate {
     }
 
     function onBack() {
-        //pop the main view to close the application
+    //pop the main view to close the application
         WatchUi.popView(WatchUi.SLIDE_DOWN);
         return true;
     }

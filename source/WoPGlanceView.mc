@@ -45,15 +45,7 @@ class WoPGlanceView extends WatchUi.GlanceView {
 
         dc.setColor(G.COLOR_WHITE, G.COLOR_TRANSPARENT);
         var penWidth = 7;
-   //     if (Toybox.Graphics has :VectorFont) {
-    //        currentFont = G.getVectorFont({
-    //        :face => ["RobotoRegular","SakkalMajallaRoman", "NotoNaskhArabicBold", "NotoSansArmenianRegular", "PridiRegularGarmin", "SakkalMajallaRoman"] as Array<String>,
-    //        :size => 30
-     //   });
-
-    //    } else {
-            currentFont = G.FONT_GLANCE;
-     //   }
+        currentFont = G.FONT_GLANCE;
 
         var heightAdj = (dc.getFontHeight(currentFont)*0.5)+penWidth; //half size of the font and the line thickness
 

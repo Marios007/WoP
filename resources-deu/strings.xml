@@ -41,6 +41,53 @@
     <!-- SecondPage --> 
     <string id="text_top_page2">Aktuelle Größe/Gewicht </string>
 
+    <!-- ThirdPage -->
+    <string id="firstLine">Das Baby ist jetzt so groß wie</string>
+    <string id="size0">noch zu klein</string>
+    <string id="size1">noch zu klein</string>
+    <string id="size2">noch zu klein</string>
+    <string id="size3">noch zu klein</string>
+    <string id="size4">ein Mohnkorn</string><!-- fehlt -->
+    <string id="size5">ein Sesamsamen</string>
+    <string id="size6">ein Maiskorn</string>
+    <string id="size7">eine Heidelbeere</string>
+    <string id="size8">eine Himbeere</string>
+    <string id="size9">eine Haselnuss</string>
+    <string id="size10">eine Dattel</string>
+    <string id="size11">eine kleine Tomate</string>
+    <string id="size12">eine Pflaume</string>
+    <string id="size13">ein Pfirsich</string>
+    <string id="size14">ein Apfel</string>
+    <string id="size15">eine Zitrone</string>
+    <string id="size16">eine kleine Orange</string>
+    <string id="size17">eine Avocado</string>
+    <string id="size18">eine Mango</string>
+    <string id="size19">eine Kartoffel</string>
+    <string id="size20">eine Süßkartoffel</string>
+    <string id="size21">eine Aubergine</string>
+    <string id="size22">eine Kokosnuss</string>
+    <string id="size23">ein Brokkoli</string>
+    <string id="size24">eine Gurke</string>
+    <string id="size25">ein Rotkohl</string>
+    <string id="size26">eine Honigmelone</string>
+    <string id="size27">ein Chinakohl</string>
+    <string id="size28">eine Ananas</string>
+    <string id="size29">eine Porreestange</string>
+    <string id="size30">eine Yambohne</string>
+    <string id="size31">eine Kochbanane</string>
+    <string id="size32">ein großer Rettich</string>
+    <string id="size33">ein Mangold</string>
+    <string id="size34">eine Yamswurzel</string>
+    <string id="size35">eine Wintermelone</string>
+    <string id="size36">eine Selleriestaude</string>
+    <string id="size37">eine Jackfrucht</string>
+    <string id="size38">eine Rhabarberstange</string>
+    <string id="size39">ein Kürbis</string>
+    <string id="size40">eine große Wassermelone</string>
+    <string id="size40">eine große Wassermelone</string>
+
+
+
     <!-- Other --> 
     <string id="PopUpMessage">Geburtsdatum einstellen?</string>
 

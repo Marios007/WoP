@@ -41,6 +41,51 @@
     <!-- SecondPage --> 
     <string id="text_top_page2">Current size/weight </string>
 
+    <!-- ThirdPage -->
+    <string id="firstLine">Your baby is the size of</string>
+    <string id="size0">still too small</string> <!-- fehlt -->
+    <string id="size1">still too small</string> <!-- fehlt -->
+    <string id="size2">still too small</string> <!-- fehlt -->
+    <string id="size3">still too small</string><!-- fehlt -->
+    <string id="size4">still too small</string> <!-- fehlt -->
+    <string id="size5">a sesame seed</string>
+    <string id="size6">a corn kernel</string><!-- fehlt -->
+    <string id="size7">a blueberry</string>
+    <string id="size8">a raspberry</string>
+    <string id="size9">a hazelnut</string>
+    <string id="size10">an date</string>
+    <string id="size11">a small tomato</string>
+    <string id="size12">a plum</string>
+    <string id="size13">a peach</string>
+    <string id="size14">an apple</string>
+    <string id="size15">a lemon</string>
+    <string id="size16">a small orange</string>
+    <string id="size17">an avocado</string>
+    <string id="size18">a mango</string>
+    <string id="size19">a potato</string>
+    <string id="size20">a sweet potato</string>
+    <string id="size21">an eggplant</string>
+    <string id="size22">a coconut</string>
+    <string id="size23">a broccoli</string>
+    <string id="size24">a cucumber</string>
+    <string id="size25">a red cabbage</string>
+    <string id="size26">a honeydew melon</string>
+    <string id="size27">a chinese cabbage</string>
+    <string id="size28">a pineapple</string>
+    <string id="size29">a leek stalk</string>
+    <string id="size30">a yam bean</string>
+    <string id="size31">a plantain</string>
+    <string id="size32">a large radish</string>
+    <string id="size33">a swiss chard</string> <!-- fehlt -->
+    <string id="size34">a yam root</string>
+    <string id="size35">a winter melon</string>
+    <string id="size36">a celery stalk</string> 
+    <string id="size37">a jackfruit</string>
+    <string id="size38">a rhubarb stalk</string> <!-- fehlt -->
+    <string id="size39">a pumpkin</string>
+    <string id="size40">a large watermelon</string>
+    <string id="size41">a large watermelon</string>
+
 
     <!-- Others --> 
     <string id="PopUpMessage">Set date of birth?</string>

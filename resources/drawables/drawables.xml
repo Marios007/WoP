@@ -3,4 +3,51 @@
     <bitmap id="fetusIcon" filename="baby_fetus_icon4040.png" />
     <bitmap id="scaleIcon" filename="scale_white4040.png" />
     <bitmap id="rulerIcon" filename="ruler_white4040.png" />
+    <bitmap id="size0" filename="IconSize/sesame_seed.svg" scaleX="40%" scaleY="40%" /><!-- fehlt -->
+    <bitmap id="size1" filename="IconSize/sesame_seed.svg" scaleX="40%" scaleY="40%" /><!-- fehlt -->
+    <bitmap id="size2" filename="IconSize/sesame_seed.svg" scaleX="40%" scaleY="40%" /><!-- fehlt -->
+    <bitmap id="size3" filename="IconSize/sesame_seed.svg" scaleX="40%" scaleY="40%" /><!-- fehlt -->
+    <bitmap id="size4" filename="IconSize/sesame_seed.svg" scaleX="40%" scaleY="40%" /><!-- fehlt -->
+    <bitmap id="size5" filename="IconSize/sesame_seed.svg" scaleX="40%" scaleY="40%" />
+    <bitmap id="size6" filename="IconSize/Corn_kernel.svg" /><!-- fehlt -->
+    <bitmap id="size7" filename="IconSize/blueberry.svg" scaleX="40%" scaleY="40%"/>
+    <bitmap id="size8" filename="IconSize/Raspberry.svg" scaleX="40%" scaleY="40%" />
+    <bitmap id="size9" filename="IconSize/Hazelnut.svg" scaleX="40%" scaleY="40%" />
+    <bitmap id="size10" filename="IconSize/dates.svg" scaleX="40%" scaleY="40%" />
+    <bitmap id="size11" filename="IconSize/tomato.svg" scaleX="40%" scaleY="40%" />
+    <bitmap id="size12" filename="IconSize/plum.svg" scaleX="40%" scaleY="40%" />
+    <bitmap id="size13" filename="IconSize/peach.svg" scaleX="40%" scaleY="40%" />
+    <bitmap id="size14" filename="IconSize/apple.svg" scaleX="40%" scaleY="40%" />
+    <bitmap id="size15" filename="IconSize/lemon.svg" scaleX="40%" scaleY="40%" />
+    <bitmap id="size16" filename="IconSize/orange.svg" scaleX="40%" scaleY="40%" />
+    <bitmap id="size17" filename="IconSize/avocado2.svg" scaleX="40%" scaleY="40%" />
+    <bitmap id="size18" filename="IconSize/mango.svg" scaleX="40%" scaleY="40%" />
+    <bitmap id="size19" filename="IconSize/potato.svg" scaleX="40%" scaleY="40%" />
+    <bitmap id="size20" filename="IconSize/sweet_potato.svg" scaleX="40%" scaleY="40%" />
+    <bitmap id="size21" filename="IconSize/eggplant.svg" scaleX="40%" scaleY="40%" />
+    <bitmap id="size22" filename="IconSize/coconut.svg" scaleX="40%" scaleY="40%"/>
+    <bitmap id="size23" filename="IconSize/broccoli.svg" scaleX="40%" scaleY="40%" />
+    <bitmap id="size24" filename="IconSize/cucumber.svg" scaleX="40%" scaleY="40%" />
+    <bitmap id="size25" filename="IconSize/red_cabbage.svg" scaleX="40%" scaleY="40%" />
+    <bitmap id="size26" filename="IconSize/honey_melon.svg" scaleX="40%" scaleY="40%" />
+    <bitmap id="size27" filename="IconSize/cabbage.svg" scaleX="40%" scaleY="40%"/>
+    <bitmap id="size28" filename="IconSize/pineapple.svg" scaleX="40%" scaleY="40%"/>
+    <bitmap id="size29" filename="IconSize/leek.svg" scaleX="40%" scaleY="40%"/>
+    <bitmap id="size30" filename="IconSize/yam.svg" scaleX="40%" scaleY="40%" />
+    <bitmap id="size31" filename="IconSize/banana.svg" scaleX="40%" scaleY="40%" />
+    <bitmap id="size32" filename="IconSize/radish.svg" scaleX="40%" scaleY="40%" />
+    <bitmap id="size33" filename="IconSize/leek.svg" scaleX="40%" scaleY="40%" />
+    <bitmap id="size34" filename="IconSize/yam_root.svg" scaleX="40%" scaleY="40%" />
+    <bitmap id="size35" filename="IconSize/winter_melon.svg" scaleX="40%" scaleY="40%" />
+    <bitmap id="size36" filename="IconSize/celery.svg" scaleX="40%" scaleY="40%" />
+    <bitmap id="size37" filename="IconSize/jackfruit.svg" scaleX="40%" scaleY="40%"/>
+    <bitmap id="size38" filename="IconSize/leek.svg" scaleX="40%" scaleY="40%" /> 
+    <bitmap id="size39" filename="IconSize/pumpkin.svg" scaleX="40%" scaleY="40%" />
+    <bitmap id="size40" filename="IconSize/watermelon.svg" scaleX="40%" scaleY="40%" />
+    <bitmap id="size41" filename="IconSize/leek.svg" scaleX="40%" scaleY="40%" />
+
+
+
+
+
 </drawables>
