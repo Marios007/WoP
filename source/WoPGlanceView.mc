@@ -53,7 +53,7 @@ class WoPGlanceView extends WatchUi.GlanceView {
         dc.drawText(0, ((GH/1.333)-heightAdj), currentFont, _message, G.TEXT_JUSTIFY_LEFT);
         dc.setPenWidth(penWidth);
         dc.setColor(G.COLOR_DK_GRAY, -1);
-
+        dc.drawLine(0, (GH/2)-penWidth, GW/3.33-8, (GH/2)-penWidth);
         dc.drawLine(GW/3.33+3, (GH/2)-penWidth, GW/1.66-penWidth, (GH/2)-penWidth);
         dc.drawLine(GW/1.66+3, (GH/2)-penWidth, GW, (GH/2)-penWidth);
 

@@ -7,9 +7,9 @@
     <bitmap id="size1" filename="IconSize/sesame_seed.svg" scaleX="40%" scaleY="40%" /><!-- fehlt -->
     <bitmap id="size2" filename="IconSize/sesame_seed.svg" scaleX="40%" scaleY="40%" /><!-- fehlt -->
     <bitmap id="size3" filename="IconSize/sesame_seed.svg" scaleX="40%" scaleY="40%" /><!-- fehlt -->
-    <bitmap id="size4" filename="IconSize/sesame_seed.svg" scaleX="40%" scaleY="40%" /><!-- fehlt -->
+    <bitmap id="size4" filename="IconSize/Poppy.svg" scaleX="40%" scaleY="40%" /><!-- fehlt -->
     <bitmap id="size5" filename="IconSize/sesame_seed.svg" scaleX="40%" scaleY="40%" />
-    <bitmap id="size6" filename="IconSize/Corn_kernel.svg" /><!-- fehlt -->
+    <bitmap id="size6" filename="IconSize/CornKernel_1.svg" scaleX="40%" scaleY="40%"/><!-- fehlt -->
     <bitmap id="size7" filename="IconSize/blueberry.svg" scaleX="40%" scaleY="40%"/>
     <bitmap id="size8" filename="IconSize/Raspberry.svg" scaleX="40%" scaleY="40%" />
     <bitmap id="size9" filename="IconSize/Hazelnut.svg" scaleX="40%" scaleY="40%" />
