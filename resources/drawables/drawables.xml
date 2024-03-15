@@ -36,7 +36,7 @@
     <bitmap id="size30" filename="IconSize/yam.svg" scaleX="40%" scaleY="40%" />
     <bitmap id="size31" filename="IconSize/banana.svg" scaleX="40%" scaleY="40%" />
     <bitmap id="size32" filename="IconSize/radish.svg" scaleX="40%" scaleY="40%" />
-    <bitmap id="size33" filename="IconSize/leek.svg" scaleX="40%" scaleY="40%" />
+    <bitmap id="size33" filename="IconSize/chard.svg" scaleX="40%" scaleY="40%" />
     <bitmap id="size34" filename="IconSize/yam_root.svg" scaleX="40%" scaleY="40%" />
     <bitmap id="size35" filename="IconSize/winter_melon.svg" scaleX="40%" scaleY="40%" />
     <bitmap id="size36" filename="IconSize/celery.svg" scaleX="40%" scaleY="40%" />
@@ -44,7 +44,7 @@
     <bitmap id="size38" filename="IconSize/leek.svg" scaleX="40%" scaleY="40%" /> 
     <bitmap id="size39" filename="IconSize/pumpkin.svg" scaleX="40%" scaleY="40%" />
     <bitmap id="size40" filename="IconSize/watermelon.svg" scaleX="40%" scaleY="40%" />
-    <bitmap id="size41" filename="IconSize/leek.svg" scaleX="40%" scaleY="40%" />
+    <bitmap id="size41" filename="IconSize/watermelon.svg" scaleX="40%" scaleY="40%" />
 
 
 
