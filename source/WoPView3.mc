@@ -29,14 +29,13 @@ class WoPView3 extends WatchUi.View {
         center_y = dc.getHeight()/2;
         _textTop = findDrawableById("textTop");
         _textSize = findDrawableById("textSizeName");
-        
-        _currentWoP = calculator.getDates();
     }
 
     // Called when this View is brought to the foreground. Restore
     // the state of this View and prepare it to be shown. This includes
     // loading resources into memory.
     function onShow() as Void {
+        _currentWoP = calculator.getDates();
         _textTop.setText(WatchUi.loadResource(Rez.Strings.firstLine));
         trimester = _currentWoP.get(:trimester);
         week = _currentWoP.get(:week);
@@ -52,7 +51,6 @@ class WoPView3 extends WatchUi.View {
         _image = new WatchUi.Bitmap({:rezId=>data[4], :locX=>center_x, :locY=>center_y});
         var _image_dimension = _image.getDimensions();
         _image.setLocation(center_x - (_image_dimension[0]/2), center_y - (_image_dimension[1]/2));
-        //System.println(_image.getDimensions());
         _image.draw(dc);
     }
 

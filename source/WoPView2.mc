@@ -36,7 +36,6 @@ class WoPView2 extends WatchUi.View {
     function onShow() as Void {
         _currentWoP = calculator.getDates();
         _textTop.setText(WatchUi.loadResource(Rez.Strings.text_top_page2));
-
         var week = _currentWoP.get(:week).toNumber();
         var data = stats.getStatsforWeek(week) as Array;
         _sizeBaby.setText(data[1]);
