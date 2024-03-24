@@ -11,7 +11,7 @@ class DatePickerDelegate extends WatchUi.PickerDelegate {
 
 
 
-    var monthDict as Dictionary = { 
+    var monthDict  = { 
         WatchUi.loadResource(Rez.Strings.month01) => 1,
         WatchUi.loadResource(Rez.Strings.month02) => 2,
         WatchUi.loadResource(Rez.Strings.month03) => 3,
@@ -24,7 +24,7 @@ class DatePickerDelegate extends WatchUi.PickerDelegate {
         WatchUi.loadResource(Rez.Strings.month10) => 10,
         WatchUi.loadResource(Rez.Strings.month11) => 11,
         WatchUi.loadResource(Rez.Strings.month12) => 12,
-        } as Dictionary;
+        } ;
 
 
     //! Constructor

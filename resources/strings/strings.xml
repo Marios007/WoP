@@ -12,6 +12,9 @@
     <string id="text_countdown1"></string>
     <string id="text_countdown2"> days remaining</string>
     <string id="text_countdown3"> day remaining</string>
+    <string id="text_wrong_date1">Please </string>
+    <string id="text_wrong_date2">set a valid</string>
+    <string id="text_wrong_date3">birth date</string>
     <string id="first">st</string>
     <string id="second">nd</string>
     <string id="third">rd</string>
@@ -43,13 +46,13 @@
 
     <!-- ThirdPage -->
     <string id="firstLine">Your baby is the size of</string>
-    <string id="size0">still too small</string> <!-- fehlt -->
-    <string id="size1">still too small</string> <!-- fehlt -->
-    <string id="size2">still too small</string> <!-- fehlt -->
-    <string id="size3">still too small</string><!-- fehlt -->
-    <string id="size4">still too small</string> <!-- fehlt -->
+    <string id="size0">still too small</string>
+    <string id="size1">still too small</string>
+    <string id="size2">still too small</string>
+    <string id="size3">still too small</string>
+    <string id="size4">still too small</string>
     <string id="size5">a sesame seed</string>
-    <string id="size6">a corn kernel</string><!-- fehlt -->
+    <string id="size6">a corn kernel</string>
     <string id="size7">a blueberry</string>
     <string id="size8">a raspberry</string>
     <string id="size9">a hazelnut</string>
@@ -85,6 +88,8 @@
     <string id="size39">a pumpkin</string>
     <string id="size40">a large watermelon</string>
     <string id="size41">a large watermelon</string>
+    <string id="size42">a large watermelon</string>
+    <string id="size43">Please set a correct birth date</string>
 
 
     <!-- Others --> 

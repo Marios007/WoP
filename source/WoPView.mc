@@ -75,7 +75,12 @@ class WoPView extends WatchUi.View {
                 _trimesterLabel.setColor(Graphics.COLOR_GREEN);
                 _trimesterLabel.setText(trimester + WatchUi.loadResource(Rez.Strings.third) + WatchUi.loadResource(Rez.Strings.trimester));
                 break;
-            case 4:
+            case 0 :
+                _trimesterLabel.setColor(Graphics.COLOR_WHITE);
+                _textTop.setText("");
+                _currentWoPLabel.setText(WatchUi.loadResource(Rez.Strings.text_wrong_date1));
+                _trimesterLabel.setText(WatchUi.loadResource(Rez.Strings.text_wrong_date2));
+                _countdownDaysLabel.setText(WatchUi.loadResource(Rez.Strings.text_wrong_date3));
                 break;
         }
     }

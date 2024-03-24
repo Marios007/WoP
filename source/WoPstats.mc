@@ -48,6 +48,8 @@ class WoPstats {
             [39,"50 cm","3186 g", Rez.Strings.size39, Rez.Drawables.size39],
             [40,"50 cm","3404 g", Rez.Strings.size40, Rez.Drawables.size40],
             [41,"52 cm","3600 g", Rez.Strings.size41, Rez.Drawables.size41],
+            [42,"52 cm","3600 g", Rez.Strings.size42, Rez.Drawables.size42],
+            [43,"-- cm","- g", Rez.Strings.size43, Rez.Drawables.size43],
     ] as Array<Array<Number or String or Lang.ResourceId>>;
 
 
@@ -60,7 +62,7 @@ class WoPstats {
             return statsTable[week] as Array;
         }
         else {
-            return statsTable[41] as Array;
+            return statsTable[43] as Array;
         }
     }
 }

@@ -12,6 +12,9 @@
     <string id="text_countdown1">Noch </string>
     <string id="text_countdown2"> Tage</string>
     <string id="text_countdown3"> Tag</string>
+    <string id="text_wrong_date1">Bitte </string>
+    <string id="text_wrong_date2">plausibles Datum </string>
+    <string id="text_wrong_date3">einstellen</string>
     <string id="first"></string>
     <string id="second"></string>
     <string id="third"></string>
@@ -47,7 +50,7 @@
     <string id="size1">noch zu klein</string>
     <string id="size2">noch zu klein</string>
     <string id="size3">noch zu klein</string>
-    <string id="size4">ein Mohnkorn</string><!-- fehlt -->
+    <string id="size4">ein Mohnkorn</string>
     <string id="size5">ein Sesamsamen</string>
     <string id="size6">ein Maiskorn</string>
     <string id="size7">eine Heidelbeere</string>
@@ -84,7 +87,9 @@
     <string id="size38">eine Rhabarberstange</string>
     <string id="size39">ein Kürbis</string>
     <string id="size40">eine große Wassermelone</string>
-    <string id="size40">eine große Wassermelone</string>
+    <string id="size41">eine große Wassermelone</string>
+    <string id="size42">eine große Wassermelone</string>
+    <string id="size43">Bitte ein valides Datum einstellen</string>
 
 
 

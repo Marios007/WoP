@@ -22,17 +22,16 @@ class WoPcalcDates {
         }
     }
 
+
     //set initial date in 10 weeks 3 days from today after new install
     function setInitialDate(){
         var tenWeeks = new Time.Duration(17884800); // 17884800 == pregnant already 10 week 3 days
         var today =  getToday();
         var initialDate = today.add(tenWeeks);
-        //_dateOfBirth = initialDate;
         var initialDateGregorian = Gregorian.info(initialDate, Time.FORMAT_SHORT);
         Properties.setValue("day", initialDateGregorian.day);
         Properties.setValue("month", initialDateGregorian.month);
         Properties.setValue("year", initialDateGregorian.year);
-        // Properties.setValue("dateSet", 1);
     }
 
 
