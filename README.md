@@ -49,6 +49,10 @@ https://apps.garmin.com/de-DE/apps/35876c51-1fcb-4781-88b4-0130060010dc
       <td>X</td>
     </tr>
     <tr>
+      <td>Enduro™ 3</td>
+      <td>X</td>
+    </tr>
+    <tr>
       <td>epix™ (Gen 2)</td>
       <td>X</td>
     </tr>
@@ -98,6 +102,14 @@ https://apps.garmin.com/de-DE/apps/35876c51-1fcb-4781-88b4-0130060010dc
     </tr>
     <tr>
       <td>fēnix® 7X Pro</td>
+      <td>X</td>
+    </tr>
+    <tr>
+      <td>fēnix® 8</td>
+      <td>X</td>
+    </tr>
+    <tr>
+      <td>fēnix® E</td>
       <td>X</td>
     </tr>
     <tr>
