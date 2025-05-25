@@ -2,6 +2,7 @@ using Toybox.WatchUi;
 using Toybox.System;
 using Toybox.Graphics as Gfx;
 using Toybox.Math;
+import Toybox.Application.Properties;
 
 class AboutView extends WatchUi.View {
 
@@ -11,7 +12,7 @@ class AboutView extends WatchUi.View {
     spacing = System.getDeviceSettings().screenHeight < 160 ? 1.1 : 1.3;
 
     aboutTitle = WatchUi.loadResource(Rez.Strings.AppNameAbout);
-    aboutVersion = "Version 2.1";
+    aboutVersion = Properties.getValue("appVersion");
     hfx = Gfx.getFontHeight(Gfx.FONT_XTINY) * spacing;
     View.initialize();
   }
@@ -19,7 +20,7 @@ class AboutView extends WatchUi.View {
   function onUpdate(dc) {
     dc.setColor( Gfx.COLOR_BLACK, Gfx.COLOR_BLACK );
     dc.clear();
-
+    aboutVersion = Properties.getValue("appVersion");
     var posY = dc.getHeight()/2.5;
     var titleHeight = dc.getFontHeight(Gfx.FONT_MEDIUM) * spacing * spacing;
     write(dc, aboutTitle, Gfx.COLOR_WHITE, Gfx.FONT_MEDIUM, posY - titleHeight);

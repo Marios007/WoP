@@ -27,8 +27,8 @@ class WoPcalcDates {
     function setInitialDate(){
         var tenWeeks = new Time.Duration(17884800); // 17884800 == pregnant already 10 week 3 days
         var today =  getToday();
-        var initialDate = today.add(tenWeeks);
-        var initialDateGregorian = Gregorian.info(initialDate, Time.FORMAT_SHORT);
+        var initialDateGregorian = Gregorian.info(today.add(tenWeeks), Time.FORMAT_SHORT);
+        //var initialDateGregorian = Gregorian.info(initialDate, Time.FORMAT_SHORT);
         Properties.setValue("day", initialDateGregorian.day);
         Properties.setValue("month", initialDateGregorian.month);
         Properties.setValue("year", initialDateGregorian.year);
@@ -57,7 +57,7 @@ class WoPcalcDates {
 
     // return today as Moment
     function getToday() {
-        _today = new Time.Moment(Time.now().value());
+        _today = Time.now();
         return _today;
     }
 
@@ -66,7 +66,7 @@ class WoPcalcDates {
         var dateOfBirth = getDateOfBirth();
         var currentWoP = _today.subtract(dateOfBirth.subtract(DURATION_PREGNANCY)); //WoP in Days
         var woP_in_Days = (currentWoP.value())/(Gregorian.SECONDS_PER_DAY);  // WoP output in days
-        var week = Math.floor(woP_in_Days / 7) + 1;  //set current WoP! (week + 1 )
+        var week = Math.floor(woP_in_Days / 7) + Properties.getValue("weekSetting") ;  //set current WoP! (week + 1 )
         var dayInWeek = woP_in_Days - 7 * Math.floor(woP_in_Days / 7); //exact day in week
         var trimester = getTrimester(week);
         var angle = getAngle(week);
@@ -80,7 +80,7 @@ class WoPcalcDates {
     // return the trimester according to the week
     function getTrimester(week) {
         if (week <= 12)  {return 1; }
-        if (week <= 24)  {return 2; }
+        if (week <= 28)  {return 2; }
         if (week <= 40)  {return 3; }
         else {return 0;}
     }

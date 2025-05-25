@@ -18,7 +18,7 @@ class DatePicker extends WatchUi.Picker {
         var separator = new WatchUi.Text({:text=>$.Rez.Strings.dateSeparator, :locX=>WatchUi.LAYOUT_HALIGN_CENTER,
             :locY=>WatchUi.LAYOUT_VALIGN_CENTER, :color=>Graphics.COLOR_WHITE});
         Picker.initialize({:title=>title, :pattern=>[new $.WordFactory(months as Array, {:font=>Graphics.FONT_SYSTEM_TINY}), separator, new $.NumberFactory(1, 31, 1, {:font=>Graphics.FONT_NUMBER_MEDIUM}),
-            separator, new $.NumberFactory(2024, 2026, 1, {:font=>Graphics.FONT_SYSTEM_TINY})]});
+            separator, new $.NumberFactory(2025, 2027, 1, {:font=>Graphics.FONT_SYSTEM_TINY})]});
     }
 
     //! Update the view

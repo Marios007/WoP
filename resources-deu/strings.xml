@@ -6,6 +6,9 @@
 
     <string id="menu_name">Menu</string>
     <string id="set_birthday">Geburtstermin ändern</string>
+    <string id="wop_Settings">SSW Einst.</string>
+    <string id="trimester2_settings">Start Trimester 2</string>
+    <string id="trimester3_settings">Start Trimester 3</string>
     <string id="info">Info</string>
     <string id="wop" scope="glance">. SSW </string>
     <string id="text_top">Du bist in der</string>
@@ -40,6 +43,15 @@
     <string id="SettingsDayTitle">Tag</string>
     <string id="SettingsMonthTitle">Monat</string>
     <string id="SettingsYearTitle">Jahr</string>
+    <string id="group1Title">Geburtstermin</string>
+    <string id="group1Description">Geburtstermin einstellen</string>
+    <string id="group2Title">Einstellung Woche</string>
+    <string id="group2Description">Trimester und SSW Einstellungen</string>
+    <string id="SettingsAreaTitle">Test</string>
+    <string id="SettingsArea0">9w2 = 10.SSW</string>
+    <string id="SettingsArea1">9w2 = 9.SSW</string>
+    <string id="SettingsTri2">Beginn Trimester 2</string>
+    <string id="SettingsTri3">Beginn Trimester 3</string>
 
     <!-- SecondPage --> 
     <string id="text_top_page2">Aktuelle Größe/Gewicht </string>

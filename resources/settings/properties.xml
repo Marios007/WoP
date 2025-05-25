@@ -1,7 +1,10 @@
 <properties>
     <property id="day" type="number">1</property>
     <property id="month" type="number">1</property>
-    <property id="year" type="number">2024</property>
-    <property id="dateSet" type="number">0</property>
-
+    <property id="year" type="number">2026</property>
+    <property id="dateSet" type="number">0</property> 
+    <property id="weekSetting" type="number">0</property>
+    <property id="trimester2start" type="number">13</property>
+    <property id="trimester3start" type="number">29</property>
+    <property id="appVersion" type="string">2.3</property>
 </properties>

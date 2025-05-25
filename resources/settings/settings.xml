@@ -1,27 +1,51 @@
 <settings>
-  <setting propertyKey="@Properties.day" title="@Strings.SettingsDayTitle">
-        <settingConfig type="numeric" min="1" max="31" required="true"/>
-  </setting>
+  <group id="groupDate" title="@Strings.group1Title" description="@Strings.group1Description">
+    <setting propertyKey="@Properties.day" title="@Strings.SettingsDayTitle">
+      <settingConfig type="numeric" min="1" max="31" required="true"/>
+    </setting>
 
-  <setting propertyKey="@Properties.month" title="@Strings.SettingsMonthTitle">
-    <settingConfig type="list">
-      <listEntry value="1">@Strings.month01</listEntry>
-      <listEntry value="2">@Strings.month02</listEntry>
-      <listEntry value="3">@Strings.month03</listEntry>
-      <listEntry value="4">@Strings.month04</listEntry>
-      <listEntry value="5">@Strings.month05</listEntry>
-      <listEntry value="6">@Strings.month06</listEntry>
-      <listEntry value="7">@Strings.month07</listEntry>
-      <listEntry value="8">@Strings.month08</listEntry>
-      <listEntry value="9">@Strings.month09</listEntry>
-      <listEntry value="10">@Strings.month10</listEntry>
-      <listEntry value="11">@Strings.month11</listEntry>
-      <listEntry value="12">@Strings.month12</listEntry>
-    </settingConfig>
-  </setting>
+    <setting propertyKey="@Properties.month" title="@Strings.SettingsMonthTitle">
+      <settingConfig type="list">
+        <listEntry value="1">@Strings.month01</listEntry>
+        <listEntry value="2">@Strings.month02</listEntry>
+        <listEntry value="3">@Strings.month03</listEntry>
+        <listEntry value="4">@Strings.month04</listEntry>
+        <listEntry value="5">@Strings.month05</listEntry>
+        <listEntry value="6">@Strings.month06</listEntry>
+        <listEntry value="7">@Strings.month07</listEntry>
+        <listEntry value="8">@Strings.month08</listEntry>
+        <listEntry value="9">@Strings.month09</listEntry>
+        <listEntry value="10">@Strings.month10</listEntry>
+        <listEntry value="11">@Strings.month11</listEntry>
+        <listEntry value="12">@Strings.month12</listEntry>
+      </settingConfig>
+    </setting>
 
-  <setting propertyKey="@Properties.year" title="@Strings.SettingsYearTitle">
-    <settingConfig type="numeric" min="2024" max="2026" required="true"/>
-  </setting>
-
+    <setting propertyKey="@Properties.year" title="@Strings.SettingsYearTitle">
+      <settingConfig type="numeric" min="2025" max="2027" required="true"/>
+    </setting>
+  </group>
+  <group id="groupArea" title="@Strings.group2Title" description="@Strings.group2Description">
+    <setting propertyKey="@Properties.weekSetting" title="@Strings.SettingsAreaTitle">
+      <settingConfig type="list">
+        <listEntry value="0">@Strings.SettingsArea0</listEntry>
+        <listEntry value="1">@Strings.SettingsArea1</listEntry>
+      </settingConfig>
+    </setting>
+        <setting propertyKey="@Properties.trimester2start" title="@Strings.SettingsTri2">
+      <settingConfig type="list">
+        <listEntry value="12">12</listEntry>
+        <listEntry value="13">13</listEntry>
+        <listEntry value="14">14</listEntry>
+      </settingConfig>
+       </setting>
+      <setting propertyKey="@Properties.trimester3start" title="@Strings.SettingsTri3">
+      <settingConfig type="list">
+        <listEntry value="26">26</listEntry>
+        <listEntry value="27">27</listEntry>
+        <listEntry value="28">28</listEntry>
+        <listEntry value="29">29</listEntry>
+      </settingConfig>
+       </setting>
+  </group>
 </settings>

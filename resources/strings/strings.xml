@@ -6,6 +6,9 @@
 
     <string id="menu_name">Settings</string>
     <string id="set_birthday">Set date of birth</string>
+    <string id="wop_Settings">WoP Settings</string>
+    <string id="trimester2_settings">Start Trimester 2</string>
+    <string id="trimester3_settings">Start Trimester 3</string>
     <string id="info">About</string>
     <string id="wop" scope="glance">. WoP </string>
     <string id="text_top">Current week</string>
@@ -40,6 +43,15 @@
     <string id="SettingsDayTitle">Day</string>
     <string id="SettingsMonthTitle">Month</string>
     <string id="SettingsYearTitle">Year</string>
+    <string id="group1Title">Date of birth</string>
+    <string id="group1Description">Set the date of birth</string>
+    <string id="group2Title">Week Seetings</string>
+    <string id="group2Description">Trimester an WoP Settings</string>
+    <string id="SettingsAreaTitle">Setting WoP</string>
+    <string id="SettingsArea0">9w+2 = 10WoP</string>
+    <string id="SettingsArea1">9w+2 = 9WoP</string>
+    <string id="SettingsTri2">Beginning of Trimester 2</string>
+    <string id="SettingsTri3">Beginning of Trimester 3</string>
 
     <!-- SecondPage --> 
     <string id="text_top_page2">Current size/weight </string>

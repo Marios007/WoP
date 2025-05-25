@@ -62,7 +62,7 @@ class DatePickerDelegate extends WatchUi.PickerDelegate {
 
 
     private function convertMonth(month as String) {
-        return monthDict[month] as Dictionary;
+        return monthDict[month];
     }
 
 }

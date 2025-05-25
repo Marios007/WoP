@@ -24,178 +24,35 @@ https://apps.garmin.com/de-DE/apps/35876c51-1fcb-4781-88b4-0130060010dc
 
 ## Supported devices
 
-<table>
-  <thead>
-    <tr>
-      <th>Device</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Captain Marvel</td>
-      <td>X</td>
-    </tr>
-    <tr>
-      <td>D2™ Air X10</td>
-      <td>X</td>
-    </tr>
-    <tr>
-      <td>D2™ Mach 1</td>
-      <td>X</td>
-    </tr>
-    <tr>
-      <td>Darth Vader™</td>
-      <td>X</td>
-    </tr>
-    <tr>
-      <td>Enduro™ 3</td>
-      <td>X</td>
-    </tr>
-    <tr>
-      <td>epix™ (Gen 2)</td>
-      <td>X</td>
-    </tr>
-    <tr>
-      <td>epix™ Pro (Gen 2)</td>
-      <td>X</td>
-    </tr>
-    <tr>
-      <td>fēnix® 6</td>
-      <td>X</td>
-    </tr>
-    <tr>
-      <td>fēnix® 6 Pro</td>
-      <td>X</td>
-    </tr>
-    <tr>
-      <td>fēnix® 6S</td>
-      <td>X</td>
-    </tr>
-    <tr>
-      <td>fēnix® 6S Pro</td>
-      <td>X</td>
-    </tr>
-    <tr>
-      <td>fēnix® 6X Pro</td>
-      <td>X</td>
-    </tr>
-    <tr>
-      <td>fēnix® 7</td>
-      <td>X</td>
-    </tr>
-    <tr>
-      <td>fēnix® 7S</td>
-      <td>X</td>
-    </tr>
-    <tr>
-      <td>fēnix® 7X</td>
-      <td>X</td>
-    </tr>
-    <tr>
-      <td>fēnix® 7 Pro</td>
-      <td>X</td>
-    </tr>
-    <tr>
-      <td>fēnix® 7S Pro</td>
-      <td>X</td>
-    </tr>
-    <tr>
-      <td>fēnix® 7X Pro</td>
-      <td>X</td>
-    </tr>
-    <tr>
-      <td>fēnix® 8</td>
-      <td>X</td>
-    </tr>
-    <tr>
-      <td>fēnix® E</td>
-      <td>X</td>
-    </tr>
-    <tr>
-      <td>Forerunner® 245</td>
-      <td>X</td>
-    </tr>
-    <tr>
-      <td>Forerunner® 255</td>
-      <td>X</td>
-    </tr>
-    <tr>
-      <td>Forerunner® 255s</td>
-      <td>X</td>
-    </tr>
-    <tr>
-      <td>Forerunner® 265s</td>
-      <td>X</td>
-    </tr>
-    <tr>
-      <td>Forerunner® 265</td>
-      <td>X</td>
-    </tr>
-    <tr>
-      <td>Forerunner® 745</td>
-      <td>X</td>
-    </tr>
-    <tr>
-      <td>Forerunner® 945</td>
-      <td>X</td>
-    </tr>
-    <tr>
-      <td>Forerunner® 955</td>
-      <td>X</td>
-    </tr>
-       <tr>
-      <td>Forerunner® 965</td>
-      <td>X</td>
-    </tr>
-    <tr>
-      <td>MARQ® (Gen 2)</td>
-      <td>X</td>
-    </tr>
-    <tr>
-      <td>MARQ®</td>
-      <td>X</td>
-    </tr>
-    <tr>
-      <td>Rey™</td>
-      <td>X</td>
-    </tr>
-    <tr>
-      <td>Venu®</td>
-      <td>X</td>
-    </tr>
-    <tr>
-      <td>Venu® 2 Plus</td>
-      <td>X</td>
-    </tr>
-    <tr>
-      <td>Venu® 2</td>
-      <td>X</td>
-    </tr>
-    <tr>
-      <td>Venu® 2s</td>
-      <td>X</td>
-    </tr>
-    <tr>
-      <td>Venu® 3</td>
-      <td>X</td>
-    </tr>
-    <tr>
-      <td>Venu® 3s</td>
-      <td>X</td>
-    </tr>
-    <tr>
-      <td>vívoactive® 4</td>
-      <td>X</td>
-    </tr>
-    <tr>
-      <td>vívoactive® 4S</td>
-      <td>X</td>
-    </tr>
-    <tr>
-      <td>vívoactive® 5</td>
-      <td>X</td>
-    </tr>
-  </tbody>
-</table>
+- Approach S70
+- Captain Marvel
+- D2™ Air X10
+- D2™ Mach 1
+- Darth Vader™
+- Enduro™
+- epix™ (Gen 2)
+- fēnix® 6
+- fēnix® 7
+- fēnix® 8
+- fēnix® E
+- Forerunner® 165
+- Forerunner® 245
+- Forerunner® 255
+- Forerunner® 265
+- Forerunner® 745
+- Forerunner® 945
+- Forerunner® 955
+- Forerunner® 965
+- Forerunner® 970
+- MARQ®
+- Rey™
+- Venu®
+- Venu® 2 Plus
+- Venu® 2
+- Venu® 2s
+- Venu® 3
+- Venu® 3s
+- vívoactive® 4
+- vívoactive® 5
+- vívoactive® 6
 
