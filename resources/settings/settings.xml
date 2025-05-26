@@ -28,8 +28,8 @@
   <group id="groupArea" title="@Strings.group2Title" description="@Strings.group2Description">
     <setting propertyKey="@Properties.weekSetting" title="@Strings.SettingsAreaTitle">
       <settingConfig type="list">
-        <listEntry value="0">@Strings.SettingsArea0</listEntry>
-        <listEntry value="1">@Strings.SettingsArea1</listEntry>
+        <listEntry value="1">@Strings.SettingsArea0</listEntry>
+        <listEntry value="0">@Strings.SettingsArea1</listEntry>
       </settingConfig>
     </setting>
         <setting propertyKey="@Properties.trimester2start" title="@Strings.SettingsTri2">

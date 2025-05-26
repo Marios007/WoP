@@ -20,14 +20,12 @@ class MenuSettingsView extends WatchUi.Menu2 {
 
         subLabel_birthday = Properties.getValue("day")+"."+Properties.getValue("month")+"."+Properties.getValue("year");
         itemBirthday = new WatchUi.MenuItem(WatchUi.loadResource(Rez.Strings.set_birthday), subLabel_birthday, "birthday", null);
-
-        if (Properties.getValue("weekSetting") == 0) {
+        if (Properties.getValue("weekSetting") == 1) {
             sublabel_wopSetting = WatchUi.loadResource(Rez.Strings.SettingsArea0);
-        } else if (Properties.getValue("weekSetting") == 1) {
+        } else if (Properties.getValue("weekSetting") == 0) {
             sublabel_wopSetting = WatchUi.loadResource(Rez.Strings.SettingsArea1);
         }
         itemWOPSetting = new WatchUi.MenuItem(WatchUi.loadResource(Rez.Strings.wop_Settings), sublabel_wopSetting, "settings", null);
-
         subLabel_tri2 = "Week: " + Properties.getValue("trimester2start");
         itemTrimester2Setting = new WatchUi.MenuItem(WatchUi.loadResource(Rez.Strings.trimester2_settings), subLabel_tri2, "triSetting2", null);
         subLabel_tri3 ="Week: " +  Properties.getValue("trimester3start");
@@ -44,20 +42,24 @@ class MenuSettingsView extends WatchUi.Menu2 {
     function onShow() as Void {
         subLabel_birthday = Properties.getValue("day")+"."+Properties.getValue("month")+"."+Properties.getValue("year");
         itemBirthday = new WatchUi.MenuItem(WatchUi.loadResource(Rez.Strings.set_birthday), subLabel_birthday, "birthday", null);
+        if (Properties.getValue("weekSetting") == 1) {
+            sublabel_wopSetting = WatchUi.loadResource(Rez.Strings.SettingsArea0);
+        } else if (Properties.getValue("weekSetting") == 0) {
+            sublabel_wopSetting = WatchUi.loadResource(Rez.Strings.SettingsArea1);
+        }
+        itemWOPSetting = new WatchUi.MenuItem(WatchUi.loadResource(Rez.Strings.wop_Settings), sublabel_wopSetting, "settings", null);
         subLabel_tri2 = "Week: " + Properties.getValue("trimester2start");
         itemTrimester2Setting = new WatchUi.MenuItem(WatchUi.loadResource(Rez.Strings.trimester2_settings), subLabel_tri2, "triSetting2", null);
         subLabel_tri3 ="Week: " +  Properties.getValue("trimester3start");
         itemTrimester3Setting = new WatchUi.MenuItem(WatchUi.loadResource(Rez.Strings.trimester3_settings), subLabel_tri3, "triSetting3", null);
 
-
         Menu2.updateItem(itemBirthday, 0);
+        Menu2.updateItem(itemWOPSetting, 1);
         Menu2.updateItem(itemTrimester2Setting, 2);
         Menu2.updateItem(itemTrimester3Setting, 3);
+
 	}
-
 }
-
-
 
 //! This is the menu input delegate for the main menu of the application
 class Menu2Delegate extends WatchUi.Menu2InputDelegate {

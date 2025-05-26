@@ -7,45 +7,22 @@
 import Toybox.Graphics;
 import Toybox.Lang;
 import Toybox.WatchUi;
+import Toybox.Application.Properties;
+
+
 
 //! Create the Basic Drawables custom menu
 function pushBasicCustom() as Void {
     var customMenu = new WatchUi.CustomMenu(100, Graphics.COLOR_BLACK, {
         :focusItemHeight=>150,
         :title=>new $.DrawableMenuTitle(),
-        //:footer=>new $.DrawableMenuFooter()
+        :footer=>new $.DrawableMenuFooter()
     });
     customMenu.addItem(new $.CustomItem(:item1, WatchUi.loadResource(Rez.Strings.SettingsArea0)));
     customMenu.addItem(new $.CustomItem(:item2, WatchUi.loadResource(Rez.Strings.SettingsArea1)));
     WatchUi.pushView(customMenu, new $.BasicCustomDelegate(), WatchUi.SLIDE_UP);
 }
 
-//! View to show when an item is selected
-class ItemView extends WatchUi.View {
-
-    private var _text as Text;
-
-    //! Constructor
-    //! @param text The item text
-    public function initialize(text as String) {
-        View.initialize();
-        _text = new WatchUi.Text({:text => text,
-            :color => Graphics.COLOR_WHITE,
-            :backgroundColor => Graphics.COLOR_WHITE,
-            :locX =>WatchUi.LAYOUT_HALIGN_CENTER,
-            :locY=>WatchUi.LAYOUT_VALIGN_CENTER,
-            :justification => Graphics.TEXT_JUSTIFY_CENTER
-        });
-    }
-
-    //! Update the view
-    //! @param dc Device context
-    public function onUpdate(dc as Dc) as Void {
-        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_WHITE);
-        dc.clear();
-        _text.draw(dc);
-    }
-}
 
 //! This is the menu input delegate for the Basic Drawables menu
 class BasicCustomDelegate extends WatchUi.Menu2InputDelegate {
@@ -58,21 +35,73 @@ class BasicCustomDelegate extends WatchUi.Menu2InputDelegate {
     //! Handle an item being selected
     //! @param item The selected menu item
     public function onSelect(item as MenuItem) as Void {
-        WatchUi.pushView(new $.ItemView(item.getLabel()), null, WatchUi.SLIDE_UP);
-        WatchUi.requestUpdate();
+        if (item.getId() == :item1) {
+            // Handle first item selection
+            WatchUi.pushView(new $.SimpleTextView(WatchUi.loadResource(Rez.Strings.SettingsArea0Text)), new $.SimpleTextDelegate(), WatchUi.SLIDE_UP);
+            Properties.setValue("weekSetting", 1);
+        } else if (item.getId() == :item2) {
+            // Handle second item selection
+            WatchUi.pushView(new $.SimpleTextView(WatchUi.loadResource(Rez.Strings.SettingsArea1Text)), new $.SimpleTextDelegate(), WatchUi.SLIDE_UP);
+            Properties.setValue("weekSetting", 0);
+        }
+    }
+}
+
+//! Simple text view that shows message
+class SimpleTextView extends WatchUi.View {
+    private var _message as String;
+    private var _textCenter;
+
+    public function initialize(message as String) {
+        View.initialize();
+        _message = message;
     }
 
-    //! Handle the back key being pressed
-    public function onBack() as Void {
+    function onLayout(dc) as Void {
+        setLayout(Rez.Layouts.TextOnlyLayout(dc));
+        _textCenter = findDrawableById("textCenter");
+    }
+
+    function onShow() as Void {
+        // Set the text to be displayed
+        System.println(_message);
+        _textCenter.setText(_message);
+    }
+
+    public function onUpdate(dc as Dc) as Void {
+        //dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
+        View.onUpdate(dc);
+        //dc.clear();
+        
+    }
+}
+
+//! Simple delegate that closes view on any button press
+class SimpleTextDelegate extends WatchUi.BehaviorDelegate {
+    
+    public function initialize() {
+        BehaviorDelegate.initialize();
+    }
+
+    public function onKey(keyEvent as KeyEvent) as Boolean {
+        // Close view on any key press
         WatchUi.popView(WatchUi.SLIDE_DOWN);
+        WatchUi.popView(WatchUi.SLIDE_DOWN);
+        return true;
     }
 
-    //! Handle the user navigating off the end of the menu
-    //! @param key The key triggering the menu wrap
-    //! @return true if wrap is allowed, false otherwise
-    public function onWrap(key as Key) as Boolean {
-        // Don't allow wrapping
-        return false;
+    public function onTap(clickEvent as ClickEvent) as Boolean {
+        // Close view on any tap
+        WatchUi.popView(WatchUi.SLIDE_DOWN);
+        WatchUi.popView(WatchUi.SLIDE_DOWN);
+        return true;
+    }
+
+    public function onSelect() as Boolean {
+        // Close view on select button
+        WatchUi.popView(WatchUi.SLIDE_DOWN);
+        WatchUi.popView(WatchUi.SLIDE_DOWN);
+        return true;
     }
 }
 
@@ -95,7 +124,7 @@ class CustomItem extends WatchUi.CustomMenuItem {
     public function draw(dc as Dc) as Void {
         var font = Graphics.FONT_SMALL;
         if (isFocused()) {
-            font = Graphics.FONT_LARGE;
+            font = Graphics.FONT_MEDIUM;
         }
 
         if (isSelected()) {

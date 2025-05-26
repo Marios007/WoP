@@ -50,8 +50,10 @@
     <string id="SettingsAreaTitle">Setting WoP</string>
     <string id="SettingsArea0">9w+2 = 10WoP</string>
     <string id="SettingsArea1">9w+2 = 9WoP</string>
-    <string id="SettingsTri2">Beginning of Trimester 2</string>
-    <string id="SettingsTri3">Beginning of Trimester 3</string>
+    <string id="SettingsArea0Text">9w+2 = 10th WoP activated. Counts partial weeks as complete (Medical standard)</string>
+    <string id="SettingsArea1Text">9w+2 = 9th WoP activated. Counts only complete weeks No rounding of partial weeks</string>
+    <string id="SettingsTri2">Beginning of 2nd trimester</string>
+    <string id="SettingsTri3">Beginning of 3rd trimester</string>
 
     <!-- SecondPage --> 
     <string id="text_top_page2">Current size/weight </string>
