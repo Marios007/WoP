@@ -89,7 +89,7 @@ class WoPView extends WatchUi.View {
     function onUpdate(dc) as Void {
          // Call the parent onUpdate function to redraw the layout
         View.onUpdate(dc);
-        drawer.drawStatusCircle(dc, center_x, center_y, trimester, _currentWoP.get(:angle));
+        drawer.drawStatusCircle(dc, center_x, center_y, trimester, _currentWoP.get(:angle),_currentWoP.get(:tri2angle), _currentWoP.get(:tri3angle));
     }
 
 

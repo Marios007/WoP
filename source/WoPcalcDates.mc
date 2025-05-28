@@ -25,7 +25,7 @@ class WoPcalcDates {
 
     //set initial date in 10 weeks 3 days from today after new install
     function setInitialDate(){
-        var tenWeeks = new Time.Duration(17884800); // 17884800 == pregnant already 10 week 3 days
+        var tenWeeks = new Time.Duration(17884800); // 17884800 == pregnant already 10 weeks 3 days
         var today =  getToday();
         var initialDateGregorian = Gregorian.info(today.add(tenWeeks), Time.FORMAT_SHORT);
         //var initialDateGregorian = Gregorian.info(initialDate, Time.FORMAT_SHORT);
@@ -70,18 +70,22 @@ class WoPcalcDates {
         var dayInWeek = woP_in_Days - 7 * Math.floor(woP_in_Days / 7); //exact day in week
         var trimester = getTrimester(week);
         var angle = getAngle(week);
+        var tri2angle = getAngle(Properties.getValue("trimester2start"));
+        var tri3angle = getAngle(Properties.getValue("trimester3start"));
         _weeksDict = {
             :week => week, :exactWeek => woP_in_Days/7, :dayInWeek => dayInWeek, :trimester => trimester,
-            :angle => angle
+            :angle => angle, :tri2angle => tri2angle, :tri3angle => tri3angle
         };
         return _weeksDict;
     }
 
     // return the trimester according to the week
     function getTrimester(week) {
-        if (week <= 12)  {return 1; }
-        if (week <= 28)  {return 2; }
-        if (week <= 40)  {return 3; }
+        var tri1end = Properties.getValue("trimester2start") - 1; //end of trimester 1
+        var tri2end = Properties.getValue("trimester3start") - 1; //end of trimester 2
+        if (week <= tri1end)  {return 1; }
+        if (week <= tri2end)  {return 2; }
+        if (week <= 41)  {return 3; }
         else {return 0;}
     }
 

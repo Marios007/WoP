@@ -47,7 +47,7 @@ class WoPView3 extends WatchUi.View {
     function onUpdate(dc) as Void {
         // Call the parent onUpdate function to redraw the layout
         View.onUpdate(dc);
-        drawer.drawStatusCircle(dc, center_x, center_y, trimester, _currentWoP.get(:angle));
+        drawer.drawStatusCircle(dc, center_x, center_y, trimester, _currentWoP.get(:angle),_currentWoP.get(:tri2angle), _currentWoP.get(:tri3angle));
         _image = new WatchUi.Bitmap({:rezId=>data[4], :locX=>center_x, :locY=>center_y});
         var _image_dimension = _image.getDimensions();
         _image.setLocation(center_x - (_image_dimension[0]/2), center_y - (_image_dimension[1]/2));

@@ -1,14 +1,7 @@
-//
-// Copyright 2018-2021 by Garmin Ltd. or its subsidiaries.
-// Subject to Garmin SDK License Agreement and Wearables
-// Application Developer Agreement.
-//
-
 import Toybox.Graphics;
 import Toybox.Lang;
 import Toybox.WatchUi;
 import Toybox.Application.Properties;
-
 
 
 //! Create the Basic Drawables custom menu
@@ -37,12 +30,12 @@ class BasicCustomDelegate extends WatchUi.Menu2InputDelegate {
     public function onSelect(item as MenuItem) as Void {
         if (item.getId() == :item1) {
             // Handle first item selection
-            WatchUi.pushView(new $.SimpleTextView(WatchUi.loadResource(Rez.Strings.SettingsArea0Text)), new $.SimpleTextDelegate(), WatchUi.SLIDE_UP);
             Properties.setValue("weekSetting", 1);
+            WatchUi.pushView(new $.SimpleTextView(WatchUi.loadResource(Rez.Strings.SettingsArea0Text)), new $.SimpleTextDelegate(), WatchUi.SLIDE_UP);
         } else if (item.getId() == :item2) {
             // Handle second item selection
-            WatchUi.pushView(new $.SimpleTextView(WatchUi.loadResource(Rez.Strings.SettingsArea1Text)), new $.SimpleTextDelegate(), WatchUi.SLIDE_UP);
             Properties.setValue("weekSetting", 0);
+            WatchUi.pushView(new $.SimpleTextView(WatchUi.loadResource(Rez.Strings.SettingsArea1Text)), new $.SimpleTextDelegate(), WatchUi.SLIDE_UP);
         }
     }
 }
@@ -85,20 +78,21 @@ class SimpleTextDelegate extends WatchUi.BehaviorDelegate {
 
     public function onKey(keyEvent as KeyEvent) as Boolean {
         // Close view on any key press
-        WatchUi.popView(WatchUi.SLIDE_DOWN);
-        WatchUi.popView(WatchUi.SLIDE_DOWN);
-        return true;
+        return closeView();
     }
 
     public function onTap(clickEvent as ClickEvent) as Boolean {
         // Close view on any tap
-        WatchUi.popView(WatchUi.SLIDE_DOWN);
-        WatchUi.popView(WatchUi.SLIDE_DOWN);
-        return true;
+        return closeView();
     }
 
     public function onSelect() as Boolean {
         // Close view on select button
+        return closeView();
+    }
+
+        // Helper method to close view safely
+    private function closeView() as Boolean {
         WatchUi.popView(WatchUi.SLIDE_DOWN);
         WatchUi.popView(WatchUi.SLIDE_DOWN);
         return true;
