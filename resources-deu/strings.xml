@@ -48,10 +48,10 @@
     <string id="group2Title">Einstellung Woche</string>
     <string id="group2Description">Trimester und SSW Einstellungen</string>
     <string id="SettingsAreaTitle">Test</string>
-    <string id="SettingsArea0">9w2 = 10.SSW</string>
-    <string id="SettingsArea1">9w2 = 9.SSW</string>
-    <string id="SettingsArea0Text">9w+2 = 10.SSW ausgewählt. Zählt angefangene Wochen als vollständig (Medizinischer Standard)</string>
-    <string id="SettingsArea1Text">9w+2 = 9.SSW: ausgewählt. Zählt nur vollständige Wochen Keine Aufrundung von Teilwochen</string>
+    <string id="SettingsArea0">9W+2 = 10.SSW</string>
+    <string id="SettingsArea1">9W+2 = 9.SSW</string>
+    <string id="SettingsArea0Text">9W+2 = 10.SSW ausgewählt. Zählt angefangene Wochen als vollständig (Medizinischer Standard)</string>
+    <string id="SettingsArea1Text">9W+2 = 9.SSW: ausgewählt. Zählt nur vollständige Wochen. Keine Aufrundung von Teilwochen</string>
     <string id="SettingsTri2">Beginn 2.Trimester</string>
     <string id="SettingsTri3">Beginn 3.Trimester</string>
 
