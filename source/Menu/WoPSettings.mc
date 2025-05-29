@@ -57,7 +57,6 @@ class SimpleTextView extends WatchUi.View {
 
     function onShow() as Void {
         // Set the text to be displayed
-        System.println(_message);
         _textCenter.setText(_message);
     }
 

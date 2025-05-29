@@ -22,7 +22,6 @@ class WoPcalcDates {
         }
     }
 
-
     //set initial date in 10 weeks 3 days from today after new install
     function setInitialDate(){
         var tenWeeks = new Time.Duration(17884800); // 17884800 == pregnant already 10 weeks 3 days
