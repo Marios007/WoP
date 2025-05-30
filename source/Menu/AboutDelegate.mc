@@ -1,5 +1,4 @@
 using Toybox.WatchUi as Ui;
-using Toybox.System;
 
 class AboutDelegate extends Ui.BehaviorDelegate {
 

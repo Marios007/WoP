@@ -1,33 +1,39 @@
 import Toybox.WatchUi;
 import Toybox.Graphics;
-import Toybox.Lang;
-import Toybox.Application.Properties;
 
 class WoPDelegate extends WatchUi.BehaviorDelegate {
     
-    var model;
+    var calculator;
+    var drawer;
 
     // Set up the callback to the view
-    function initialize() {
+    function initialize(mCalc, mDrawer) {
         WatchUi.BehaviorDelegate.initialize();
+        calculator = mCalc;
+        drawer = mDrawer;
     }
 
     function onNextPage() {
-        WatchUi.pushView(new WoPView2(), new WoPDelegate2(), WatchUi.SLIDE_UP);
+        WatchUi.pushView(new WoPView2(calculator, drawer), new WoPDelegate2(calculator, drawer), WatchUi.SLIDE_UP);
         return true;
     }
 
 
     function onMenu() {
     // Generate a new Menu with a drawable Title
-        WatchUi.pushView(new MenuSettingsView(), new $.Menu2Delegate(model), WatchUi.SLIDE_LEFT);
+        WatchUi.pushView(new MenuSettingsView(), new $.Menu2Delegate(), WatchUi.SLIDE_LEFT);
         return true;
     }
 
 
     function onSelect() {
-        WatchUi.pushView(new WoPView2(), new WoPDelegate2(), WatchUi.SLIDE_UP);
+        WatchUi.pushView(new WoPView2(calculator, drawer), new WoPDelegate2(calculator, drawer), WatchUi.SLIDE_UP);
         return true;
+    }
+    function onHide() as Void {
+        // Clean up resources when view is hidden
+        calculator = null;
+        drawer = null;
     }
 }
 

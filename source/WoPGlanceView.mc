@@ -67,14 +67,6 @@ class WoPGlanceView extends WatchUi.GlanceView {
         dc.drawText(0, ((GH/1.333)-heightAdj), currentFont, _message, G.TEXT_JUSTIFY_LEFT);
         dc.setPenWidth(penWidth);
         
-        // USE cached values instead of recalculating
-        // REMOVED: var tri2Start = Properties.getValue("trimester2start");
-        // REMOVED: var tri3Start = Properties.getValue("trimester3start");
-        // REMOVED: var totalWeeks = 40.0;
-        // REMOVED: var tri1End = (tri2Start - 1) / totalWeeks * GW;
-        // REMOVED: var tri2End = (tri3Start - 1) / totalWeeks * GW;
-        // REMOVED: var gap = 5;
-        
         // Draw background lines using cached values
         dc.setColor(G.COLOR_DK_GRAY, -1);
         dc.drawLine(0, (GH/2)-penWidth, _tri1End-_gap, (GH/2)-penWidth);

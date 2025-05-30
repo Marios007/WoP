@@ -8,6 +8,7 @@ class WoPApp extends Application.AppBase {
     hidden var mCalc;
     hidden var mDelegate;
     hidden var mGlanceView;
+    hidden var drawer;
 
     function initialize() {
         AppBase.initialize();
@@ -24,9 +25,10 @@ class WoPApp extends Application.AppBase {
 
     // Return the initial view of your application here
     function getInitialView()  {
+        drawer = new WoPDrawer();
         mCalc = new WoPcalcDates();
-        mView = new WoPView(mCalc);
-        mDelegate = new WoPDelegate();
+        mView = new WoPView(mCalc, drawer);
+        mDelegate = new WoPDelegate(mCalc, drawer);
         return [ mView, mDelegate ];
     }
 

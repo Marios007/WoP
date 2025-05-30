@@ -1,14 +1,14 @@
 using Toybox.WatchUi;
-import Toybox.Application.Properties;
 
 
 class WoPDelegate3 extends WatchUi.BehaviorDelegate {
     
-    var model;
-    var menu;
-    
+    var calculator;
+    var drawer;
         // Set up the callback to the view
-    function initialize() {
+    function initialize(mCalc, mDrawer) {
+        drawer = mDrawer;
+        calculator = mCalc;
         WatchUi.BehaviorDelegate.initialize();
     }
     
@@ -17,7 +17,7 @@ class WoPDelegate3 extends WatchUi.BehaviorDelegate {
     }
 
     function onMenu() {
-        WatchUi.pushView(new MenuSettingsView(), new $.Menu2Delegate(model), WatchUi.SLIDE_LEFT);
+        WatchUi.pushView(new MenuSettingsView(), new $.Menu2Delegate(), WatchUi.SLIDE_LEFT);
         return true;
     }
 

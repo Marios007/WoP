@@ -1,5 +1,5 @@
-using Toybox.System;
 import Toybox.Lang;
+using Toybox.Application.Properties;
 
 
 class WoPstats {
@@ -57,12 +57,16 @@ class WoPstats {
         
     }
 
-    function getStatsforWeek(week as Number) {
-        if (week < 42){
-            return statsTable[week] as Array;
+    function getStatsforWeek(week as Number) as Array {
+        // Adjust week based on setting (cache the property lookup)
+        var weekSetting = Properties.getValue("weekSetting");
+        if (weekSetting == 0) {
+            week += 1; // adjust if week setting is 9W+2 = 9WoP
         }
-        else {
-            return statsTable[43] as Array;
-        }
+        
+        // Handle overflow with single check
+        var tableIndex = (week < 42) ? week : 43;
+        
+        return statsTable[tableIndex] as Array;
     }
 }

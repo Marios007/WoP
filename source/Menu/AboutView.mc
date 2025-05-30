@@ -1,7 +1,6 @@
 using Toybox.WatchUi;
 using Toybox.System;
 using Toybox.Graphics as Gfx;
-using Toybox.Math;
 import Toybox.Application.Properties;
 
 class AboutView extends WatchUi.View {

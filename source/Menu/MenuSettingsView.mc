@@ -65,7 +65,7 @@ class MenuSettingsView extends WatchUi.Menu2 {
 class Menu2Delegate extends WatchUi.Menu2InputDelegate {
 
     //! Constructor
-    public function initialize(p) {
+    public function initialize() {
         Menu2InputDelegate.initialize();
     }
 

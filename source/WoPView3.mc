@@ -9,16 +9,17 @@ class WoPView3 extends WatchUi.View {
     private var _currentWoP;
     private var _textTop;
     private var _textSize;
-    var dates;
     var trimester;
-    var calculator = new WoPcalcDates();
-    var stats = new WoPstats();
-    var drawer = new WoPDrawer();
+    private var calculator;
+    private var stats = new WoPstats();
+    private var drawer;
     var week;
-    var _image;
-    var data as Array = [];
+    private var _image;
+    private var data as Array or Null = [];
 
-    function initialize() {
+    function initialize(mCalc, mDrawer) {
+        drawer = mDrawer;
+        calculator = mCalc;
         View.initialize();
     }
 
@@ -41,6 +42,10 @@ class WoPView3 extends WatchUi.View {
         week = _currentWoP.get(:week);
         data  = stats.getStatsforWeek(week) as Array;
         _textSize.setText(WatchUi.loadResource(data[3]));
+        _image = new WatchUi.Bitmap({:rezId=>data[4], :locX=>center_x, :locY=>center_y});
+        var _image_dimension = _image.getDimensions();
+        _image.setLocation(center_x - (_image_dimension[0]/2), center_y - (_image_dimension[1]/2));
+        
     }
 
     // Update the view
@@ -48,9 +53,6 @@ class WoPView3 extends WatchUi.View {
         // Call the parent onUpdate function to redraw the layout
         View.onUpdate(dc);
         drawer.drawStatusCircle(dc, center_x, center_y, trimester, _currentWoP.get(:angle),_currentWoP.get(:tri2angle), _currentWoP.get(:tri3angle));
-        _image = new WatchUi.Bitmap({:rezId=>data[4], :locX=>center_x, :locY=>center_y});
-        var _image_dimension = _image.getDimensions();
-        _image.setLocation(center_x - (_image_dimension[0]/2), center_y - (_image_dimension[1]/2));
         _image.draw(dc);
     }
 

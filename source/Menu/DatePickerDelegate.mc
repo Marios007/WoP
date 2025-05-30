@@ -1,6 +1,5 @@
 
 import Toybox.Application.Properties;
-import Toybox.Graphics;
 import Toybox.Lang;
 import Toybox.WatchUi;
 
@@ -8,8 +7,6 @@ import Toybox.WatchUi;
 
 //! Responds to a date picker selection or cancellation
 class DatePickerDelegate extends WatchUi.PickerDelegate {
-
-
 
     var monthDict  = { 
         WatchUi.loadResource(Rez.Strings.month01) => 1,
@@ -25,7 +22,6 @@ class DatePickerDelegate extends WatchUi.PickerDelegate {
         WatchUi.loadResource(Rez.Strings.month11) => 11,
         WatchUi.loadResource(Rez.Strings.month12) => 12,
         } ;
-
 
     //! Constructor
     public function initialize() {
@@ -60,9 +56,7 @@ class DatePickerDelegate extends WatchUi.PickerDelegate {
         return true;
     }
 
-
     private function convertMonth(month as String) {
         return monthDict[month];
     }
-
 }

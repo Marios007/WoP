@@ -2,5 +2,5 @@
     <bitmap id="LauncherIcon" filename="woman_pregnant7070.png" />
     <bitmap id="fetusIcon" filename="baby_fetus_icon7070.png" />
     <bitmap id="scaleIcon" filename="scale_icon5050.png" />
-    <bitmap id="rulerIcon" filename="ruler_icon5050.png" />
+    <bitmap id="rulerIcon" filename="ruler_icon.svg" />
 </drawables>

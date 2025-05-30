@@ -1,9 +1,7 @@
 
 import Toybox.Application.Properties;
-import Toybox.Graphics;
 import Toybox.Lang;
 import Toybox.WatchUi;
-import Toybox.System;
 
 
 //! Responds to a date picker selection or cancellation

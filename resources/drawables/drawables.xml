@@ -1,8 +1,4 @@
 <drawables>
-    <bitmap id="LauncherIcon" filename="woman_pregnant4040.png" />
-    <bitmap id="fetusIcon" filename="baby_fetus_icon4040.png" />
-    <bitmap id="scaleIcon" filename="scale_white4040.png" />
-    <bitmap id="rulerIcon" filename="ruler_white4040.png" />
     <bitmap id="size0" filename="IconSize/sperm.svg" scaleX="38%" scaleY="38%" />
     <bitmap id="size1" filename="IconSize/sperm.svg" scaleX="38%" scaleY="38%" />
     <bitmap id="size2" filename="IconSize/sperm.svg" scaleX="38%" scaleY="38%" />

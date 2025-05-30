@@ -1,6 +1,6 @@
 using Toybox.WatchUi;
-using Toybox.System;
-using Toybox.Application.Properties;
+import Toybox.Application;
+
 
 var model;
 

@@ -1,6 +1,5 @@
 import Toybox.Graphics;
 import Toybox.WatchUi;
-using Toybox.System;
 using Toybox.Time;
 using Toybox.Time.Gregorian;
 using Toybox.Lang;
@@ -19,14 +18,14 @@ class WoPView extends WatchUi.View {
     private var center_y;
     var trimester;
     var calculator;
-    var stats = new WoPstats();
-    var drawer = new WoPDrawer();
+    var drawer;
     var dialog;
 
-    function initialize(mCalc) {
-        View.initialize();
+    function initialize(mCalc, mDrawer) {
+        drawer = mDrawer;
         calculator = mCalc;
         calculator.getDateOfBirth();
+        View.initialize();
     }
 
     // Load your resources here

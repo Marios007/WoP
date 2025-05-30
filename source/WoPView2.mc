@@ -1,6 +1,7 @@
 import Toybox.Graphics;
 import Toybox.WatchUi;
 import Toybox.Lang;
+using Toybox.System;
 
 class WoPView2 extends WatchUi.View {
 
@@ -10,13 +11,14 @@ class WoPView2 extends WatchUi.View {
     private var _textTop;
     private var _sizeBaby;
     private var _weightBaby;
-    var dates;
     var trimester;
-    var calculator = new WoPcalcDates();
+    var calculator;
     var stats = new WoPstats();
-    var drawer = new WoPDrawer();
+    var drawer;
 
-    function initialize() {
+    function initialize(mCalc, mDrawer) {
+        drawer = mDrawer;
+        calculator = mCalc;
         View.initialize();
     }
 
@@ -35,7 +37,8 @@ class WoPView2 extends WatchUi.View {
     // loading resources into memory.
     function onShow() as Void {
         _currentWoP = calculator.getDates();
-        _textTop.setText(WatchUi.loadResource(Rez.Strings.text_top_page2));        var week = _currentWoP.get(:week).toNumber();
+        _textTop.setText(WatchUi.loadResource(Rez.Strings.text_top_page2));
+        var week = _currentWoP.get(:week).toNumber();
         var data = stats.getStatsforWeek(week) as Array;
         _sizeBaby.setText(data[1]);
         _weightBaby.setText(data[2]);
