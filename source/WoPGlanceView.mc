@@ -59,7 +59,7 @@ class WoPGlanceView extends WatchUi.GlanceView {
     function onUpdate(dc) {
         dc.setColor(G.COLOR_WHITE, G.COLOR_TRANSPARENT);
         var penWidth = 7;
-        currentFont = G.FONT_GLANCE;
+        currentFont = G.FONT_SYSTEM_XTINY;
 
         var heightAdj = (dc.getFontHeight(currentFont)*0.5)+penWidth;
 

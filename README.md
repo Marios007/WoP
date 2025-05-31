@@ -29,14 +29,13 @@ https://apps.garmin.com/de-DE/apps/35876c51-1fcb-4781-88b4-0130060010dc
 - D2™ Air X10
 - D2™ Mach 1
 - Darth Vader™
-- Enduro™
+- Enduro 3™
 - epix™ (Gen 2)
-- fēnix® 6
+- fēnix® 6 Pro
 - fēnix® 7
 - fēnix® 8
 - fēnix® E
 - Forerunner® 165
-- Forerunner® 245
 - Forerunner® 255
 - Forerunner® 265
 - Forerunner® 745
