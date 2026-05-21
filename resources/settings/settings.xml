@@ -22,7 +22,7 @@
     </setting>
 
     <setting propertyKey="@Properties.year" title="@Strings.SettingsYearTitle">
-      <settingConfig type="numeric" min="2025" max="2027" required="true"/>
+      <settingConfig type="numeric" min="2026" max="2029" required="true"/>
     </setting>
   </group>
   <group id="groupArea" title="@Strings.group2Title" description="@Strings.group2Description">

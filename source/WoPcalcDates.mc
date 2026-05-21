@@ -82,6 +82,10 @@ class WoPcalcDates {
     function getTrimester(week) {
         var tri1end = Properties.getValue("trimester2start") - 1; //end of trimester 1
         var tri2end = Properties.getValue("trimester3start") - 1; //end of trimester 2
+
+        System.println(week);
+        System.println(tri2end);
+        
         if (week <= tri1end)  {return 1; }
         if (week <= tri2end)  {return 2; }
         if (week <= 41)  {return 3; }

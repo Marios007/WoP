@@ -1,4 +1,5 @@
 import Toybox.Graphics;
+import Toybox.System;
 
 class WoPDrawer {
 
@@ -25,6 +26,7 @@ class WoPDrawer {
         // draw week on arc 
         //var angle = _currentWoP.get(:angle);
         dc.setPenWidth(((dc.getWidth()/25)).toNumber());
+        System.println(trimester);
         switch (trimester) {
             case 1:
                 dc.setColor(Graphics.COLOR_RED, Graphics.COLOR_BLACK);
@@ -42,7 +44,8 @@ class WoPDrawer {
                 dc.setColor(Graphics.COLOR_YELLOW, Graphics.COLOR_BLACK);
                 dc.drawArc(center_x, center_y, radius, Graphics.ARC_CLOCKWISE, tri2angle + thickness, tri3angle + thickness);
                 dc.setColor(Graphics.COLOR_GREEN, Graphics.COLOR_BLACK);
-                dc.drawArc(center_x, center_y, radius, Graphics.ARC_CLOCKWISE, tri3angle - thickness, angle);
+                dc.drawArc(center_x, center_y, radius, Graphics.ARC_CLOCKWISE, tri3angle + thickness, angle);
+                System.println(center_x + ", " + center_y + ", " + angle);
                 break;
             case 4:
                 break;
