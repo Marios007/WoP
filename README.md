@@ -36,8 +36,10 @@ https://apps.garmin.com/de-DE/apps/35876c51-1fcb-4781-88b4-0130060010dc
 - fēnix® 8
 - fēnix® E
 - Forerunner® 165
+- Forerunner® 170
 - Forerunner® 255
 - Forerunner® 265
+- Forerunner® 645
 - Forerunner® 745
 - Forerunner® 945
 - Forerunner® 955
