@@ -15,6 +15,7 @@ class WoPView3 extends WatchUi.View {
     private var drawer;
     var week;
     private var _image;
+    private var _imageRezId = null;
     private var data as Array or Null = [];
 
     function initialize(mCalc, mDrawer) {
@@ -42,9 +43,12 @@ class WoPView3 extends WatchUi.View {
         week = _currentWoP.get(:week);
         data  = stats.getStatsforWeek(week) as Array;
         _textSize.setText(WatchUi.loadResource(data[3]));
-        _image = new WatchUi.Bitmap({:rezId=>data[4], :locX=>center_x, :locY=>center_y});
-        var _image_dimension = _image.getDimensions();
-        _image.setLocation(center_x - (_image_dimension[0]/2), center_y - (_image_dimension[1]/2));
+        if (data[4] != _imageRezId) {
+            _imageRezId = data[4];
+            _image = new WatchUi.Bitmap({:rezId=>data[4], :locX=>center_x, :locY=>center_y});
+            var dims = _image.getDimensions();
+            _image.setLocation(center_x - (dims[0]/2), center_y - (dims[1]/2));
+        }
         
     }
 

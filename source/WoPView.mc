@@ -20,6 +20,17 @@ class WoPView extends WatchUi.View {
     var calculator;
     var drawer;
     var dialog;
+    private var _strTextTop;
+    private var _strCountdown1;
+    private var _strCountdown2;
+    private var _strWop;
+    private var _strFirst;
+    private var _strSecond;
+    private var _strThird;
+    private var _strTrimester;
+    private var _strWrongDate1;
+    private var _strWrongDate2;
+    private var _strWrongDate3;
 
     function initialize(mCalc, mDrawer) {
         drawer = mDrawer;
@@ -43,6 +54,17 @@ class WoPView extends WatchUi.View {
         _trimesterLabel = findDrawableById("trimester");
         center_x = dc.getWidth()/2;
         center_y = dc.getHeight()/2;
+        _strTextTop    = WatchUi.loadResource(Rez.Strings.text_top);
+        _strCountdown1 = WatchUi.loadResource(Rez.Strings.text_countdown1);
+        _strCountdown2 = WatchUi.loadResource(Rez.Strings.text_countdown2);
+        _strWop        = WatchUi.loadResource(Rez.Strings.wop);
+        _strFirst      = WatchUi.loadResource(Rez.Strings.first);
+        _strSecond     = WatchUi.loadResource(Rez.Strings.second);
+        _strThird      = WatchUi.loadResource(Rez.Strings.third);
+        _strTrimester  = WatchUi.loadResource(Rez.Strings.trimester);
+        _strWrongDate1 = WatchUi.loadResource(Rez.Strings.text_wrong_date1);
+        _strWrongDate2 = WatchUi.loadResource(Rez.Strings.text_wrong_date2);
+        _strWrongDate3 = WatchUi.loadResource(Rez.Strings.text_wrong_date3);
     }
 
     // Called when this View is brought to the foreground. Restore
@@ -52,34 +74,34 @@ class WoPView extends WatchUi.View {
         _dateOfBirth = calculator.getDateOfBirth();
         var today = calculator.getToday();
         // calculate countdown and set text
-        _textTop.setText(WatchUi.loadResource(Rez.Strings.text_top));
+        _textTop.setText(_strTextTop);
         _countdownDays = calculator.calculateCountdown(_dateOfBirth, today);
-        _countdownDaysLabel.setText(WatchUi.loadResource(Rez.Strings.text_countdown1) + _countdownDays + WatchUi.loadResource(Rez.Strings.text_countdown2) );
+        _countdownDaysLabel.setText(_strCountdown1 + _countdownDays + _strCountdown2);
 
         //calculate week an set text
         _currentWoP = calculator.getDates();
-        _currentWoPLabel.setText(_currentWoP.get(:week) + WatchUi.loadResource(Rez.Strings.wop) + " ("+ (_currentWoP.get(:exactWeek)+"W + "+_currentWoP.get(:dayInWeek) +")"));
-        
+        _currentWoPLabel.setText(_currentWoP.get(:week) + _strWop + " ("+ (_currentWoP.get(:exactWeek)+"W + "+_currentWoP.get(:dayInWeek) +")"));
+
         trimester = _currentWoP.get(:trimester);
         switch (trimester){
             case 1:
                 _trimesterLabel.setColor(Graphics.COLOR_RED);
-                _trimesterLabel.setText(trimester + WatchUi.loadResource(Rez.Strings.first) + WatchUi.loadResource(Rez.Strings.trimester));
+                _trimesterLabel.setText(trimester + _strFirst + _strTrimester);
                 break;
             case 2:
                 _trimesterLabel.setColor(Graphics.COLOR_YELLOW);
-                _trimesterLabel.setText(trimester + WatchUi.loadResource(Rez.Strings.second) + WatchUi.loadResource(Rez.Strings.trimester));
+                _trimesterLabel.setText(trimester + _strSecond + _strTrimester);
                 break;
             case 3:
                 _trimesterLabel.setColor(Graphics.COLOR_GREEN);
-                _trimesterLabel.setText(trimester + WatchUi.loadResource(Rez.Strings.third) + WatchUi.loadResource(Rez.Strings.trimester));
+                _trimesterLabel.setText(trimester + _strThird + _strTrimester);
                 break;
             case 0 :
                 _trimesterLabel.setColor(Graphics.COLOR_WHITE);
                 _textTop.setText("");
-                _currentWoPLabel.setText(WatchUi.loadResource(Rez.Strings.text_wrong_date1));
-                _trimesterLabel.setText(WatchUi.loadResource(Rez.Strings.text_wrong_date2));
-                _countdownDaysLabel.setText(WatchUi.loadResource(Rez.Strings.text_wrong_date3));
+                _currentWoPLabel.setText(_strWrongDate1);
+                _trimesterLabel.setText(_strWrongDate2);
+                _countdownDaysLabel.setText(_strWrongDate3);
                 break;
         }
     }
