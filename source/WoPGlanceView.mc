@@ -12,7 +12,7 @@ class WoPGlanceView extends WatchUi.GlanceView {
     var _woPDates;
     var _today;
     var calculatorGlance;
-    var _xPosWeek;
+    //var _xPosWeek;
     var GW;
     var GH;
     var currentFont;
@@ -43,7 +43,7 @@ class WoPGlanceView extends WatchUi.GlanceView {
     // This includes loading resources into memory.
     function onShow() {
         _woPDates = calculatorGlance.getDates();
-        _xPosWeek = 100 * 0.4 / _woPDates.get(:week);
+        //_xPosWeek = 100 * 0.4 / _woPDates.get(:week);
         _message = _woPDates.get(:week) + _textWoP + "("  +(_woPDates.get(:exactWeek)+"W + "+_woPDates.get(:dayInWeek) +")");
         
         // Cache property values once
