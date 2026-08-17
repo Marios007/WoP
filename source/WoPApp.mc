@@ -22,6 +22,12 @@ class WoPApp extends Application.AppBase {
     function onStop(state as Dictionary?) as Void {
     }
 
+    // called when the app settings were changed on the phone
+    function onSettingsChanged() as Void {
+        $.reconcileDates();
+        WatchUi.requestUpdate();
+    }
+
 
     // Return the initial view of your application here
     function getInitialView()  {

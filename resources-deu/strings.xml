@@ -6,6 +6,7 @@
 
     <string id="menu_name">Menu</string>
     <string id="set_birthday">Geburtstermin ändern</string>
+    <string id="set_lmp">Letzte Periode ändern</string>
     <string id="wop_Settings">SSW Einst.</string>
     <string id="trimester2_settings">Start Trimester 2</string>
     <string id="trimester3_settings">Start Trimester 3</string>
@@ -25,6 +26,8 @@
 
     <!-- Date picker --> 
     <string id="datePickerTitle">Geburtstermin</string>
+    <string id="lmpPickerTitle">Letzte Periode</string>
+    <string id="dateChoiceTitle">Datum wählen</string>
     <string id="dateSeparator">-</string>
     <string id="month01">Jan</string>
     <string id="month02">Feb</string>
@@ -45,6 +48,8 @@
     <string id="SettingsYearTitle">Jahr</string>
     <string id="group1Title">Geburtstermin</string>
     <string id="group1Description">Geburtstermin einstellen</string>
+    <string id="group3Title">Letzte Periode</string>
+    <string id="group3Description">Datum der letzten Periode einstellen</string>
     <string id="group2Title">Einstellung Woche</string>
     <string id="group2Description">Trimester und SSW Einstellungen</string>
     <string id="SettingsAreaTitle">Test</string>

@@ -4,11 +4,13 @@ import Toybox.WatchUi;
 import Toybox.Application.Properties;
 
 var itemBirthday;
+var itemLmp;
 var itemWOPSetting;
 var itemTrimester2Setting;
 var itemTrimester3Setting;
 var itemInfo;
 var subLabel_birthday;
+var subLabel_lmp;
 var sublabel_wopSetting;
 var subLabel_tri2;
 var subLabel_tri3;
@@ -20,6 +22,8 @@ class MenuSettingsView extends WatchUi.Menu2 {
 
         subLabel_birthday = Properties.getValue("day")+"."+Properties.getValue("month")+"."+Properties.getValue("year");
         itemBirthday = new WatchUi.MenuItem(WatchUi.loadResource(Rez.Strings.set_birthday), subLabel_birthday, "birthday", null);
+        subLabel_lmp = Properties.getValue("lmpDay")+"."+Properties.getValue("lmpMonth")+"."+Properties.getValue("lmpYear");
+        itemLmp = new WatchUi.MenuItem(WatchUi.loadResource(Rez.Strings.set_lmp), subLabel_lmp, "lmp", null);
         if (Properties.getValue("weekSetting") == 1) {
             sublabel_wopSetting = WatchUi.loadResource(Rez.Strings.SettingsArea0);
         } else if (Properties.getValue("weekSetting") == 0) {
@@ -33,6 +37,7 @@ class MenuSettingsView extends WatchUi.Menu2 {
 
         itemInfo = new WatchUi.MenuItem(WatchUi.loadResource(Rez.Strings.info), null, "info", null);
         Menu2.addItem(itemBirthday);
+        Menu2.addItem(itemLmp);
         Menu2.addItem(itemWOPSetting);
         Menu2.addItem(itemTrimester2Setting);
         Menu2.addItem(itemTrimester3Setting);
@@ -42,6 +47,8 @@ class MenuSettingsView extends WatchUi.Menu2 {
     function onShow() as Void {
         subLabel_birthday = Properties.getValue("day")+"."+Properties.getValue("month")+"."+Properties.getValue("year");
         itemBirthday = new WatchUi.MenuItem(WatchUi.loadResource(Rez.Strings.set_birthday), subLabel_birthday, "birthday", null);
+        subLabel_lmp = Properties.getValue("lmpDay")+"."+Properties.getValue("lmpMonth")+"."+Properties.getValue("lmpYear");
+        itemLmp = new WatchUi.MenuItem(WatchUi.loadResource(Rez.Strings.set_lmp), subLabel_lmp, "lmp", null);
         if (Properties.getValue("weekSetting") == 1) {
             sublabel_wopSetting = WatchUi.loadResource(Rez.Strings.SettingsArea0);
         } else if (Properties.getValue("weekSetting") == 0) {
@@ -54,9 +61,10 @@ class MenuSettingsView extends WatchUi.Menu2 {
         itemTrimester3Setting = new WatchUi.MenuItem(WatchUi.loadResource(Rez.Strings.trimester3_settings), subLabel_tri3, "triSetting3", null);
 
         Menu2.updateItem(itemBirthday, 0);
-        Menu2.updateItem(itemWOPSetting, 1);
-        Menu2.updateItem(itemTrimester2Setting, 2);
-        Menu2.updateItem(itemTrimester3Setting, 3);
+        Menu2.updateItem(itemLmp, 1);
+        Menu2.updateItem(itemWOPSetting, 2);
+        Menu2.updateItem(itemTrimester2Setting, 3);
+        Menu2.updateItem(itemTrimester3Setting, 4);
 
 	}
 }
@@ -74,8 +82,11 @@ class Menu2Delegate extends WatchUi.Menu2InputDelegate {
     public function onSelect(item as MenuItem) as Void {
         var id = item.getId() as String;
         if (id.equals("birthday")) {
-            WatchUi.pushView(new DatePicker(), new DatePickerDelegate(), WatchUi.SLIDE_LEFT );
-        } 
+            WatchUi.pushView(new DatePicker(:dueDate), new DatePickerDelegate(:dueDate), WatchUi.SLIDE_LEFT );
+        }
+        else if (id.equals("lmp")) {
+            WatchUi.pushView(new DatePicker(:lmp), new DatePickerDelegate(:lmp), WatchUi.SLIDE_LEFT );
+        }
         else if (id.equals("settings")) {
             $.pushBasicCustom();
         }

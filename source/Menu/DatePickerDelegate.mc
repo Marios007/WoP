@@ -23,9 +23,13 @@ class DatePickerDelegate extends WatchUi.PickerDelegate {
         WatchUi.loadResource(Rez.Strings.month12) => 12,
         } ;
 
+    private var _mode as Symbol;
+
     //! Constructor
-    public function initialize() {
+    //! @param mode :dueDate if the picked date is the date of birth, :lmp if it is the last period
+    public function initialize(mode as Symbol) {
         PickerDelegate.initialize();
+        _mode = mode;
     }
 
     //! Handle a cancel event from the picker
@@ -46,9 +50,11 @@ class DatePickerDelegate extends WatchUi.PickerDelegate {
             var day = values[2];
             var year = values[4];
             if ((day != null) && (year != null)) {
-                Properties.setValue("day", day);
-                Properties.setValue("month", convertMonth(month as String));
-                Properties.setValue("year", year);
+                if (_mode == :lmp) {
+                    $.setDatesFromLmp(day, convertMonth(month as String), year);
+                } else {
+                    $.setDatesFromDue(day, convertMonth(month as String), year);
+                }
                 Properties.setValue("dateSet", 1);
             }
         }

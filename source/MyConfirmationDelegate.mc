@@ -14,8 +14,8 @@ class MyConfirmationDelegate extends WatchUi.ConfirmationDelegate {
             return false;
         } 
         else {
-            WatchUi.switchToView(new DatePicker(), new DatePickerDelegate(), WatchUi.SLIDE_LEFT );
-            WatchUi.pushView(new DatePicker(), new DatePickerDelegate(), WatchUi.SLIDE_LEFT );
+            WatchUi.switchToView(new DateChoiceMenu(), new DateChoiceDelegate(), WatchUi.SLIDE_LEFT );
+            WatchUi.pushView(new DateChoiceMenu(), new DateChoiceDelegate(), WatchUi.SLIDE_LEFT );
             return true;
         }
     }

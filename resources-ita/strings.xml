@@ -6,6 +6,7 @@
 
     <string id="menu_name">Impostazioni</string>
     <string id="set_birthday">Imposta data presunta del parto</string>
+    <string id="set_lmp">Imposta ultima mestruazione</string>
     <string id="wop_Settings">Impostazioni SG</string>
     <string id="trimester2_settings">Inizio trimestre 2</string>
     <string id="trimester3_settings">Inizio trimestre 3</string>
@@ -26,6 +27,8 @@
 
     <!-- Date picker -->
     <string id="datePickerTitle">Seleziona data</string>
+    <string id="lmpPickerTitle">Ultima mestruazione</string>
+    <string id="dateChoiceTitle">Seleziona data</string>
     <string id="dateSeparator">-</string>
     <string id="month01">Gen</string>
     <string id="month02">Feb</string>
@@ -45,6 +48,8 @@
     <string id="SettingsYearTitle">Anno</string>
     <string id="group1Title">Data presunta del parto</string>
     <string id="group1Description">Imposta la data presunta del parto</string>
+    <string id="group3Title">Ultima mestruazione</string>
+    <string id="group3Description">Imposta la data dell'ultima mestruazione</string>
     <string id="group2Title">Impostazioni settimana</string>
     <string id="group2Description">Trimestre e impostazioni SG</string>
     <string id="SettingsAreaTitle">Impostazione SG</string>

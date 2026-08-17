@@ -6,6 +6,7 @@
 
     <string id="menu_name">Réglages</string>
     <string id="set_birthday">Régler la date prévue d'accouchement</string>
+    <string id="set_lmp">Régler les dernières règles</string>
     <string id="wop_Settings">Réglages SG</string>
     <string id="trimester2_settings">Début du trimestre 2</string>
     <string id="trimester3_settings">Début du trimestre 3</string>
@@ -26,6 +27,8 @@
 
     <!-- Date picker -->
     <string id="datePickerTitle">Choisir une date</string>
+    <string id="lmpPickerTitle">Dernières règles</string>
+    <string id="dateChoiceTitle">Choisir une date</string>
     <string id="dateSeparator">-</string>
     <string id="month01">janv.</string>
     <string id="month02">févr.</string>
@@ -45,6 +48,8 @@
     <string id="SettingsYearTitle">Année</string>
     <string id="group1Title">Date prévue d'accouchement</string>
     <string id="group1Description">Régler la date prévue d'accouchement</string>
+    <string id="group3Title">Dernières règles</string>
+    <string id="group3Description">Régler la date des dernières règles</string>
     <string id="group2Title">Réglages de la semaine</string>
     <string id="group2Description">Trimestre et réglages SG</string>
     <string id="SettingsAreaTitle">Réglage SG</string>

@@ -19,6 +19,8 @@ class WoPcalcDates {
         // if pregnancy date is not set, set to today + 10 weeks 3 days
         if (Properties.getValue("dateSet") == 0 ) {
             setInitialDate();
+        } else {
+            $.reconcileDates(); // sync due date and last period after phone settings changed
         }
     }
 
@@ -28,9 +30,7 @@ class WoPcalcDates {
         var today =  getToday();
         var initialDateGregorian = Gregorian.info(today.add(tenWeeks), Time.FORMAT_SHORT);
         //var initialDateGregorian = Gregorian.info(initialDate, Time.FORMAT_SHORT);
-        Properties.setValue("day", initialDateGregorian.day);
-        Properties.setValue("month", initialDateGregorian.month);
-        Properties.setValue("year", initialDateGregorian.year);
+        $.setDatesFromDue(initialDateGregorian.day, initialDateGregorian.month, initialDateGregorian.year);
     }
 
 
@@ -63,8 +63,11 @@ class WoPcalcDates {
         // calculate week of pregnancy and week and day seperatly, return a dict with all information
     function getDates(){
         var dateOfBirth = getDateOfBirth();
-        var currentWoP = _today.subtract(dateOfBirth.subtract(DURATION_PREGNANCY)); //WoP in Days
-        var woP_in_Days = (currentWoP.value())/(Gregorian.SECONDS_PER_DAY);  // WoP output in days
+        var currentWoP = _today.compare(dateOfBirth.subtract(DURATION_PREGNANCY)); //WoP in seconds, negative if the pregnancy has not started yet
+        var woP_in_Days = currentWoP/(Gregorian.SECONDS_PER_DAY);  // WoP output in days
+        if (woP_in_Days < 0) {
+            woP_in_Days = 42 * 7; //due date too far in the future -> force the invalid date screen (week > 41)
+        }
         var week = Math.floor(woP_in_Days / 7) + Properties.getValue("weekSetting") ;  //set current WoP! (week + 1 )
         var dayInWeek = woP_in_Days - 7 * Math.floor(woP_in_Days / 7); //exact day in week
         var trimester = getTrimester(week);
