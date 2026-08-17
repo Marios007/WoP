@@ -1,0 +1,113 @@
+<strings>
+    <string id="AppName">Embarazo</string>
+    <string id="AppNameAbout">SG-Widget</string>
+    <string id="view_title" scope="foreground">Embarazo</string>
+    <string id="glance_title" scope="glance">Info embarazo</string>
+
+    <string id="menu_name">Ajustes</string>
+    <string id="set_birthday">Configurar fecha prevista de parto</string>
+    <string id="wop_Settings">Ajustes SG</string>
+    <string id="trimester2_settings">Inicio del trimestre 2</string>
+    <string id="trimester3_settings">Inicio del trimestre 3</string>
+    <string id="info">Acerca de</string>
+    <string id="wop" scope="glance">. SG </string>
+    <string id="text_top">Semana actual</string>
+    <string id="text_countdown1"></string>
+    <string id="text_countdown2"> días restantes</string>
+    <string id="text_countdown3"> día restante</string>
+    <string id="text_wrong_date1">Por favor </string>
+    <string id="text_wrong_date2">indica una fecha </string>
+    <string id="text_wrong_date3">válida</string>
+    <string id="first">º</string>
+    <string id="second">º</string>
+    <string id="third">º</string>
+    <string id="trimester"> trimestre</string>
+
+
+    <!-- Date picker -->
+    <string id="datePickerTitle">Elegir fecha</string>
+    <string id="dateSeparator">-</string>
+    <string id="month01">ene.</string>
+    <string id="month02">feb.</string>
+    <string id="month03">mar.</string>
+    <string id="month04">abr.</string>
+    <string id="month05">may.</string>
+    <string id="month06">jun.</string>
+    <string id="month07">jul.</string>
+    <string id="month08">ago.</string>
+    <string id="month09">sep.</string>
+    <string id="month10">oct.</string>
+    <string id="month11">nov.</string>
+    <string id="month12">dic.</string>
+
+    <string id="SettingsDayTitle">Día</string>
+    <string id="SettingsMonthTitle">Mes</string>
+    <string id="SettingsYearTitle">Año</string>
+    <string id="group1Title">Fecha prevista de parto</string>
+    <string id="group1Description">Configurar la fecha prevista de parto</string>
+    <string id="group2Title">Ajustes de semana</string>
+    <string id="group2Description">Trimestre y ajustes SG</string>
+    <string id="SettingsAreaTitle">Ajuste SG</string>
+    <string id="SettingsArea0">9S+2 = 10.ª SG</string>
+    <string id="SettingsArea1">9S+2 = 9.ª SG</string>
+    <string id="SettingsArea0Text">9S+2 = 10.ª SG activado. Cuenta las semanas empezadas como completas (estándar médico)</string>
+    <string id="SettingsArea1Text">9S+2 = 9.ª SG activado. Solo cuenta semanas completas. Sin redondeo de semanas parciales</string>
+    <string id="SettingsTri2">Inicio del 2.º trimestre</string>
+    <string id="SettingsTri3">Inicio del 3.º trimestre</string>
+
+    <!-- SecondPage -->
+    <string id="text_top_page2">Tamaño/peso actual </string>
+
+    <!-- ThirdPage -->
+    <string id="firstLine">Tu bebé ahora tiene el tamaño de</string>
+    <string id="size0">aún muy pequeño</string>
+    <string id="size1">aún muy pequeño</string>
+    <string id="size2">aún muy pequeño</string>
+    <string id="size3">aún muy pequeño</string>
+    <string id="size4">una semilla de amapola</string>
+    <string id="size5">una semilla de sésamo</string>
+    <string id="size6">un grano de maíz</string>
+    <string id="size7">un arándano</string>
+    <string id="size8">una frambuesa</string>
+    <string id="size9">una avellana</string>
+    <string id="size10">un dátil</string>
+    <string id="size11">un tomate pequeño</string>
+    <string id="size12">una ciruela</string>
+    <string id="size13">un melocotón</string>
+    <string id="size14">una manzana</string>
+    <string id="size15">un limón</string>
+    <string id="size16">una naranja pequeña</string>
+    <string id="size17">un aguacate</string>
+    <string id="size18">un mango</string>
+    <string id="size19">una patata</string>
+    <string id="size20">un boniato</string>
+    <string id="size21">una berenjena</string>
+    <string id="size22">un coco</string>
+    <string id="size23">un brócoli</string>
+    <string id="size24">un pepino</string>
+    <string id="size25">una col lombarda</string>
+    <string id="size26">un melón dulce</string>
+    <string id="size27">una col china</string>
+    <string id="size28">una piña</string>
+    <string id="size29">un puerro</string>
+    <string id="size30">una jícama</string>
+    <string id="size31">un plátano macho</string>
+    <string id="size32">un rábano grande</string>
+    <string id="size33">una acelga</string>
+    <string id="size34">un ñame</string>
+    <string id="size35">un melón de invierno</string>
+    <string id="size36">un tallo de apio</string>
+    <string id="size37">una yaca</string>
+    <string id="size38">un tallo de ruibarbo</string>
+    <string id="size39">una calabaza</string>
+    <string id="size40">una sandía grande</string>
+    <string id="size41">una sandía grande</string>
+    <string id="size42">una sandía grande</string>
+    <string id="size43">Introduce una fecha correcta</string>
+
+
+    <!-- Others -->
+    <string id="PopUpMessage">¿Configurar la fecha prevista de parto?</string>
+
+
+</strings>

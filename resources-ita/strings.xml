@@ -1,0 +1,113 @@
+<strings>
+    <string id="AppName">Gravidanza</string>
+    <string id="AppNameAbout">SG-Widget</string>
+    <string id="view_title" scope="foreground">Gravidanza</string>
+    <string id="glance_title" scope="glance">Info gravidanza</string>
+
+    <string id="menu_name">Impostazioni</string>
+    <string id="set_birthday">Imposta data presunta del parto</string>
+    <string id="wop_Settings">Impostazioni SG</string>
+    <string id="trimester2_settings">Inizio trimestre 2</string>
+    <string id="trimester3_settings">Inizio trimestre 3</string>
+    <string id="info">Informazioni</string>
+    <string id="wop" scope="glance">. SG </string>
+    <string id="text_top">Settimana attuale</string>
+    <string id="text_countdown1"></string>
+    <string id="text_countdown2"> giorni rimanenti</string>
+    <string id="text_countdown3"> giorno rimanente</string>
+    <string id="text_wrong_date1">Per favore </string>
+    <string id="text_wrong_date2">inserisci una data </string>
+    <string id="text_wrong_date3">valida</string>
+    <string id="first">°</string>
+    <string id="second">°</string>
+    <string id="third">°</string>
+    <string id="trimester"> trimestre</string>
+
+
+    <!-- Date picker -->
+    <string id="datePickerTitle">Seleziona data</string>
+    <string id="dateSeparator">-</string>
+    <string id="month01">Gen</string>
+    <string id="month02">Feb</string>
+    <string id="month03">Mar</string>
+    <string id="month04">Apr</string>
+    <string id="month05">Mag</string>
+    <string id="month06">Giu</string>
+    <string id="month07">Lug</string>
+    <string id="month08">Ago</string>
+    <string id="month09">Set</string>
+    <string id="month10">Ott</string>
+    <string id="month11">Nov</string>
+    <string id="month12">Dic</string>
+
+    <string id="SettingsDayTitle">Giorno</string>
+    <string id="SettingsMonthTitle">Mese</string>
+    <string id="SettingsYearTitle">Anno</string>
+    <string id="group1Title">Data presunta del parto</string>
+    <string id="group1Description">Imposta la data presunta del parto</string>
+    <string id="group2Title">Impostazioni settimana</string>
+    <string id="group2Description">Trimestre e impostazioni SG</string>
+    <string id="SettingsAreaTitle">Impostazione SG</string>
+    <string id="SettingsArea0">9S+2 = 10ª SG</string>
+    <string id="SettingsArea1">9S+2 = 9ª SG</string>
+    <string id="SettingsArea0Text">9S+2 = 10ª SG attivato. Conta le settimane iniziate come complete (standard medico)</string>
+    <string id="SettingsArea1Text">9S+2 = 9ª SG attivato. Conta solo le settimane complete. Nessun arrotondamento delle settimane parziali</string>
+    <string id="SettingsTri2">Inizio del 2° trimestre</string>
+    <string id="SettingsTri3">Inizio del 3° trimestre</string>
+
+    <!-- SecondPage -->
+    <string id="text_top_page2">Dimensione/peso attuale </string>
+
+    <!-- ThirdPage -->
+    <string id="firstLine">Il tuo bambino ora è grande come</string>
+    <string id="size0">ancora troppo piccolo</string>
+    <string id="size1">ancora troppo piccolo</string>
+    <string id="size2">ancora troppo piccolo</string>
+    <string id="size3">ancora troppo piccolo</string>
+    <string id="size4">un seme di papavero</string>
+    <string id="size5">un seme di sesamo</string>
+    <string id="size6">un chicco di mais</string>
+    <string id="size7">un mirtillo</string>
+    <string id="size8">un lampone</string>
+    <string id="size9">una nocciola</string>
+    <string id="size10">un dattero</string>
+    <string id="size11">un piccolo pomodoro</string>
+    <string id="size12">una prugna</string>
+    <string id="size13">una pesca</string>
+    <string id="size14">una mela</string>
+    <string id="size15">un limone</string>
+    <string id="size16">una piccola arancia</string>
+    <string id="size17">un avocado</string>
+    <string id="size18">un mango</string>
+    <string id="size19">una patata</string>
+    <string id="size20">una patata dolce</string>
+    <string id="size21">una melanzana</string>
+    <string id="size22">un cocco</string>
+    <string id="size23">un broccolo</string>
+    <string id="size24">un cetriolo</string>
+    <string id="size25">un cavolo rosso</string>
+    <string id="size26">un melone bianco</string>
+    <string id="size27">un cavolo cinese</string>
+    <string id="size28">un ananas</string>
+    <string id="size29">un porro</string>
+    <string id="size30">una jicama</string>
+    <string id="size31">un platano</string>
+    <string id="size32">un grosso ravanello</string>
+    <string id="size33">una bietola</string>
+    <string id="size34">un igname</string>
+    <string id="size35">una zucca invernale</string>
+    <string id="size36">un gambo di sedano</string>
+    <string id="size37">un jackfruit</string>
+    <string id="size38">un gambo di rabarbaro</string>
+    <string id="size39">una zucca</string>
+    <string id="size40">una grande anguria</string>
+    <string id="size41">una grande anguria</string>
+    <string id="size42">una grande anguria</string>
+    <string id="size43">Inserisci una data corretta</string>
+
+
+    <!-- Others -->
+    <string id="PopUpMessage">Impostare la data presunta del parto?</string>
+
+
+</strings>
