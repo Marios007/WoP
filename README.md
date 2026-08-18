@@ -11,6 +11,7 @@ Shows the current week of pregnancy and trimester.
 - Set the date inside the widget menu and on the phone
 - Glance view
 - Information about current weight and size
+- Available in 5 languages (GER/ENG/ESP/ITA/FRE)
 
 ---
 
