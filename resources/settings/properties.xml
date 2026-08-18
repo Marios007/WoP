@@ -9,5 +9,5 @@
     <property id="weekSetting" type="number">1</property>
     <property id="trimester2start" type="number">13</property>
     <property id="trimester3start" type="number">29</property>
-    <property id="appVersion" type="string">2.4</property>
+    <property id="appVersion" type="string">2.6</property>
 </properties>
