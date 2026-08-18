@@ -2,25 +2,24 @@
 
 Shows the current week of pregnancy and trimester.
 
-![MainView](screenshots/ConnectIQ/MainViewENG.jpeg) 
+![MainView](screenshots/ConnectIQ/MainViewENG.jpeg)
 
 ![MainView](screenshots/ConnectIQ/GlanceViewENG.png)
 
 ## Current functionality
 
-- Set the date inside the widget menu
+- Set the date inside the widget menu and on the phone
 - Glance view
 - Information about current weight and size
 
----------
+---
+
 ## Sources
 
 Size and weight: https://www.babelli.de/entwicklung-embryo/
 
-##
 Connect IQ Store:
 https://apps.garmin.com/de-DE/apps/35876c51-1fcb-4781-88b4-0130060010dc
-
 
 ## Supported devices
 
@@ -56,4 +55,3 @@ https://apps.garmin.com/de-DE/apps/35876c51-1fcb-4781-88b4-0130060010dc
 - vívoactive® 4
 - vívoactive® 5
 - vívoactive® 6
-
