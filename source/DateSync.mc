@@ -10,9 +10,22 @@ using Toybox.Application.Storage;
 (:glance)
 const PREGNANCY_DURATION_SECS = 24192000; //280d in sec
 
+//! clamp a day to the last valid day of the given month/year (handles leap years)
+(:glance)
+function daysInMonth(month, year) {
+    var lengths = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+    var max = lengths[month - 1];
+    if (month == 2 && year % 4 == 0 && (year % 100 != 0 || year % 400 == 0)) {
+        max = 29;
+    }
+    return max;
+}
+
 //! set the due date and derive the last period from it
 (:glance)
 function setDatesFromDue(day, month, year) {
+    var maxDay = daysInMonth(month, year);
+    if (day > maxDay) { day = maxDay; }
     var due = Gregorian.moment({:year => year, :month => month, :day => day, :hour => 0});
     var lmp = Gregorian.info(due.subtract(new Time.Duration($.PREGNANCY_DURATION_SECS)), Time.FORMAT_SHORT);
     saveDates(day, month, year, lmp.day, lmp.month, lmp.year);
@@ -21,6 +34,8 @@ function setDatesFromDue(day, month, year) {
 //! set the last period and derive the due date from it
 (:glance)
 function setDatesFromLmp(day, month, year) {
+    var maxDay = daysInMonth(month, year);
+    if (day > maxDay) { day = maxDay; }
     var lmp = Gregorian.moment({:year => year, :month => month, :day => day, :hour => 0});
     var due = Gregorian.info(lmp.add(new Time.Duration($.PREGNANCY_DURATION_SECS)), Time.FORMAT_SHORT);
     saveDates(due.day, due.month, due.year, day, month, year);
