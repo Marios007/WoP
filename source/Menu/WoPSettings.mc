@@ -112,12 +112,13 @@ class CustomItem extends WatchUi.CustomMenuItem {
         _label = text;
     }
 
-    //! Draw the item string at the center of the item.
+    //! Draw the item string at the center of the item, wrapping onto
+    //! multiple lines if it does not fit the item's width.
     //! @param dc Device context
     public function draw(dc as Dc) as Void {
-        var font = Graphics.FONT_SMALL;
+        var font = Graphics.FONT_XTINY;
         if (isFocused()) {
-            font = Graphics.FONT_MEDIUM;
+            font = Graphics.FONT_TINY;
         }
 
         if (isSelected()) {
@@ -125,11 +126,56 @@ class CustomItem extends WatchUi.CustomMenuItem {
             dc.clear();
         }
 
+        var maxWidth = dc.getWidth() - 16;
+        var lines = wrapText(dc, _label, font, maxWidth);
+        var lineHeight = Graphics.getFontHeight(font);
+        var startY = (dc.getHeight() - lineHeight * lines.size()) / 2 + lineHeight / 2;
+
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(dc.getWidth() / 2, dc.getHeight() / 2, font, _label, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+        for (var i = 0; i < lines.size(); i++) {
+            dc.drawText(dc.getWidth() / 2, startY + i * lineHeight, font, lines[i], Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+        }
+
         dc.setColor(Graphics.COLOR_DK_GRAY, Graphics.COLOR_TRANSPARENT);
         dc.drawLine(0, 0, dc.getWidth(), 0);
         dc.drawLine(0, dc.getHeight() - 1, dc.getWidth(), dc.getHeight() - 1);
+    }
+
+    //! Split text into lines that each fit within maxWidth for the given font.
+    //! @param dc Device context used to measure text
+    //! @param text The text to wrap
+    //! @param font The font the text will be drawn with
+    //! @param maxWidth The maximum width in pixels a line may occupy
+    //! @return Array of lines
+    private function wrapText(dc as Dc, text as String, font as Graphics.FontType, maxWidth as Number) as Array<String> {
+        var lines = [] as Array<String>;
+        var currentLine = "";
+        var remaining = text;
+
+        while (remaining.length() > 0) {
+            var spaceIndex = remaining.find(" ");
+            var word;
+            if (spaceIndex == null) {
+                word = remaining;
+                remaining = "";
+            } else {
+                word = remaining.substring(0, spaceIndex) as String;
+                remaining = remaining.substring(spaceIndex + 1, remaining.length()) as String;
+            }
+
+            var testLine = currentLine.equals("") ? word : currentLine + " " + word;
+            if (dc.getTextWidthInPixels(testLine, font) <= maxWidth || currentLine.equals("")) {
+                currentLine = testLine;
+            } else {
+                lines.add(currentLine);
+                currentLine = word;
+            }
+        }
+        if (!currentLine.equals("")) {
+            lines.add(currentLine);
+        }
+
+        return lines;
     }
 
     //! Get the item label
