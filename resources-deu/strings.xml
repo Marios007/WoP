@@ -52,11 +52,11 @@
     <string id="group3Description">Datum der letzten Periode einstellen</string>
     <string id="group2Title">Einstellung Woche</string>
     <string id="group2Description">Trimester und SSW Einstellungen</string>
-    <string id="SettingsAreaTitle">Test</string>
-    <string id="SettingsArea0">9W+2 = 10.SSW</string>
-    <string id="SettingsArea1">9W+2 = 9.SSW</string>
-    <string id="SettingsArea0Text">9W+2 = 10.SSW ausgewählt. Zählt angefangene Wochen als vollständig (Medizinischer Standard)</string>
-    <string id="SettingsArea1Text">9W+2 = 9.SSW: ausgewählt. Zählt nur vollständige Wochen. Keine Aufrundung von Teilwochen</string>
+    <string id="SettingsAreaTitle">Zählweise</string>
+    <string id="SettingsArea0">Angefangene Woche (6W+3 = 7. SSW)</string>
+    <string id="SettingsArea1">Vollendete Wochen (6W+3 = 6. SSW)</string>
+    <string id="SettingsArea0Text">Zählt die laufende Woche: 6 Wochen + 3 Tage wird als 7. SSW angezeigt (üblich in Deutschland und Österreich)</string>
+    <string id="SettingsArea1Text">Zählt nur vollendete Wochen: 6 Wochen + 3 Tage wird als 6. SSW angezeigt (üblich im englischsprachigen Raum)</string>
     <string id="SettingsTri2">Beginn 2.Trimester</string>
     <string id="SettingsTri3">Beginn 3.Trimester</string>
 

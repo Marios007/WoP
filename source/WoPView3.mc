@@ -40,7 +40,7 @@ class WoPView3 extends WatchUi.View {
         _currentWoP = calculator.getDates();
         _textTop.setText(WatchUi.loadResource(Rez.Strings.firstLine));
         trimester = _currentWoP.get(:trimester);
-        week = _currentWoP.get(:week);
+        week = _currentWoP.get(:wopWeek);
         data  = stats.getStatsforWeek(week) as Array;
         _textSize.setText(WatchUi.loadResource(data[3]));
         if (data[4] != _imageRezId) {

@@ -57,13 +57,8 @@ class WoPstats {
         
     }
 
+    //! @param week the started week (:wopWeek from WoPcalcDates.getDates), independent of the display setting
     function getStatsforWeek(week as Number) as Array {
-        // Adjust week based on setting (cache the property lookup)
-        var weekSetting = Properties.getValue("weekSetting");
-        if (weekSetting == 0) {
-            week += 1; // adjust if week setting is 9W+2 = 9WoP
-        }
-        
         // Handle overflow with single check
         var tableIndex = (week < 42) ? week : 43;
         

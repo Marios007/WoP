@@ -11,6 +11,7 @@ Shows the current week of pregnancy and trimester.
 - Set the date inside the widget menu and on the phone
 - Glance view
 - Information about current weight and size
+- Week counting style selectable: started week (6W+3 = week 7, German SSW) or completed weeks (6W+3 = week 6); the default depends on the watch language
  - Available in 5 languages (GER/ENG/ESP/ITA/FRE)
 
 ---

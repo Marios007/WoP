@@ -53,10 +53,10 @@
     <string id="group2Title">Réglages de la semaine</string>
     <string id="group2Description">Trimestre et réglages SG</string>
     <string id="SettingsAreaTitle">Réglage SG</string>
-    <string id="SettingsArea0">9S+2 = 10e SG</string>
-    <string id="SettingsArea1">9S+2 = 9e SG</string>
-    <string id="SettingsArea0Text">9S+2 = 10e SG activé. Compte les semaines entamées comme complètes (norme médicale)</string>
-    <string id="SettingsArea1Text">9S+2 = 9e SG activé. Ne compte que les semaines complètes. Pas d'arrondi des semaines partielles</string>
+    <string id="SettingsArea0">Semaine entamée (6S+3 = 7e SG)</string>
+    <string id="SettingsArea1">Semaines complètes (6S+3 = 6e SG)</string>
+    <string id="SettingsArea0Text">Compte la semaine en cours : 6 semaines + 3 jours est affiché comme 7e SG</string>
+    <string id="SettingsArea1Text">Ne compte que les semaines complètes : 6 semaines + 3 jours est affiché comme 6e SG</string>
     <string id="SettingsTri2">Début du 2e trimestre</string>
     <string id="SettingsTri3">Début du 3e trimestre</string>
 

@@ -50,13 +50,13 @@
     <string id="group1Description">Set the date of birth</string>
     <string id="group3Title">Last period</string>
     <string id="group3Description">Set the date of the last period</string>
-    <string id="group2Title">Week Seetings</string>
-    <string id="group2Description">Trimester an WoP Settings</string>
-    <string id="SettingsAreaTitle">Setting WoP</string>
-    <string id="SettingsArea0">9W+2 = 10WoP</string>
-    <string id="SettingsArea1">9W+2 = 9WoP</string>
-    <string id="SettingsArea0Text">9W+2 = 10th WoP activated. Counts partial weeks as complete (Medical standard)</string>
-    <string id="SettingsArea1Text">9W+2 = 9th WoP activated. Counts only complete weeks No rounding of partial weeks</string>
+    <string id="group2Title">Week settings</string>
+    <string id="group2Description">Trimester and week counting settings</string>
+    <string id="SettingsAreaTitle">Week counting</string>
+    <string id="SettingsArea0">Started week (6W+3 = week 7)</string>
+    <string id="SettingsArea1">Completed weeks (6W+3 = week 6)</string>
+    <string id="SettingsArea0Text">Counts the week in progress: 6 weeks + 3 days is shown as week 7 (common in Germany and Austria)</string>
+    <string id="SettingsArea1Text">Counts completed weeks: 6 weeks + 3 days is shown as week 6 (common in English-speaking countries)</string>
     <string id="SettingsTri2">Beginning of 2nd trimester</string>
     <string id="SettingsTri3">Beginning of 3rd trimester</string>
 

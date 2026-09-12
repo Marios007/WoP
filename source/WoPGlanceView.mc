@@ -78,7 +78,7 @@ class WoPGlanceView extends WatchUi.GlanceView {
             case 1:
                 dc.setPenWidth(8);
                 dc.setColor(G.COLOR_RED, -1);
-                var currentProgress = _woPDates.get(:week) / _totalWeeks * GW;
+                var currentProgress = _woPDates.get(:wopWeek) / _totalWeeks * GW;
                 if (currentProgress > _tri1End-_gap) {
                     currentProgress = _tri1End-_gap;
                 }
@@ -101,7 +101,7 @@ class WoPGlanceView extends WatchUi.GlanceView {
                 
                 // Zeichne Fortschritt im 2. Trimester in Gelb (mit Lücken)
                 dc.setColor(G.COLOR_YELLOW, -1);
-                var currentProgress2 = _woPDates.get(:week) / _totalWeeks * GW;
+                var currentProgress2 = _woPDates.get(:wopWeek) / _totalWeeks * GW;
                 // Begrenze Fortschritt auf das 2. Trimester
                 if (currentProgress2 > _tri2End-_gap) {
                     currentProgress2 = _tri2End-_gap;
@@ -132,7 +132,7 @@ class WoPGlanceView extends WatchUi.GlanceView {
                 
                 // Zeichne Fortschritt im 3. Trimester in Grün (mit Lücke)
                 dc.setColor(G.COLOR_GREEN, -1);
-                var currentProgress3 = _woPDates.get(:week) / _totalWeeks * GW;
+                var currentProgress3 = _woPDates.get(:wopWeek) / _totalWeeks * GW;
                 // Starte erst ab dem 3. Trimester
                 if (currentProgress3 < _tri2End+_gap) {
                     currentProgress3 = _tri2End+_gap;

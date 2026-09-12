@@ -24,7 +24,10 @@ class WoPApp extends Application.AppBase {
 
     // called when the app settings were changed on the phone
     function onSettingsChanged() as Void {
-        $.reconcileDates();
+        if ($.reconcileDates()) {
+            // the user set a date in the phone app -> no more demo date on start
+            Application.Properties.setValue("dateSet", 1);
+        }
         WatchUi.requestUpdate();
     }
 

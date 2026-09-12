@@ -53,10 +53,10 @@
     <string id="group2Title">Ajustes de semana</string>
     <string id="group2Description">Trimestre y ajustes SG</string>
     <string id="SettingsAreaTitle">Ajuste SG</string>
-    <string id="SettingsArea0">9S+2 = 10.ª SG</string>
-    <string id="SettingsArea1">9S+2 = 9.ª SG</string>
-    <string id="SettingsArea0Text">9S+2 = 10.ª SG activado. Cuenta las semanas empezadas como completas (estándar médico)</string>
-    <string id="SettingsArea1Text">9S+2 = 9.ª SG activado. Solo cuenta semanas completas. Sin redondeo de semanas parciales</string>
+    <string id="SettingsArea0">Semana empezada (6S+3 = 7.ª SG)</string>
+    <string id="SettingsArea1">Semanas completas (6S+3 = 6.ª SG)</string>
+    <string id="SettingsArea0Text">Cuenta la semana en curso: 6 semanas + 3 días se muestra como 7.ª SG</string>
+    <string id="SettingsArea1Text">Solo cuenta semanas completas: 6 semanas + 3 días se muestra como 6.ª SG</string>
     <string id="SettingsTri2">Inicio del 2.º trimestre</string>
     <string id="SettingsTri3">Inicio del 3.º trimestre</string>
 
